@@ -1,0 +1,2676 @@
+INFO  20:27:12,462 - Compiling source file: E:\Fakultet\Semestar 8\PP\workspace\MJCompiler\test\parserTests\testErrA.mj
+INFO  20:27:13,002 - #2 program
+INFO  20:27:13,003 - #52 test_err
+INFO  20:27:13,008 - #21 void
+INFO  20:27:13,008 - #52 main
+INFO  20:27:13,048 - #53 10
+ERROR 20:27:13,055 - Syntax error detected at line 6
+INFO  20:27:13,055 - #52 int
+INFO  20:27:13,056 - #52 x
+DEBUG 20:27:13,058 - Recovered from bad LOCAL VARIABLE DECLARATION.
+INFO  20:27:13,063 - #5 const
+ERROR 20:27:13,063 - Syntax error detected at line 9
+INFO  20:27:13,064 - #52 x
+INFO  20:27:13,064 - #53 0
+INFO  20:27:13,064 - #52 dasdas
+INFO  20:27:13,064 - #52 int
+INFO  20:27:13,065 - #52 x
+DEBUG 20:27:13,065 - Recovered from bad LOCAL VARIABLE DECLARATION.
+INFO  20:27:13,067 - #52 cont
+INFO  20:27:13,067 - #52 d
+ERROR 20:27:13,067 - Syntax error detected at line 13
+INFO  20:27:13,068 - #52 dasdsa
+INFO  20:27:13,068 - #52 x
+INFO  20:27:13,069 - #52 int
+INFO  20:27:13,069 - #52 x
+DEBUG 20:27:13,069 - Recovered from bad LOCAL VARIABLE DECLARATION.
+INFO  20:27:13,071 - #52 cont
+INFO  20:27:13,071 - #52 d
+ERROR 20:27:13,071 - Syntax error detected at line 18
+INFO  20:27:13,072 - #52 dasdsa
+INFO  20:27:13,072 - #52 int
+INFO  20:27:13,072 - #52 x
+DEBUG 20:27:13,072 - Recovered from bad LOCAL VARIABLE DECLARATION.
+INFO  20:27:13,072 - #52 still_bad
+INFO  20:27:13,073 - #52 x
+INFO  20:27:13,073 - #52 x
+ERROR 20:27:13,074 - Syntax error detected at line 22
+INFO  20:27:13,074 - #53 10
+INFO  20:27:13,074 - #53 2
+INFO  20:27:13,074 - #52 x
+INFO  20:27:13,075 - #52 d4
+DEBUG 20:27:13,075 - Recovered from bad LOCAL VARIABLE DECLARATION.
+INFO  20:27:13,075 - #52 bad
+ERROR 20:27:13,076 - Syntax error detected at line 24
+INFO  20:27:13,076 - #53 10
+INFO  20:27:13,076 - #52 d
+INFO  20:27:13,076 - #52 good
+DEBUG 20:27:13,077 - Recovered from bad LOCAL VARIABLE DECLARATION.
+INFO  20:27:13,100 - #52 ok
+INFO  20:27:13,164 - #53 5
+ERROR 20:27:13,164 - Syntax error detected at line 31
+INFO  20:27:13,165 - #52 f
+INFO  20:27:13,171 - #53 2
+INFO  20:27:13,173 - #52 good
+INFO  20:27:13,181 - #52 ok
+ERROR 20:27:13,181 - Syntax error detected at line 35
+INFO  20:27:13,237 - Program(
+  ProgName(
+   test_err
+  ) [ProgName]
+  ProgramOptListNone(
+  ) [ProgramOptListNone]
+  MethodDeclListSome(
+    MethodDecl(
+      MethodName(
+        MethodReturnNone(
+        ) [MethodReturnNone]
+       main
+      ) [MethodName]
+      FormParChainOptNone(
+      ) [FormParChainOptNone]
+      MethodVars(
+        VarDeclListSome(
+          VarDeclErr(
+          ) [VarDeclErr]
+          VarDeclListSome(
+            VarDeclValid(
+              Type(
+               int
+              ) [Type]
+              VarChainSingle(
+                VarChainElSingle(
+                 x
+                ) [VarChainElSingle]
+              ) [VarChainSingle]
+            ) [VarDeclValid]
+            VarDeclListSome(
+              VarDeclErr(
+              ) [VarDeclErr]
+              VarDeclListSome(
+                VarDeclValid(
+                  Type(
+                   int
+                  ) [Type]
+                  VarChainSingle(
+                    VarChainElSingle(
+                     x
+                    ) [VarChainElSingle]
+                  ) [VarChainSingle]
+                ) [VarDeclValid]
+                VarDeclListSome(
+                  VarDeclValid(
+                    Type(
+                     cont
+                    ) [Type]
+                    VarChainSingle(
+                      VarChainErr(
+                      ) [VarChainErr]
+                    ) [VarChainSingle]
+                  ) [VarDeclValid]
+                  VarDeclListSome(
+                    VarDeclValid(
+                      Type(
+                       int
+                      ) [Type]
+                      VarChainSingle(
+                        VarChainElSingle(
+                         x
+                        ) [VarChainElSingle]
+                      ) [VarChainSingle]
+                    ) [VarDeclValid]
+                    VarDeclListSome(
+                      VarDeclValid(
+                        Type(
+                         cont
+                        ) [Type]
+                        VarChainSingle(
+                          VarChainErr(
+                          ) [VarChainErr]
+                        ) [VarChainSingle]
+                      ) [VarDeclValid]
+                      VarDeclListSome(
+                        VarDeclValid(
+                          Type(
+                           int
+                          ) [Type]
+                          VarChainSingle(
+                            VarChainElSingle(
+                             x
+                            ) [VarChainElSingle]
+                          ) [VarChainSingle]
+                        ) [VarDeclValid]
+                        VarDeclListSome(
+                          VarDeclValid(
+                            Type(
+                             still_bad
+                            ) [Type]
+                            VarChainMulti(
+                              VarChainMulti(
+                                VarChainMulti(
+                                  VarChainSingle(
+                                    VarChainElSingle(
+                                     x
+                                    ) [VarChainElSingle]
+                                  ) [VarChainSingle]
+                                  VarChainErr(
+                                  ) [VarChainErr]
+                                ) [VarChainMulti]
+                                VarChainElSingle(
+                                 x
+                                ) [VarChainElSingle]
+                              ) [VarChainMulti]
+                              VarChainElSingle(
+                               d4
+                              ) [VarChainElSingle]
+                            ) [VarChainMulti]
+                          ) [VarDeclValid]
+                          VarDeclListSome(
+                            VarDeclValid(
+                              Type(
+                               bad
+                              ) [Type]
+                              VarChainSingle(
+                                VarChainErr(
+                                ) [VarChainErr]
+                              ) [VarChainSingle]
+                            ) [VarDeclValid]
+                            VarDeclListNone(
+                            ) [VarDeclListNone]
+                          ) [VarDeclListSome]
+                        ) [VarDeclListSome]
+                      ) [VarDeclListSome]
+                    ) [VarDeclListSome]
+                  ) [VarDeclListSome]
+                ) [VarDeclListSome]
+              ) [VarDeclListSome]
+            ) [VarDeclListSome]
+          ) [VarDeclListSome]
+        ) [VarDeclListSome]
+      ) [MethodVars]
+      StatementListSome(
+        MatchedStatement(
+          BadAssignStatement(
+            BadAssignStatementC(
+              AssignopEQ(
+              ) [AssignopEQ]
+              Expr(
+                MinusOptNone(
+                ) [MinusOptNone]
+                Term(
+                  FactorComplex(
+                    Designator(
+                      DesigStart(
+                       f
+                      ) [DesigStart]
+                      DesignatorChoiceListSome(
+                        DesignatorChoiceArr(
+                          Expr(
+                            MinusOptNone(
+                            ) [MinusOptNone]
+                            Term(
+                              FactorNum(
+                               2
+                              ) [FactorNum]
+                              FactorChainNone(
+                              ) [FactorChainNone]
+                            ) [Term]
+                            TermChainNone(
+                            ) [TermChainNone]
+                          ) [Expr]
+                        ) [DesignatorChoiceArr]
+                        DesignatorChoiceListNone(
+                        ) [DesignatorChoiceListNone]
+                      ) [DesignatorChoiceListSome]
+                    ) [Designator]
+                    ActParsParenOptNone(
+                    ) [ActParsParenOptNone]
+                  ) [FactorComplex]
+                  FactorChainNone(
+                  ) [FactorChainNone]
+                ) [Term]
+                TermChainNone(
+                ) [TermChainNone]
+              ) [Expr]
+            ) [BadAssignStatementC]
+          ) [BadAssignStatement]
+        ) [MatchedStatement]
+        StatementListSome(
+          MatchedStatement(
+            BadStatement(
+            ) [BadStatement]
+          ) [MatchedStatement]
+          StatementListNone(
+          ) [StatementListNone]
+        ) [StatementListSome]
+      ) [StatementListSome]
+    ) [MethodDecl]
+    MethodDeclListNone(
+    ) [MethodDeclListNone]
+  ) [MethodDeclListSome]
+) [Program]
+INFO  20:27:13,238 - ===================================
+ERROR 20:27:13,262 - Symbol x already declared in current scope at line 11
+ERROR 20:27:13,263 - Type used but not declared cont at line 13
+ERROR 20:27:13,263 - Symbol x already declared in current scope at line 16
+ERROR 20:27:13,263 - Type used but not declared cont at line 18
+ERROR 20:27:13,263 - Symbol x already declared in current scope at line 20
+ERROR 20:27:13,263 - Type used but not declared still_bad at line 22
+ERROR 20:27:13,264 - Symbol x already declared in current scope at line 22
+ERROR 20:27:13,264 - Symbol x already declared in current scope at line 22
+ERROR 20:27:13,264 - Type used but not declared bad at line 24
+ERROR 20:27:13,266 - Symbol f not found in current scope at line 31
+ERROR 20:27:13,266 - Symbol f not found in current scope at line 31
+INFO  20:27:13,266 - ===================================
+INFO  20:27:26,146 - Compiling source file: E:\Fakultet\Semestar 8\PP\workspace\MJCompiler\test\parserTests\testErrB.mj
+INFO  20:27:26,719 - #2 program
+INFO  20:27:26,719 - #52 test_err
+INFO  20:27:26,723 - #21 void
+INFO  20:27:26,725 - #52 main
+INFO  20:27:26,729 - #52 int
+INFO  20:27:26,736 - #52 valid
+INFO  20:27:26,738 - #52 invalid
+ERROR 20:27:26,739 - Syntax error detected at line 4
+INFO  20:27:26,739 - #21 void
+DEBUG 20:27:26,741 - Recovered from BAD FORMAL PARAMETER DECLARATION.
+INFO  20:27:26,750 - #52 main
+INFO  20:27:26,751 - #52 invalid
+ERROR 20:27:26,751 - Syntax error detected at line 5
+INFO  20:27:26,751 - #53 10
+INFO  20:27:26,752 - #52 x
+INFO  20:27:26,752 - #21 void
+DEBUG 20:27:26,752 - Recovered from BAD FORMAL PARAMETER DECLARATION.
+INFO  20:27:26,753 - #52 main
+INFO  20:27:26,753 - #52 int
+INFO  20:27:26,753 - #52 valid
+INFO  20:27:26,754 - #52 x
+ERROR 20:27:26,754 - Syntax error detected at line 6
+INFO  20:27:26,754 - #53 5
+INFO  20:27:26,754 - #52 x
+INFO  20:27:26,754 - #53 3
+INFO  20:27:26,755 - #21 void
+DEBUG 20:27:26,755 - Recovered from BAD FORMAL PARAMETER DECLARATION.
+INFO  20:27:26,755 - #52 main
+ERROR 20:27:26,755 - Syntax error detected at line 7
+INFO  20:27:26,756 - #21 void
+DEBUG 20:27:26,756 - Recovered from BAD FORMAL PARAMETER DECLARATION.
+INFO  20:27:26,756 - #52 test_for
+INFO  20:27:26,758 - #23 for
+INFO  20:27:26,758 - #52 i
+INFO  20:27:26,762 - #53 0
+INFO  20:27:26,782 - #52 i
+INFO  20:27:26,784 - #53 20
+ERROR 20:27:26,787 - Syntax error detected at line 11
+INFO  20:27:26,787 - #52 x
+INFO  20:27:26,787 - #53 8
+INFO  20:27:26,788 - #52 i
+DEBUG 20:27:26,788 - Recovered from bad CONDITION IN FOR STATEMENT.
+INFO  20:27:26,794 - #23 for
+INFO  20:27:26,795 - #52 i
+INFO  20:27:26,795 - #53 0
+ERROR 20:27:26,795 - Syntax error detected at line 12
+INFO  20:27:26,795 - #52 i
+DEBUG 20:27:26,795 - Recovered from bad CONDITION IN FOR STATEMENT.
+INFO  20:27:26,796 - #23 for
+INFO  20:27:26,796 - #52 i
+INFO  20:27:26,796 - #53 0
+INFO  20:27:26,796 - #21 void
+ERROR 20:27:26,797 - Syntax error detected at line 13
+INFO  20:27:26,797 - #23 for
+DEBUG 20:27:26,797 - Recovered from bad CONDITION IN FOR STATEMENT.
+INFO  20:27:26,799 - #52 f
+INFO  20:27:26,810 - #52 b
+INFO  20:27:26,813 - #53 25
+INFO  20:27:26,818 - #52 i
+INFO  20:27:26,840 - Program(
+  ProgName(
+   test_err
+  ) [ProgName]
+  ProgramOptListNone(
+  ) [ProgramOptListNone]
+  MethodDeclListSome(
+    MethodDecl(
+      MethodName(
+        MethodReturnNone(
+        ) [MethodReturnNone]
+       main
+      ) [MethodName]
+      FormParChainOptSome(
+        FormParChainMulti(
+          FormParSingle(
+            Type(
+             int
+            ) [Type]
+           valid
+          ) [FormParSingle]
+          FormParChainSingle(
+            FormParErr(
+            ) [FormParErr]
+          ) [FormParChainSingle]
+        ) [FormParChainMulti]
+      ) [FormParChainOptSome]
+      MethodVars(
+        VarDeclListNone(
+        ) [VarDeclListNone]
+      ) [MethodVars]
+      StatementListNone(
+      ) [StatementListNone]
+    ) [MethodDecl]
+    MethodDeclListSome(
+      MethodDecl(
+        MethodName(
+          MethodReturnNone(
+          ) [MethodReturnNone]
+         main
+        ) [MethodName]
+        FormParChainOptSome(
+          FormParChainSingle(
+            FormParErr(
+            ) [FormParErr]
+          ) [FormParChainSingle]
+        ) [FormParChainOptSome]
+        MethodVars(
+          VarDeclListNone(
+          ) [VarDeclListNone]
+        ) [MethodVars]
+        StatementListNone(
+        ) [StatementListNone]
+      ) [MethodDecl]
+      MethodDeclListSome(
+        MethodDecl(
+          MethodName(
+            MethodReturnNone(
+            ) [MethodReturnNone]
+           main
+          ) [MethodName]
+          FormParChainOptSome(
+            FormParChainMulti(
+              FormParSingle(
+                Type(
+                 int
+                ) [Type]
+               valid
+              ) [FormParSingle]
+              FormParChainSingle(
+                FormParErr(
+                ) [FormParErr]
+              ) [FormParChainSingle]
+            ) [FormParChainMulti]
+          ) [FormParChainOptSome]
+          MethodVars(
+            VarDeclListNone(
+            ) [VarDeclListNone]
+          ) [MethodVars]
+          StatementListNone(
+          ) [StatementListNone]
+        ) [MethodDecl]
+        MethodDeclListSome(
+          MethodDecl(
+            MethodName(
+              MethodReturnNone(
+              ) [MethodReturnNone]
+             main
+            ) [MethodName]
+            FormParChainOptSome(
+              FormParChainSingle(
+                FormParErr(
+                ) [FormParErr]
+              ) [FormParChainSingle]
+            ) [FormParChainOptSome]
+            MethodVars(
+              VarDeclListNone(
+              ) [VarDeclListNone]
+            ) [MethodVars]
+            StatementListNone(
+            ) [StatementListNone]
+          ) [MethodDecl]
+          MethodDeclListSome(
+            MethodDecl(
+              MethodName(
+                MethodReturnNone(
+                ) [MethodReturnNone]
+               test_for
+              ) [MethodName]
+              FormParChainOptNone(
+              ) [FormParChainOptNone]
+              MethodVars(
+                VarDeclListNone(
+                ) [VarDeclListNone]
+              ) [MethodVars]
+              StatementListSome(
+                MatchedStatement(
+                  MatchedFor(
+                    ForInit(
+                      DesignatorStatementOptSome(
+                        DesignatorStatement(
+                          Designator(
+                            DesigStart(
+                             i
+                            ) [DesigStart]
+                            DesignatorChoiceListNone(
+                            ) [DesignatorChoiceListNone]
+                          ) [Designator]
+                          DesignatorElemAssign(
+                            AssignopEQ(
+                            ) [AssignopEQ]
+                            Expr(
+                              MinusOptNone(
+                              ) [MinusOptNone]
+                              Term(
+                                FactorNum(
+                                 0
+                                ) [FactorNum]
+                                FactorChainNone(
+                                ) [FactorChainNone]
+                              ) [Term]
+                              TermChainNone(
+                              ) [TermChainNone]
+                            ) [Expr]
+                          ) [DesignatorElemAssign]
+                        ) [DesignatorStatement]
+                      ) [DesignatorStatementOptSome]
+                    ) [ForInit]
+                    ForCond(
+                      ConditionOptForErr(
+                      ) [ConditionOptForErr]
+                    ) [ForCond]
+                    ForPost(
+                      DesignatorStatementOptSome(
+                        DesignatorStatement(
+                          Designator(
+                            DesigStart(
+                             i
+                            ) [DesigStart]
+                            DesignatorChoiceListNone(
+                            ) [DesignatorChoiceListNone]
+                          ) [Designator]
+                          DesignatorElemPlus(
+                          ) [DesignatorElemPlus]
+                        ) [DesignatorStatement]
+                      ) [DesignatorStatementOptSome]
+                    ) [ForPost]
+                    BlockStatement(
+                      StatementListSome(
+                        MatchedStatement(
+                          MatchedFor(
+                            ForInit(
+                              DesignatorStatementOptSome(
+                                DesignatorStatement(
+                                  Designator(
+                                    DesigStart(
+                                     i
+                                    ) [DesigStart]
+                                    DesignatorChoiceListNone(
+                                    ) [DesignatorChoiceListNone]
+                                  ) [Designator]
+                                  DesignatorElemAssign(
+                                    AssignopEQ(
+                                    ) [AssignopEQ]
+                                    Expr(
+                                      MinusOptNone(
+                                      ) [MinusOptNone]
+                                      Term(
+                                        FactorNum(
+                                         0
+                                        ) [FactorNum]
+                                        FactorChainNone(
+                                        ) [FactorChainNone]
+                                      ) [Term]
+                                      TermChainNone(
+                                      ) [TermChainNone]
+                                    ) [Expr]
+                                  ) [DesignatorElemAssign]
+                                ) [DesignatorStatement]
+                              ) [DesignatorStatementOptSome]
+                            ) [ForInit]
+                            ForCond(
+                              ConditionOptForErr(
+                              ) [ConditionOptForErr]
+                            ) [ForCond]
+                            ForPost(
+                              DesignatorStatementOptSome(
+                                DesignatorStatement(
+                                  Designator(
+                                    DesigStart(
+                                     i
+                                    ) [DesigStart]
+                                    DesignatorChoiceListNone(
+                                    ) [DesignatorChoiceListNone]
+                                  ) [Designator]
+                                  DesignatorElemPlus(
+                                  ) [DesignatorElemPlus]
+                                ) [DesignatorStatement]
+                              ) [DesignatorStatementOptSome]
+                            ) [ForPost]
+                            BlockStatement(
+                              StatementListSome(
+                                MatchedStatement(
+                                  MatchedFor(
+                                    ForInit(
+                                      DesignatorStatementOptSome(
+                                        DesignatorStatement(
+                                          Designator(
+                                            DesigStart(
+                                             i
+                                            ) [DesigStart]
+                                            DesignatorChoiceListNone(
+                                            ) [DesignatorChoiceListNone]
+                                          ) [Designator]
+                                          DesignatorElemAssign(
+                                            AssignopEQ(
+                                            ) [AssignopEQ]
+                                            Expr(
+                                              MinusOptNone(
+                                              ) [MinusOptNone]
+                                              Term(
+                                                FactorNum(
+                                                 0
+                                                ) [FactorNum]
+                                                FactorChainNone(
+                                                ) [FactorChainNone]
+                                              ) [Term]
+                                              TermChainNone(
+                                              ) [TermChainNone]
+                                            ) [Expr]
+                                          ) [DesignatorElemAssign]
+                                        ) [DesignatorStatement]
+                                      ) [DesignatorStatementOptSome]
+                                    ) [ForInit]
+                                    ForCond(
+                                      ConditionOptForErr(
+                                      ) [ConditionOptForErr]
+                                    ) [ForCond]
+                                    ForPost(
+                                      DesignatorStatementOptNone(
+                                      ) [DesignatorStatementOptNone]
+                                    ) [ForPost]
+                                    BlockStatement(
+                                      StatementListSome(
+                                        MatchedStatement(
+                                          MatchedFor(
+                                            ForInit(
+                                              DesignatorStatementOptNone(
+                                              ) [DesignatorStatementOptNone]
+                                            ) [ForInit]
+                                            ForCond(
+                                              ConditionOptForSome(
+                                                ConditionSingle(
+                                                  CondTermSingle(
+                                                    CondFactSingle(
+                                                      Expr(
+                                                        MinusOptNone(
+                                                        ) [MinusOptNone]
+                                                        Term(
+                                                          FactorComplex(
+                                                            Designator(
+                                                              DesigStart(
+                                                               f
+                                                              ) [DesigStart]
+                                                              DesignatorChoiceListNone(
+                                                              ) [DesignatorChoiceListNone]
+                                                            ) [Designator]
+                                                            ActParsParenOptSome(
+                                                              FunInvoke(
+                                                                ActParsOptNone(
+                                                                ) [ActParsOptNone]
+                                                              ) [FunInvoke]
+                                                            ) [ActParsParenOptSome]
+                                                          ) [FactorComplex]
+                                                          FactorChainNone(
+                                                          ) [FactorChainNone]
+                                                        ) [Term]
+                                                        TermChainSome(
+                                                          TermChainEl(
+                                                            AddopL(
+                                                              AddopLeftPlus(
+                                                              ) [AddopLeftPlus]
+                                                            ) [AddopL]
+                                                            Term(
+                                                              FactorComplex(
+                                                                Designator(
+                                                                  DesigStart(
+                                                                   b
+                                                                  ) [DesigStart]
+                                                                  DesignatorChoiceListSome(
+                                                                    DesignatorChoiceArr(
+                                                                      Expr(
+                                                                        MinusOptNone(
+                                                                        ) [MinusOptNone]
+                                                                        Term(
+                                                                          FactorNum(
+                                                                           25
+                                                                          ) [FactorNum]
+                                                                          FactorChainNone(
+                                                                          ) [FactorChainNone]
+                                                                        ) [Term]
+                                                                        TermChainNone(
+                                                                        ) [TermChainNone]
+                                                                      ) [Expr]
+                                                                    ) [DesignatorChoiceArr]
+                                                                    DesignatorChoiceListNone(
+                                                                    ) [DesignatorChoiceListNone]
+                                                                  ) [DesignatorChoiceListSome]
+                                                                ) [Designator]
+                                                                ActParsParenOptNone(
+                                                                ) [ActParsParenOptNone]
+                                                              ) [FactorComplex]
+                                                              FactorChainNone(
+                                                              ) [FactorChainNone]
+                                                            ) [Term]
+                                                          ) [TermChainEl]
+                                                          TermChainNone(
+                                                          ) [TermChainNone]
+                                                        ) [TermChainSome]
+                                                      ) [Expr]
+                                                    ) [CondFactSingle]
+                                                  ) [CondTermSingle]
+                                                ) [ConditionSingle]
+                                              ) [ConditionOptForSome]
+                                            ) [ForCond]
+                                            ForPost(
+                                              DesignatorStatementOptSome(
+                                                DesignatorStatement(
+                                                  Designator(
+                                                    DesigStart(
+                                                     i
+                                                    ) [DesigStart]
+                                                    DesignatorChoiceListNone(
+                                                    ) [DesignatorChoiceListNone]
+                                                  ) [Designator]
+                                                  DesignatorElemPlus(
+                                                  ) [DesignatorElemPlus]
+                                                ) [DesignatorStatement]
+                                              ) [DesignatorStatementOptSome]
+                                            ) [ForPost]
+                                            BlockStatement(
+                                              StatementListNone(
+                                              ) [StatementListNone]
+                                            ) [BlockStatement]
+                                          ) [MatchedFor]
+                                        ) [MatchedStatement]
+                                        StatementListNone(
+                                        ) [StatementListNone]
+                                      ) [StatementListSome]
+                                    ) [BlockStatement]
+                                  ) [MatchedFor]
+                                ) [MatchedStatement]
+                                StatementListNone(
+                                ) [StatementListNone]
+                              ) [StatementListSome]
+                            ) [BlockStatement]
+                          ) [MatchedFor]
+                        ) [MatchedStatement]
+                        StatementListNone(
+                        ) [StatementListNone]
+                      ) [StatementListSome]
+                    ) [BlockStatement]
+                  ) [MatchedFor]
+                ) [MatchedStatement]
+                StatementListNone(
+                ) [StatementListNone]
+              ) [StatementListSome]
+            ) [MethodDecl]
+            MethodDeclListNone(
+            ) [MethodDeclListNone]
+          ) [MethodDeclListSome]
+        ) [MethodDeclListSome]
+      ) [MethodDeclListSome]
+    ) [MethodDeclListSome]
+  ) [MethodDeclListSome]
+) [Program]
+INFO  20:27:26,845 - ===================================
+ERROR 20:27:26,859 - Symbol main already declared in current scope at line 5
+INFO  20:27:40,952 - Compiling source file: E:\Fakultet\Semestar 8\PP\workspace\MJCompiler\test\parserTests\testErrC.mj
+INFO  20:27:41,215 - #2 program
+INFO  20:27:41,215 - #52 test_err
+INFO  20:27:41,216 - #13 class
+INFO  20:27:41,217 - #52 X
+ERROR 20:27:41,223 - Syntax error detected at line 4
+INFO  20:27:41,223 - #53 10
+INFO  20:27:41,225 - #13 class
+INFO  20:27:41,225 - #52 X
+DEBUG 20:27:41,226 - Recovered from bad CLASS NAMING.
+ERROR 20:27:41,231 - Syntax error detected at line 6
+INFO  20:27:41,231 - #53 5
+INFO  20:27:41,232 - #14 extends
+INFO  20:27:41,232 - #52 Object
+INFO  20:27:41,233 - #13 class
+INFO  20:27:41,233 - #52 X
+DEBUG 20:27:41,233 - Recovered from bad CLASS NAMING.
+ERROR 20:27:41,234 - Syntax error detected at line 8
+INFO  20:27:41,235 - #53 10
+INFO  20:27:41,235 - #14 extends
+INFO  20:27:41,235 - #53 2
+INFO  20:27:41,235 - #13 class
+INFO  20:27:41,235 - #52 X
+DEBUG 20:27:41,235 - Recovered from bad CLASS NAMING.
+INFO  20:27:41,235 - #14 extends
+INFO  20:27:41,236 - #53 10
+ERROR 20:27:41,236 - Syntax error detected at line 10
+INFO  20:27:41,236 - #18 abstract
+INFO  20:27:41,236 - #13 class
+DEBUG 20:27:41,236 - Recovered from bad CLASS NAMING.
+INFO  20:27:41,236 - #52 Y
+INFO  20:27:41,238 - #15 public
+INFO  20:27:41,238 - #18 abstract
+INFO  20:27:41,241 - #21 void
+ERROR 20:27:41,241 - Syntax error detected at line 15
+INFO  20:27:41,241 - #53 10
+INFO  20:27:41,241 - #52 bad_func
+INFO  20:27:41,241 - #15 public
+INFO  20:27:41,241 - #18 abstract
+INFO  20:27:41,242 - #21 void
+DEBUG 20:27:41,242 - Recovered from bad ABSTRACT METHOD DECLARATION.
+INFO  20:27:41,243 - #52 f
+INFO  20:27:41,247 - #15 public
+INFO  20:27:41,247 - #21 void
+INFO  20:27:41,247 - #52 f
+INFO  20:27:41,260 - #15 public
+INFO  20:27:41,264 - #21 void
+INFO  20:27:41,264 - #52 f
+INFO  20:27:41,264 - #18 abstract
+INFO  20:27:41,265 - #21 void
+ERROR 20:27:41,265 - Syntax error detected at line 19
+INFO  20:27:41,265 - #52 bad
+INFO  20:27:41,265 - #15 public
+INFO  20:27:41,265 - #21 void
+INFO  20:27:41,265 - #52 f
+DEBUG 20:27:41,266 - Recovered from bad ABSTRACT METHOD DECLARATION.
+INFO  20:27:41,266 - #15 public
+INFO  20:27:41,266 - #18 abstract
+INFO  20:27:41,266 - #52 f
+ERROR 20:27:41,266 - Syntax error detected at line 21
+INFO  20:27:41,266 - #53 5
+INFO  20:27:41,267 - #52 d
+INFO  20:27:41,267 - #15 public
+INFO  20:27:41,267 - #21 void
+INFO  20:27:41,267 - #52 f
+DEBUG 20:27:41,267 - Recovered from bad ABSTRACT METHOD DECLARATION.
+INFO  20:27:41,298 - Program(
+  ProgName(
+   test_err
+  ) [ProgName]
+  ProgramOptListSome(
+    ProgramOptC(
+      ClassDecl(
+        ClassNamingErr(
+        ) [ClassNamingErr]
+        ClassVarDeclListNone(
+        ) [ClassVarDeclListNone]
+        ClasMethodsOptNone(
+        ) [ClasMethodsOptNone]
+      ) [ClassDecl]
+    ) [ProgramOptC]
+    ProgramOptListSome(
+      ProgramOptC(
+        ClassDecl(
+          ClassNamingErr(
+          ) [ClassNamingErr]
+          ClassVarDeclListNone(
+          ) [ClassVarDeclListNone]
+          ClasMethodsOptNone(
+          ) [ClasMethodsOptNone]
+        ) [ClassDecl]
+      ) [ProgramOptC]
+      ProgramOptListSome(
+        ProgramOptC(
+          ClassDecl(
+            ClassNamingErr(
+            ) [ClassNamingErr]
+            ClassVarDeclListNone(
+            ) [ClassVarDeclListNone]
+            ClasMethodsOptNone(
+            ) [ClasMethodsOptNone]
+          ) [ClassDecl]
+        ) [ProgramOptC]
+        ProgramOptListSome(
+          ProgramOptC(
+            ClassDecl(
+              ClassNamingErr(
+              ) [ClassNamingErr]
+              ClassVarDeclListNone(
+              ) [ClassVarDeclListNone]
+              ClasMethodsOptNone(
+              ) [ClasMethodsOptNone]
+            ) [ClassDecl]
+          ) [ProgramOptC]
+          ProgramOptListSome(
+            ProgramOptAC(
+              AbstractClassDecl(
+                ClassNamingValid(
+                 Y
+                  ExtendOptNone(
+                  ) [ExtendOptNone]
+                ) [ClassNamingValid]
+                ClassVarDeclListNone(
+                ) [ClassVarDeclListNone]
+                AbstractClassMethodsOptSingle(
+                  AbstractClassMethods(
+                    AbstractMethodDeclListA(
+                      AbstractMethodDeclErr(
+                      ) [AbstractMethodDeclErr]
+                      AbstractMethodDeclListA(
+                        AbstractMethodDeclValid(
+                          AbstractMethodDeclA(
+                            Public(
+                            ) [Public]
+                            MethodReturnNone(
+                            ) [MethodReturnNone]
+                           f
+                          ) [AbstractMethodDeclA]
+                          FormParChainOptNone(
+                          ) [FormParChainOptNone]
+                        ) [AbstractMethodDeclValid]
+                        AbstractMethodDeclListB(
+                          ClassMethodDecl(
+                            Public(
+                            ) [Public]
+                            MethodDecl(
+                              MethodName(
+                                MethodReturnNone(
+                                ) [MethodReturnNone]
+                               f
+                              ) [MethodName]
+                              FormParChainOptNone(
+                              ) [FormParChainOptNone]
+                              MethodVars(
+                                VarDeclListNone(
+                                ) [VarDeclListNone]
+                              ) [MethodVars]
+                              StatementListNone(
+                              ) [StatementListNone]
+                            ) [MethodDecl]
+                          ) [ClassMethodDecl]
+                          AbstractMethodDeclListB(
+                            ClassMethodDecl(
+                              Public(
+                              ) [Public]
+                              MethodDecl(
+                                MethodName(
+                                  MethodReturnNone(
+                                  ) [MethodReturnNone]
+                                 f
+                                ) [MethodName]
+                                FormParChainOptNone(
+                                ) [FormParChainOptNone]
+                                MethodVars(
+                                  VarDeclListNone(
+                                  ) [VarDeclListNone]
+                                ) [MethodVars]
+                                StatementListNone(
+                                ) [StatementListNone]
+                              ) [MethodDecl]
+                            ) [ClassMethodDecl]
+                            AbstractMethodDeclListA(
+                              AbstractMethodDeclErr(
+                              ) [AbstractMethodDeclErr]
+                              AbstractMethodDeclListB(
+                                ClassMethodDecl(
+                                  Public(
+                                  ) [Public]
+                                  MethodDecl(
+                                    MethodName(
+                                      MethodReturnNone(
+                                      ) [MethodReturnNone]
+                                     f
+                                    ) [MethodName]
+                                    FormParChainOptNone(
+                                    ) [FormParChainOptNone]
+                                    MethodVars(
+                                      VarDeclListNone(
+                                      ) [VarDeclListNone]
+                                    ) [MethodVars]
+                                    StatementListNone(
+                                    ) [StatementListNone]
+                                  ) [MethodDecl]
+                                ) [ClassMethodDecl]
+                                AbstractMethodDeclListA(
+                                  AbstractMethodDeclErr(
+                                  ) [AbstractMethodDeclErr]
+                                  AbstractMethodDeclListB(
+                                    ClassMethodDecl(
+                                      Public(
+                                      ) [Public]
+                                      MethodDecl(
+                                        MethodName(
+                                          MethodReturnNone(
+                                          ) [MethodReturnNone]
+                                         f
+                                        ) [MethodName]
+                                        FormParChainOptNone(
+                                        ) [FormParChainOptNone]
+                                        MethodVars(
+                                          VarDeclListNone(
+                                          ) [VarDeclListNone]
+                                        ) [MethodVars]
+                                        StatementListNone(
+                                        ) [StatementListNone]
+                                      ) [MethodDecl]
+                                    ) [ClassMethodDecl]
+                                    AbstractMethodDeclListC(
+                                    ) [AbstractMethodDeclListC]
+                                  ) [AbstractMethodDeclListB]
+                                ) [AbstractMethodDeclListA]
+                              ) [AbstractMethodDeclListB]
+                            ) [AbstractMethodDeclListA]
+                          ) [AbstractMethodDeclListB]
+                        ) [AbstractMethodDeclListB]
+                      ) [AbstractMethodDeclListA]
+                    ) [AbstractMethodDeclListA]
+                  ) [AbstractClassMethods]
+                ) [AbstractClassMethodsOptSingle]
+              ) [AbstractClassDecl]
+            ) [ProgramOptAC]
+            ProgramOptListNone(
+            ) [ProgramOptListNone]
+          ) [ProgramOptListSome]
+        ) [ProgramOptListSome]
+      ) [ProgramOptListSome]
+    ) [ProgramOptListSome]
+  ) [ProgramOptListSome]
+  MethodDeclListNone(
+  ) [MethodDeclListNone]
+) [Program]
+INFO  20:27:41,299 - ===================================
+ERROR 20:27:41,317 - Class declaration invalid at line 4
+ERROR 20:27:41,317 - Class declaration invalid at line 6
+ERROR 20:27:41,318 - Class declaration invalid at line 8
+ERROR 20:27:41,318 - Class declaration invalid at line 10
+ERROR 20:27:41,318 - Symbol f already declared in current scope at line 17
+INFO  20:32:39,580 - Compiling source file: E:\Fakultet\Semestar 8\PP\workspace\MJCompiler\test\parserTests\testErrC.mj
+INFO  20:32:39,931 - #2 program
+INFO  20:32:39,931 - #52 test_err
+INFO  20:32:39,931 - #13 class
+INFO  20:32:39,933 - #52 X
+ERROR 20:32:39,940 - Syntax error detected at line 4
+INFO  20:32:39,940 - #53 10
+INFO  20:32:39,942 - #13 class
+INFO  20:32:39,942 - #52 X
+DEBUG 20:32:39,943 - Recovered from bad CLASS NAMING.
+ERROR 20:32:39,950 - Syntax error detected at line 6
+INFO  20:32:39,950 - #53 5
+INFO  20:32:39,950 - #14 extends
+INFO  20:32:39,951 - #52 Object
+INFO  20:32:39,951 - #13 class
+INFO  20:32:39,951 - #52 X
+DEBUG 20:32:39,951 - Recovered from bad CLASS NAMING.
+ERROR 20:32:39,951 - Syntax error detected at line 8
+INFO  20:32:39,952 - #53 10
+INFO  20:32:39,952 - #14 extends
+INFO  20:32:39,952 - #53 2
+INFO  20:32:39,952 - #13 class
+INFO  20:32:39,952 - #52 X
+DEBUG 20:32:39,953 - Recovered from bad CLASS NAMING.
+INFO  20:32:39,953 - #14 extends
+INFO  20:32:39,953 - #53 10
+ERROR 20:32:39,953 - Syntax error detected at line 10
+INFO  20:32:39,953 - #18 abstract
+INFO  20:32:39,954 - #13 class
+DEBUG 20:32:39,954 - Recovered from bad CLASS NAMING.
+INFO  20:32:39,954 - #52 Y
+INFO  20:32:39,956 - #15 public
+INFO  20:32:39,956 - #18 abstract
+INFO  20:32:39,958 - #21 void
+ERROR 20:32:39,959 - Syntax error detected at line 15
+INFO  20:32:39,959 - #53 10
+INFO  20:32:39,959 - #52 bad_func
+INFO  20:32:39,959 - #15 public
+INFO  20:32:39,959 - #18 abstract
+INFO  20:32:39,959 - #21 void
+DEBUG 20:32:39,959 - Recovered from bad ABSTRACT METHOD DECLARATION.
+INFO  20:32:39,962 - #52 f
+INFO  20:32:39,966 - #15 public
+INFO  20:32:39,966 - #21 void
+INFO  20:32:39,966 - #52 f
+INFO  20:32:39,973 - #15 public
+INFO  20:32:39,983 - #21 void
+INFO  20:32:39,983 - #52 f
+INFO  20:32:39,983 - #18 abstract
+INFO  20:32:39,983 - #21 void
+ERROR 20:32:39,983 - Syntax error detected at line 19
+INFO  20:32:39,984 - #52 bad
+INFO  20:32:39,984 - #15 public
+INFO  20:32:39,984 - #21 void
+INFO  20:32:39,984 - #52 f
+DEBUG 20:32:39,984 - Recovered from bad ABSTRACT METHOD DECLARATION.
+INFO  20:32:39,984 - #15 public
+INFO  20:32:39,985 - #18 abstract
+INFO  20:32:39,985 - #52 f
+ERROR 20:32:39,985 - Syntax error detected at line 21
+INFO  20:32:39,985 - #53 5
+INFO  20:32:39,985 - #52 d
+INFO  20:32:39,985 - #15 public
+INFO  20:32:39,985 - #21 void
+INFO  20:32:39,986 - #52 f
+DEBUG 20:32:39,986 - Recovered from bad ABSTRACT METHOD DECLARATION.
+INFO  20:32:40,012 - Program(
+  ProgName(
+   test_err
+  ) [ProgName]
+  ProgramOptListSome(
+    ProgramOptC(
+      ClassDecl(
+        ClassNamingErr(
+        ) [ClassNamingErr]
+        ClassVarDeclListNone(
+        ) [ClassVarDeclListNone]
+        ClasMethodsOptNone(
+        ) [ClasMethodsOptNone]
+      ) [ClassDecl]
+    ) [ProgramOptC]
+    ProgramOptListSome(
+      ProgramOptC(
+        ClassDecl(
+          ClassNamingErr(
+          ) [ClassNamingErr]
+          ClassVarDeclListNone(
+          ) [ClassVarDeclListNone]
+          ClasMethodsOptNone(
+          ) [ClasMethodsOptNone]
+        ) [ClassDecl]
+      ) [ProgramOptC]
+      ProgramOptListSome(
+        ProgramOptC(
+          ClassDecl(
+            ClassNamingErr(
+            ) [ClassNamingErr]
+            ClassVarDeclListNone(
+            ) [ClassVarDeclListNone]
+            ClasMethodsOptNone(
+            ) [ClasMethodsOptNone]
+          ) [ClassDecl]
+        ) [ProgramOptC]
+        ProgramOptListSome(
+          ProgramOptC(
+            ClassDecl(
+              ClassNamingErr(
+              ) [ClassNamingErr]
+              ClassVarDeclListNone(
+              ) [ClassVarDeclListNone]
+              ClasMethodsOptNone(
+              ) [ClasMethodsOptNone]
+            ) [ClassDecl]
+          ) [ProgramOptC]
+          ProgramOptListSome(
+            ProgramOptAC(
+              AbstractClassDecl(
+                ClassNamingValid(
+                 Y
+                  ExtendOptNone(
+                  ) [ExtendOptNone]
+                ) [ClassNamingValid]
+                ClassVarDeclListNone(
+                ) [ClassVarDeclListNone]
+                AbstractClassMethodsOptSingle(
+                  AbstractClassMethods(
+                    AbstractMethodDeclListA(
+                      AbstractMethodDeclErr(
+                      ) [AbstractMethodDeclErr]
+                      AbstractMethodDeclListA(
+                        AbstractMethodDeclValid(
+                          AbstractMethodDeclA(
+                            Public(
+                            ) [Public]
+                            MethodReturnNone(
+                            ) [MethodReturnNone]
+                           f
+                          ) [AbstractMethodDeclA]
+                          FormParChainOptNone(
+                          ) [FormParChainOptNone]
+                        ) [AbstractMethodDeclValid]
+                        AbstractMethodDeclListB(
+                          ClassMethodDecl(
+                            Public(
+                            ) [Public]
+                            MethodDecl(
+                              MethodName(
+                                MethodReturnNone(
+                                ) [MethodReturnNone]
+                               f
+                              ) [MethodName]
+                              FormParChainOptNone(
+                              ) [FormParChainOptNone]
+                              MethodVars(
+                                VarDeclListNone(
+                                ) [VarDeclListNone]
+                              ) [MethodVars]
+                              StatementListNone(
+                              ) [StatementListNone]
+                            ) [MethodDecl]
+                          ) [ClassMethodDecl]
+                          AbstractMethodDeclListB(
+                            ClassMethodDecl(
+                              Public(
+                              ) [Public]
+                              MethodDecl(
+                                MethodName(
+                                  MethodReturnNone(
+                                  ) [MethodReturnNone]
+                                 f
+                                ) [MethodName]
+                                FormParChainOptNone(
+                                ) [FormParChainOptNone]
+                                MethodVars(
+                                  VarDeclListNone(
+                                  ) [VarDeclListNone]
+                                ) [MethodVars]
+                                StatementListNone(
+                                ) [StatementListNone]
+                              ) [MethodDecl]
+                            ) [ClassMethodDecl]
+                            AbstractMethodDeclListA(
+                              AbstractMethodDeclErr(
+                              ) [AbstractMethodDeclErr]
+                              AbstractMethodDeclListB(
+                                ClassMethodDecl(
+                                  Public(
+                                  ) [Public]
+                                  MethodDecl(
+                                    MethodName(
+                                      MethodReturnNone(
+                                      ) [MethodReturnNone]
+                                     f
+                                    ) [MethodName]
+                                    FormParChainOptNone(
+                                    ) [FormParChainOptNone]
+                                    MethodVars(
+                                      VarDeclListNone(
+                                      ) [VarDeclListNone]
+                                    ) [MethodVars]
+                                    StatementListNone(
+                                    ) [StatementListNone]
+                                  ) [MethodDecl]
+                                ) [ClassMethodDecl]
+                                AbstractMethodDeclListA(
+                                  AbstractMethodDeclErr(
+                                  ) [AbstractMethodDeclErr]
+                                  AbstractMethodDeclListB(
+                                    ClassMethodDecl(
+                                      Public(
+                                      ) [Public]
+                                      MethodDecl(
+                                        MethodName(
+                                          MethodReturnNone(
+                                          ) [MethodReturnNone]
+                                         f
+                                        ) [MethodName]
+                                        FormParChainOptNone(
+                                        ) [FormParChainOptNone]
+                                        MethodVars(
+                                          VarDeclListNone(
+                                          ) [VarDeclListNone]
+                                        ) [MethodVars]
+                                        StatementListNone(
+                                        ) [StatementListNone]
+                                      ) [MethodDecl]
+                                    ) [ClassMethodDecl]
+                                    AbstractMethodDeclListC(
+                                    ) [AbstractMethodDeclListC]
+                                  ) [AbstractMethodDeclListB]
+                                ) [AbstractMethodDeclListA]
+                              ) [AbstractMethodDeclListB]
+                            ) [AbstractMethodDeclListA]
+                          ) [AbstractMethodDeclListB]
+                        ) [AbstractMethodDeclListB]
+                      ) [AbstractMethodDeclListA]
+                    ) [AbstractMethodDeclListA]
+                  ) [AbstractClassMethods]
+                ) [AbstractClassMethodsOptSingle]
+              ) [AbstractClassDecl]
+            ) [ProgramOptAC]
+            ProgramOptListNone(
+            ) [ProgramOptListNone]
+          ) [ProgramOptListSome]
+        ) [ProgramOptListSome]
+      ) [ProgramOptListSome]
+    ) [ProgramOptListSome]
+  ) [ProgramOptListSome]
+  MethodDeclListNone(
+  ) [MethodDeclListNone]
+) [Program]
+INFO  20:32:40,013 - ===================================
+ERROR 20:32:40,027 - Class declaration invalid at line 4
+ERROR 20:32:40,027 - Class declaration invalid at line 6
+ERROR 20:32:40,028 - Class declaration invalid at line 8
+ERROR 20:32:40,028 - Class declaration invalid at line 10
+ERROR 20:32:40,028 - Symbol f already declared in current scope at line 17
+INFO  20:32:57,602 - Compiling source file: E:\Fakultet\Semestar 8\PP\workspace\MJCompiler\test\parserTests\testErrA.mj
+INFO  20:32:57,895 - #2 program
+INFO  20:32:57,895 - #52 test_err
+INFO  20:32:57,897 - #21 void
+INFO  20:32:57,898 - #52 main
+INFO  20:32:57,907 - #53 10
+ERROR 20:32:57,907 - Syntax error detected at line 6
+INFO  20:32:57,907 - #52 int
+INFO  20:32:57,907 - #52 x
+DEBUG 20:32:57,909 - Recovered from bad LOCAL VARIABLE DECLARATION.
+INFO  20:32:57,912 - #5 const
+ERROR 20:32:57,912 - Syntax error detected at line 9
+INFO  20:32:57,913 - #52 x
+INFO  20:32:57,913 - #53 0
+INFO  20:32:57,913 - #52 dasdas
+INFO  20:32:57,913 - #52 int
+INFO  20:32:57,913 - #52 x
+DEBUG 20:32:57,913 - Recovered from bad LOCAL VARIABLE DECLARATION.
+INFO  20:32:57,913 - #52 cont
+INFO  20:32:57,914 - #52 d
+ERROR 20:32:57,914 - Syntax error detected at line 13
+INFO  20:32:57,914 - #52 dasdsa
+INFO  20:32:57,914 - #52 x
+INFO  20:32:57,914 - #52 int
+INFO  20:32:57,914 - #52 x
+DEBUG 20:32:57,914 - Recovered from bad LOCAL VARIABLE DECLARATION.
+INFO  20:32:57,916 - #52 cont
+INFO  20:32:57,916 - #52 d
+ERROR 20:32:57,916 - Syntax error detected at line 18
+INFO  20:32:57,916 - #52 dasdsa
+INFO  20:32:57,917 - #52 int
+INFO  20:32:57,917 - #52 x
+DEBUG 20:32:57,917 - Recovered from bad LOCAL VARIABLE DECLARATION.
+INFO  20:32:57,917 - #52 still_bad
+INFO  20:32:57,917 - #52 x
+INFO  20:32:57,917 - #52 x
+ERROR 20:32:57,917 - Syntax error detected at line 22
+INFO  20:32:57,918 - #53 10
+INFO  20:32:57,918 - #53 2
+INFO  20:32:57,918 - #52 x
+INFO  20:32:57,918 - #52 d4
+DEBUG 20:32:57,918 - Recovered from bad LOCAL VARIABLE DECLARATION.
+INFO  20:32:57,919 - #52 bad
+ERROR 20:32:57,919 - Syntax error detected at line 24
+INFO  20:32:57,919 - #53 10
+INFO  20:32:57,919 - #52 d
+INFO  20:32:57,919 - #52 good
+DEBUG 20:32:57,920 - Recovered from bad LOCAL VARIABLE DECLARATION.
+INFO  20:32:57,927 - #52 ok
+INFO  20:32:57,948 - #53 5
+ERROR 20:32:57,948 - Syntax error detected at line 31
+INFO  20:32:57,948 - #52 f
+INFO  20:32:57,948 - #53 2
+INFO  20:32:57,949 - #52 good
+INFO  20:32:57,950 - #52 ok
+ERROR 20:32:57,951 - Syntax error detected at line 35
+INFO  20:32:57,987 - Program(
+  ProgName(
+   test_err
+  ) [ProgName]
+  ProgramOptListNone(
+  ) [ProgramOptListNone]
+  MethodDeclListSome(
+    MethodDecl(
+      MethodName(
+        MethodReturnNone(
+        ) [MethodReturnNone]
+       main
+      ) [MethodName]
+      FormParChainOptNone(
+      ) [FormParChainOptNone]
+      MethodVars(
+        VarDeclListSome(
+          VarDeclErr(
+          ) [VarDeclErr]
+          VarDeclListSome(
+            VarDeclValid(
+              Type(
+               int
+              ) [Type]
+              VarChainSingle(
+                VarChainElSingle(
+                 x
+                ) [VarChainElSingle]
+              ) [VarChainSingle]
+            ) [VarDeclValid]
+            VarDeclListSome(
+              VarDeclErr(
+              ) [VarDeclErr]
+              VarDeclListSome(
+                VarDeclValid(
+                  Type(
+                   int
+                  ) [Type]
+                  VarChainSingle(
+                    VarChainElSingle(
+                     x
+                    ) [VarChainElSingle]
+                  ) [VarChainSingle]
+                ) [VarDeclValid]
+                VarDeclListSome(
+                  VarDeclValid(
+                    Type(
+                     cont
+                    ) [Type]
+                    VarChainSingle(
+                      VarChainErr(
+                      ) [VarChainErr]
+                    ) [VarChainSingle]
+                  ) [VarDeclValid]
+                  VarDeclListSome(
+                    VarDeclValid(
+                      Type(
+                       int
+                      ) [Type]
+                      VarChainSingle(
+                        VarChainElSingle(
+                         x
+                        ) [VarChainElSingle]
+                      ) [VarChainSingle]
+                    ) [VarDeclValid]
+                    VarDeclListSome(
+                      VarDeclValid(
+                        Type(
+                         cont
+                        ) [Type]
+                        VarChainSingle(
+                          VarChainErr(
+                          ) [VarChainErr]
+                        ) [VarChainSingle]
+                      ) [VarDeclValid]
+                      VarDeclListSome(
+                        VarDeclValid(
+                          Type(
+                           int
+                          ) [Type]
+                          VarChainSingle(
+                            VarChainElSingle(
+                             x
+                            ) [VarChainElSingle]
+                          ) [VarChainSingle]
+                        ) [VarDeclValid]
+                        VarDeclListSome(
+                          VarDeclValid(
+                            Type(
+                             still_bad
+                            ) [Type]
+                            VarChainMulti(
+                              VarChainMulti(
+                                VarChainMulti(
+                                  VarChainSingle(
+                                    VarChainElSingle(
+                                     x
+                                    ) [VarChainElSingle]
+                                  ) [VarChainSingle]
+                                  VarChainErr(
+                                  ) [VarChainErr]
+                                ) [VarChainMulti]
+                                VarChainElSingle(
+                                 x
+                                ) [VarChainElSingle]
+                              ) [VarChainMulti]
+                              VarChainElSingle(
+                               d4
+                              ) [VarChainElSingle]
+                            ) [VarChainMulti]
+                          ) [VarDeclValid]
+                          VarDeclListSome(
+                            VarDeclValid(
+                              Type(
+                               bad
+                              ) [Type]
+                              VarChainSingle(
+                                VarChainErr(
+                                ) [VarChainErr]
+                              ) [VarChainSingle]
+                            ) [VarDeclValid]
+                            VarDeclListNone(
+                            ) [VarDeclListNone]
+                          ) [VarDeclListSome]
+                        ) [VarDeclListSome]
+                      ) [VarDeclListSome]
+                    ) [VarDeclListSome]
+                  ) [VarDeclListSome]
+                ) [VarDeclListSome]
+              ) [VarDeclListSome]
+            ) [VarDeclListSome]
+          ) [VarDeclListSome]
+        ) [VarDeclListSome]
+      ) [MethodVars]
+      StatementListSome(
+        MatchedStatement(
+          BadAssignStatement(
+            BadAssignStatementC(
+              AssignopEQ(
+              ) [AssignopEQ]
+              Expr(
+                MinusOptNone(
+                ) [MinusOptNone]
+                Term(
+                  FactorComplex(
+                    Designator(
+                      DesigStart(
+                       f
+                      ) [DesigStart]
+                      DesignatorChoiceListSome(
+                        DesignatorChoiceArr(
+                          Expr(
+                            MinusOptNone(
+                            ) [MinusOptNone]
+                            Term(
+                              FactorNum(
+                               2
+                              ) [FactorNum]
+                              FactorChainNone(
+                              ) [FactorChainNone]
+                            ) [Term]
+                            TermChainNone(
+                            ) [TermChainNone]
+                          ) [Expr]
+                        ) [DesignatorChoiceArr]
+                        DesignatorChoiceListNone(
+                        ) [DesignatorChoiceListNone]
+                      ) [DesignatorChoiceListSome]
+                    ) [Designator]
+                    ActParsParenOptNone(
+                    ) [ActParsParenOptNone]
+                  ) [FactorComplex]
+                  FactorChainNone(
+                  ) [FactorChainNone]
+                ) [Term]
+                TermChainNone(
+                ) [TermChainNone]
+              ) [Expr]
+            ) [BadAssignStatementC]
+          ) [BadAssignStatement]
+        ) [MatchedStatement]
+        StatementListSome(
+          MatchedStatement(
+            BadStatement(
+            ) [BadStatement]
+          ) [MatchedStatement]
+          StatementListNone(
+          ) [StatementListNone]
+        ) [StatementListSome]
+      ) [StatementListSome]
+    ) [MethodDecl]
+    MethodDeclListNone(
+    ) [MethodDeclListNone]
+  ) [MethodDeclListSome]
+) [Program]
+INFO  20:32:57,989 - ===================================
+ERROR 20:32:58,006 - Symbol x already declared in current scope at line 11
+ERROR 20:32:58,007 - Type used but not declared cont at line 13
+ERROR 20:32:58,007 - Symbol x already declared in current scope at line 16
+ERROR 20:32:58,007 - Type used but not declared cont at line 18
+ERROR 20:32:58,007 - Symbol x already declared in current scope at line 20
+ERROR 20:32:58,007 - Type used but not declared still_bad at line 22
+ERROR 20:32:58,009 - Symbol x already declared in current scope at line 22
+ERROR 20:32:58,009 - Symbol x already declared in current scope at line 22
+ERROR 20:32:58,009 - Type used but not declared bad at line 24
+ERROR 20:32:58,011 - Symbol f not found in current scope at line 31
+ERROR 20:32:58,011 - Symbol f not found in current scope at line 31
+INFO  20:32:58,012 - ===================================
+ERROR 20:32:58,012 - Compilation failed.
+ERROR 20:32:58,012 - Parsing failed.
+ERROR 20:32:58,012 - Semantics errors encouterd in code.
+INFO  20:33:09,777 - Compiling source file: E:\Fakultet\Semestar 8\PP\workspace\MJCompiler\test\parserTests\testErrB.mj
+INFO  20:33:10,060 - #2 program
+INFO  20:33:10,061 - #52 test_err
+INFO  20:33:10,064 - #21 void
+INFO  20:33:10,064 - #52 main
+INFO  20:33:10,073 - #52 int
+INFO  20:33:10,074 - #52 valid
+INFO  20:33:10,076 - #52 invalid
+ERROR 20:33:10,076 - Syntax error detected at line 4
+INFO  20:33:10,077 - #21 void
+DEBUG 20:33:10,081 - Recovered from BAD FORMAL PARAMETER DECLARATION.
+INFO  20:33:10,091 - #52 main
+INFO  20:33:10,091 - #52 invalid
+ERROR 20:33:10,092 - Syntax error detected at line 5
+INFO  20:33:10,092 - #53 10
+INFO  20:33:10,092 - #52 x
+INFO  20:33:10,092 - #21 void
+DEBUG 20:33:10,092 - Recovered from BAD FORMAL PARAMETER DECLARATION.
+INFO  20:33:10,093 - #52 main
+INFO  20:33:10,093 - #52 int
+INFO  20:33:10,093 - #52 valid
+INFO  20:33:10,093 - #52 x
+ERROR 20:33:10,093 - Syntax error detected at line 6
+INFO  20:33:10,093 - #53 5
+INFO  20:33:10,093 - #52 x
+INFO  20:33:10,093 - #53 3
+INFO  20:33:10,094 - #21 void
+DEBUG 20:33:10,094 - Recovered from BAD FORMAL PARAMETER DECLARATION.
+INFO  20:33:10,094 - #52 main
+ERROR 20:33:10,094 - Syntax error detected at line 7
+INFO  20:33:10,094 - #21 void
+DEBUG 20:33:10,095 - Recovered from BAD FORMAL PARAMETER DECLARATION.
+INFO  20:33:10,095 - #52 test_for
+INFO  20:33:10,096 - #23 for
+INFO  20:33:10,097 - #52 i
+INFO  20:33:10,100 - #53 0
+INFO  20:33:10,121 - #52 i
+INFO  20:33:10,123 - #53 20
+ERROR 20:33:10,127 - Syntax error detected at line 11
+INFO  20:33:10,127 - #52 x
+INFO  20:33:10,127 - #53 8
+INFO  20:33:10,127 - #52 i
+DEBUG 20:33:10,127 - Recovered from bad CONDITION IN FOR STATEMENT.
+INFO  20:33:10,134 - #23 for
+INFO  20:33:10,135 - #52 i
+INFO  20:33:10,135 - #53 0
+ERROR 20:33:10,135 - Syntax error detected at line 12
+INFO  20:33:10,135 - #52 i
+DEBUG 20:33:10,135 - Recovered from bad CONDITION IN FOR STATEMENT.
+INFO  20:33:10,136 - #23 for
+INFO  20:33:10,136 - #52 i
+INFO  20:33:10,136 - #53 0
+INFO  20:33:10,136 - #21 void
+ERROR 20:33:10,136 - Syntax error detected at line 13
+INFO  20:33:10,136 - #23 for
+DEBUG 20:33:10,137 - Recovered from bad CONDITION IN FOR STATEMENT.
+INFO  20:33:10,138 - #52 f
+INFO  20:33:10,143 - #52 b
+INFO  20:33:10,152 - #53 25
+INFO  20:33:10,155 - #52 i
+INFO  20:33:10,183 - Program(
+  ProgName(
+   test_err
+  ) [ProgName]
+  ProgramOptListNone(
+  ) [ProgramOptListNone]
+  MethodDeclListSome(
+    MethodDecl(
+      MethodName(
+        MethodReturnNone(
+        ) [MethodReturnNone]
+       main
+      ) [MethodName]
+      FormParChainOptSome(
+        FormParChainMulti(
+          FormParSingle(
+            Type(
+             int
+            ) [Type]
+           valid
+          ) [FormParSingle]
+          FormParChainSingle(
+            FormParErr(
+            ) [FormParErr]
+          ) [FormParChainSingle]
+        ) [FormParChainMulti]
+      ) [FormParChainOptSome]
+      MethodVars(
+        VarDeclListNone(
+        ) [VarDeclListNone]
+      ) [MethodVars]
+      StatementListNone(
+      ) [StatementListNone]
+    ) [MethodDecl]
+    MethodDeclListSome(
+      MethodDecl(
+        MethodName(
+          MethodReturnNone(
+          ) [MethodReturnNone]
+         main
+        ) [MethodName]
+        FormParChainOptSome(
+          FormParChainSingle(
+            FormParErr(
+            ) [FormParErr]
+          ) [FormParChainSingle]
+        ) [FormParChainOptSome]
+        MethodVars(
+          VarDeclListNone(
+          ) [VarDeclListNone]
+        ) [MethodVars]
+        StatementListNone(
+        ) [StatementListNone]
+      ) [MethodDecl]
+      MethodDeclListSome(
+        MethodDecl(
+          MethodName(
+            MethodReturnNone(
+            ) [MethodReturnNone]
+           main
+          ) [MethodName]
+          FormParChainOptSome(
+            FormParChainMulti(
+              FormParSingle(
+                Type(
+                 int
+                ) [Type]
+               valid
+              ) [FormParSingle]
+              FormParChainSingle(
+                FormParErr(
+                ) [FormParErr]
+              ) [FormParChainSingle]
+            ) [FormParChainMulti]
+          ) [FormParChainOptSome]
+          MethodVars(
+            VarDeclListNone(
+            ) [VarDeclListNone]
+          ) [MethodVars]
+          StatementListNone(
+          ) [StatementListNone]
+        ) [MethodDecl]
+        MethodDeclListSome(
+          MethodDecl(
+            MethodName(
+              MethodReturnNone(
+              ) [MethodReturnNone]
+             main
+            ) [MethodName]
+            FormParChainOptSome(
+              FormParChainSingle(
+                FormParErr(
+                ) [FormParErr]
+              ) [FormParChainSingle]
+            ) [FormParChainOptSome]
+            MethodVars(
+              VarDeclListNone(
+              ) [VarDeclListNone]
+            ) [MethodVars]
+            StatementListNone(
+            ) [StatementListNone]
+          ) [MethodDecl]
+          MethodDeclListSome(
+            MethodDecl(
+              MethodName(
+                MethodReturnNone(
+                ) [MethodReturnNone]
+               test_for
+              ) [MethodName]
+              FormParChainOptNone(
+              ) [FormParChainOptNone]
+              MethodVars(
+                VarDeclListNone(
+                ) [VarDeclListNone]
+              ) [MethodVars]
+              StatementListSome(
+                MatchedStatement(
+                  MatchedFor(
+                    ForInit(
+                      DesignatorStatementOptSome(
+                        DesignatorStatement(
+                          Designator(
+                            DesigStart(
+                             i
+                            ) [DesigStart]
+                            DesignatorChoiceListNone(
+                            ) [DesignatorChoiceListNone]
+                          ) [Designator]
+                          DesignatorElemAssign(
+                            AssignopEQ(
+                            ) [AssignopEQ]
+                            Expr(
+                              MinusOptNone(
+                              ) [MinusOptNone]
+                              Term(
+                                FactorNum(
+                                 0
+                                ) [FactorNum]
+                                FactorChainNone(
+                                ) [FactorChainNone]
+                              ) [Term]
+                              TermChainNone(
+                              ) [TermChainNone]
+                            ) [Expr]
+                          ) [DesignatorElemAssign]
+                        ) [DesignatorStatement]
+                      ) [DesignatorStatementOptSome]
+                    ) [ForInit]
+                    ForCond(
+                      ConditionOptForErr(
+                      ) [ConditionOptForErr]
+                    ) [ForCond]
+                    ForPost(
+                      DesignatorStatementOptSome(
+                        DesignatorStatement(
+                          Designator(
+                            DesigStart(
+                             i
+                            ) [DesigStart]
+                            DesignatorChoiceListNone(
+                            ) [DesignatorChoiceListNone]
+                          ) [Designator]
+                          DesignatorElemPlus(
+                          ) [DesignatorElemPlus]
+                        ) [DesignatorStatement]
+                      ) [DesignatorStatementOptSome]
+                    ) [ForPost]
+                    BlockStatement(
+                      StatementListSome(
+                        MatchedStatement(
+                          MatchedFor(
+                            ForInit(
+                              DesignatorStatementOptSome(
+                                DesignatorStatement(
+                                  Designator(
+                                    DesigStart(
+                                     i
+                                    ) [DesigStart]
+                                    DesignatorChoiceListNone(
+                                    ) [DesignatorChoiceListNone]
+                                  ) [Designator]
+                                  DesignatorElemAssign(
+                                    AssignopEQ(
+                                    ) [AssignopEQ]
+                                    Expr(
+                                      MinusOptNone(
+                                      ) [MinusOptNone]
+                                      Term(
+                                        FactorNum(
+                                         0
+                                        ) [FactorNum]
+                                        FactorChainNone(
+                                        ) [FactorChainNone]
+                                      ) [Term]
+                                      TermChainNone(
+                                      ) [TermChainNone]
+                                    ) [Expr]
+                                  ) [DesignatorElemAssign]
+                                ) [DesignatorStatement]
+                              ) [DesignatorStatementOptSome]
+                            ) [ForInit]
+                            ForCond(
+                              ConditionOptForErr(
+                              ) [ConditionOptForErr]
+                            ) [ForCond]
+                            ForPost(
+                              DesignatorStatementOptSome(
+                                DesignatorStatement(
+                                  Designator(
+                                    DesigStart(
+                                     i
+                                    ) [DesigStart]
+                                    DesignatorChoiceListNone(
+                                    ) [DesignatorChoiceListNone]
+                                  ) [Designator]
+                                  DesignatorElemPlus(
+                                  ) [DesignatorElemPlus]
+                                ) [DesignatorStatement]
+                              ) [DesignatorStatementOptSome]
+                            ) [ForPost]
+                            BlockStatement(
+                              StatementListSome(
+                                MatchedStatement(
+                                  MatchedFor(
+                                    ForInit(
+                                      DesignatorStatementOptSome(
+                                        DesignatorStatement(
+                                          Designator(
+                                            DesigStart(
+                                             i
+                                            ) [DesigStart]
+                                            DesignatorChoiceListNone(
+                                            ) [DesignatorChoiceListNone]
+                                          ) [Designator]
+                                          DesignatorElemAssign(
+                                            AssignopEQ(
+                                            ) [AssignopEQ]
+                                            Expr(
+                                              MinusOptNone(
+                                              ) [MinusOptNone]
+                                              Term(
+                                                FactorNum(
+                                                 0
+                                                ) [FactorNum]
+                                                FactorChainNone(
+                                                ) [FactorChainNone]
+                                              ) [Term]
+                                              TermChainNone(
+                                              ) [TermChainNone]
+                                            ) [Expr]
+                                          ) [DesignatorElemAssign]
+                                        ) [DesignatorStatement]
+                                      ) [DesignatorStatementOptSome]
+                                    ) [ForInit]
+                                    ForCond(
+                                      ConditionOptForErr(
+                                      ) [ConditionOptForErr]
+                                    ) [ForCond]
+                                    ForPost(
+                                      DesignatorStatementOptNone(
+                                      ) [DesignatorStatementOptNone]
+                                    ) [ForPost]
+                                    BlockStatement(
+                                      StatementListSome(
+                                        MatchedStatement(
+                                          MatchedFor(
+                                            ForInit(
+                                              DesignatorStatementOptNone(
+                                              ) [DesignatorStatementOptNone]
+                                            ) [ForInit]
+                                            ForCond(
+                                              ConditionOptForSome(
+                                                ConditionSingle(
+                                                  CondTermSingle(
+                                                    CondFactSingle(
+                                                      Expr(
+                                                        MinusOptNone(
+                                                        ) [MinusOptNone]
+                                                        Term(
+                                                          FactorComplex(
+                                                            Designator(
+                                                              DesigStart(
+                                                               f
+                                                              ) [DesigStart]
+                                                              DesignatorChoiceListNone(
+                                                              ) [DesignatorChoiceListNone]
+                                                            ) [Designator]
+                                                            ActParsParenOptSome(
+                                                              FunInvoke(
+                                                                ActParsOptNone(
+                                                                ) [ActParsOptNone]
+                                                              ) [FunInvoke]
+                                                            ) [ActParsParenOptSome]
+                                                          ) [FactorComplex]
+                                                          FactorChainNone(
+                                                          ) [FactorChainNone]
+                                                        ) [Term]
+                                                        TermChainSome(
+                                                          TermChainEl(
+                                                            AddopL(
+                                                              AddopLeftPlus(
+                                                              ) [AddopLeftPlus]
+                                                            ) [AddopL]
+                                                            Term(
+                                                              FactorComplex(
+                                                                Designator(
+                                                                  DesigStart(
+                                                                   b
+                                                                  ) [DesigStart]
+                                                                  DesignatorChoiceListSome(
+                                                                    DesignatorChoiceArr(
+                                                                      Expr(
+                                                                        MinusOptNone(
+                                                                        ) [MinusOptNone]
+                                                                        Term(
+                                                                          FactorNum(
+                                                                           25
+                                                                          ) [FactorNum]
+                                                                          FactorChainNone(
+                                                                          ) [FactorChainNone]
+                                                                        ) [Term]
+                                                                        TermChainNone(
+                                                                        ) [TermChainNone]
+                                                                      ) [Expr]
+                                                                    ) [DesignatorChoiceArr]
+                                                                    DesignatorChoiceListNone(
+                                                                    ) [DesignatorChoiceListNone]
+                                                                  ) [DesignatorChoiceListSome]
+                                                                ) [Designator]
+                                                                ActParsParenOptNone(
+                                                                ) [ActParsParenOptNone]
+                                                              ) [FactorComplex]
+                                                              FactorChainNone(
+                                                              ) [FactorChainNone]
+                                                            ) [Term]
+                                                          ) [TermChainEl]
+                                                          TermChainNone(
+                                                          ) [TermChainNone]
+                                                        ) [TermChainSome]
+                                                      ) [Expr]
+                                                    ) [CondFactSingle]
+                                                  ) [CondTermSingle]
+                                                ) [ConditionSingle]
+                                              ) [ConditionOptForSome]
+                                            ) [ForCond]
+                                            ForPost(
+                                              DesignatorStatementOptSome(
+                                                DesignatorStatement(
+                                                  Designator(
+                                                    DesigStart(
+                                                     i
+                                                    ) [DesigStart]
+                                                    DesignatorChoiceListNone(
+                                                    ) [DesignatorChoiceListNone]
+                                                  ) [Designator]
+                                                  DesignatorElemPlus(
+                                                  ) [DesignatorElemPlus]
+                                                ) [DesignatorStatement]
+                                              ) [DesignatorStatementOptSome]
+                                            ) [ForPost]
+                                            BlockStatement(
+                                              StatementListNone(
+                                              ) [StatementListNone]
+                                            ) [BlockStatement]
+                                          ) [MatchedFor]
+                                        ) [MatchedStatement]
+                                        StatementListNone(
+                                        ) [StatementListNone]
+                                      ) [StatementListSome]
+                                    ) [BlockStatement]
+                                  ) [MatchedFor]
+                                ) [MatchedStatement]
+                                StatementListNone(
+                                ) [StatementListNone]
+                              ) [StatementListSome]
+                            ) [BlockStatement]
+                          ) [MatchedFor]
+                        ) [MatchedStatement]
+                        StatementListNone(
+                        ) [StatementListNone]
+                      ) [StatementListSome]
+                    ) [BlockStatement]
+                  ) [MatchedFor]
+                ) [MatchedStatement]
+                StatementListNone(
+                ) [StatementListNone]
+              ) [StatementListSome]
+            ) [MethodDecl]
+            MethodDeclListNone(
+            ) [MethodDeclListNone]
+          ) [MethodDeclListSome]
+        ) [MethodDeclListSome]
+      ) [MethodDeclListSome]
+    ) [MethodDeclListSome]
+  ) [MethodDeclListSome]
+) [Program]
+INFO  20:33:10,189 - ===================================
+ERROR 20:33:10,204 - Symbol main already declared in current scope at line 5
+INFO  20:50:53,001 - Compiling source file: E:\Fakultet\Semestar 8\PP\workspace\MJCompiler\test\parserTests\testErrB.mj
+INFO  20:50:53,299 - #2 program
+INFO  20:50:53,299 - #52 test_err
+INFO  20:50:53,302 - #21 void
+INFO  20:50:53,302 - #52 main
+INFO  20:50:53,305 - #52 int
+INFO  20:50:53,311 - #52 valid
+INFO  20:50:53,314 - #52 invalid
+ERROR 20:50:53,314 - Syntax error detected at line 4
+INFO  20:50:53,314 - #21 void
+DEBUG 20:50:53,316 - Recovered from BAD FORMAL PARAMETER DECLARATION.
+INFO  20:50:53,325 - #52 main
+INFO  20:50:53,325 - #52 invalid
+ERROR 20:50:53,325 - Syntax error detected at line 5
+INFO  20:50:53,325 - #53 10
+INFO  20:50:53,326 - #52 x
+INFO  20:50:53,326 - #21 void
+DEBUG 20:50:53,326 - Recovered from BAD FORMAL PARAMETER DECLARATION.
+INFO  20:50:53,326 - #52 main
+INFO  20:50:53,326 - #52 int
+INFO  20:50:53,326 - #52 valid
+INFO  20:50:53,327 - #52 x
+ERROR 20:50:53,327 - Syntax error detected at line 6
+INFO  20:50:53,327 - #53 5
+INFO  20:50:53,327 - #52 x
+INFO  20:50:53,327 - #53 3
+INFO  20:50:53,327 - #21 void
+DEBUG 20:50:53,328 - Recovered from BAD FORMAL PARAMETER DECLARATION.
+INFO  20:50:53,328 - #52 main
+ERROR 20:50:53,328 - Syntax error detected at line 7
+INFO  20:50:53,328 - #21 void
+DEBUG 20:50:53,328 - Recovered from BAD FORMAL PARAMETER DECLARATION.
+INFO  20:50:53,329 - #52 test_for
+INFO  20:50:53,330 - #23 for
+INFO  20:50:53,331 - #52 i
+INFO  20:50:53,336 - #53 0
+INFO  20:50:53,360 - #52 i
+INFO  20:50:53,362 - #53 20
+ERROR 20:50:53,365 - Syntax error detected at line 11
+INFO  20:50:53,366 - #52 x
+INFO  20:50:53,366 - #53 8
+INFO  20:50:53,367 - #52 i
+DEBUG 20:50:53,367 - Recovered from bad CONDITION IN FOR STATEMENT.
+INFO  20:50:53,374 - #23 for
+INFO  20:50:53,375 - #52 i
+INFO  20:50:53,375 - #53 0
+ERROR 20:50:53,375 - Syntax error detected at line 12
+INFO  20:50:53,375 - #52 i
+DEBUG 20:50:53,376 - Recovered from bad CONDITION IN FOR STATEMENT.
+INFO  20:50:53,376 - #23 for
+INFO  20:50:53,376 - #52 i
+INFO  20:50:53,376 - #53 0
+INFO  20:50:53,376 - #21 void
+ERROR 20:50:53,377 - Syntax error detected at line 13
+INFO  20:50:53,377 - #23 for
+DEBUG 20:50:53,377 - Recovered from bad CONDITION IN FOR STATEMENT.
+INFO  20:50:53,379 - #52 f
+INFO  20:50:53,382 - #52 b
+INFO  20:50:53,392 - #53 25
+INFO  20:50:53,396 - #52 i
+INFO  20:50:53,424 - Program(
+  ProgName(
+   test_err
+  ) [ProgName]
+  ProgramOptListNone(
+  ) [ProgramOptListNone]
+  MethodDeclListSome(
+    MethodDecl(
+      MethodName(
+        MethodReturnNone(
+        ) [MethodReturnNone]
+       main
+      ) [MethodName]
+      FormParChainOptSome(
+        FormParChainMulti(
+          FormParSingle(
+            Type(
+             int
+            ) [Type]
+           valid
+          ) [FormParSingle]
+          FormParChainSingle(
+            FormParErr(
+            ) [FormParErr]
+          ) [FormParChainSingle]
+        ) [FormParChainMulti]
+      ) [FormParChainOptSome]
+      MethodVars(
+        VarDeclListNone(
+        ) [VarDeclListNone]
+      ) [MethodVars]
+      StatementListNone(
+      ) [StatementListNone]
+    ) [MethodDecl]
+    MethodDeclListSome(
+      MethodDecl(
+        MethodName(
+          MethodReturnNone(
+          ) [MethodReturnNone]
+         main
+        ) [MethodName]
+        FormParChainOptSome(
+          FormParChainSingle(
+            FormParErr(
+            ) [FormParErr]
+          ) [FormParChainSingle]
+        ) [FormParChainOptSome]
+        MethodVars(
+          VarDeclListNone(
+          ) [VarDeclListNone]
+        ) [MethodVars]
+        StatementListNone(
+        ) [StatementListNone]
+      ) [MethodDecl]
+      MethodDeclListSome(
+        MethodDecl(
+          MethodName(
+            MethodReturnNone(
+            ) [MethodReturnNone]
+           main
+          ) [MethodName]
+          FormParChainOptSome(
+            FormParChainMulti(
+              FormParSingle(
+                Type(
+                 int
+                ) [Type]
+               valid
+              ) [FormParSingle]
+              FormParChainSingle(
+                FormParErr(
+                ) [FormParErr]
+              ) [FormParChainSingle]
+            ) [FormParChainMulti]
+          ) [FormParChainOptSome]
+          MethodVars(
+            VarDeclListNone(
+            ) [VarDeclListNone]
+          ) [MethodVars]
+          StatementListNone(
+          ) [StatementListNone]
+        ) [MethodDecl]
+        MethodDeclListSome(
+          MethodDecl(
+            MethodName(
+              MethodReturnNone(
+              ) [MethodReturnNone]
+             main
+            ) [MethodName]
+            FormParChainOptSome(
+              FormParChainSingle(
+                FormParErr(
+                ) [FormParErr]
+              ) [FormParChainSingle]
+            ) [FormParChainOptSome]
+            MethodVars(
+              VarDeclListNone(
+              ) [VarDeclListNone]
+            ) [MethodVars]
+            StatementListNone(
+            ) [StatementListNone]
+          ) [MethodDecl]
+          MethodDeclListSome(
+            MethodDecl(
+              MethodName(
+                MethodReturnNone(
+                ) [MethodReturnNone]
+               test_for
+              ) [MethodName]
+              FormParChainOptNone(
+              ) [FormParChainOptNone]
+              MethodVars(
+                VarDeclListNone(
+                ) [VarDeclListNone]
+              ) [MethodVars]
+              StatementListSome(
+                MatchedStatement(
+                  MatchedFor(
+                    ForInit(
+                      DesignatorStatementOptSome(
+                        DesignatorStatement(
+                          Designator(
+                            DesigStart(
+                             i
+                            ) [DesigStart]
+                            DesignatorChoiceListNone(
+                            ) [DesignatorChoiceListNone]
+                          ) [Designator]
+                          DesignatorElemAssign(
+                            AssignopEQ(
+                            ) [AssignopEQ]
+                            Expr(
+                              MinusOptNone(
+                              ) [MinusOptNone]
+                              Term(
+                                FactorNum(
+                                 0
+                                ) [FactorNum]
+                                FactorChainNone(
+                                ) [FactorChainNone]
+                              ) [Term]
+                              TermChainNone(
+                              ) [TermChainNone]
+                            ) [Expr]
+                          ) [DesignatorElemAssign]
+                        ) [DesignatorStatement]
+                      ) [DesignatorStatementOptSome]
+                    ) [ForInit]
+                    ForCond(
+                      ConditionOptForErr(
+                      ) [ConditionOptForErr]
+                    ) [ForCond]
+                    ForPost(
+                      DesignatorStatementOptSome(
+                        DesignatorStatement(
+                          Designator(
+                            DesigStart(
+                             i
+                            ) [DesigStart]
+                            DesignatorChoiceListNone(
+                            ) [DesignatorChoiceListNone]
+                          ) [Designator]
+                          DesignatorElemPlus(
+                          ) [DesignatorElemPlus]
+                        ) [DesignatorStatement]
+                      ) [DesignatorStatementOptSome]
+                    ) [ForPost]
+                    BlockStatement(
+                      StatementListSome(
+                        MatchedStatement(
+                          MatchedFor(
+                            ForInit(
+                              DesignatorStatementOptSome(
+                                DesignatorStatement(
+                                  Designator(
+                                    DesigStart(
+                                     i
+                                    ) [DesigStart]
+                                    DesignatorChoiceListNone(
+                                    ) [DesignatorChoiceListNone]
+                                  ) [Designator]
+                                  DesignatorElemAssign(
+                                    AssignopEQ(
+                                    ) [AssignopEQ]
+                                    Expr(
+                                      MinusOptNone(
+                                      ) [MinusOptNone]
+                                      Term(
+                                        FactorNum(
+                                         0
+                                        ) [FactorNum]
+                                        FactorChainNone(
+                                        ) [FactorChainNone]
+                                      ) [Term]
+                                      TermChainNone(
+                                      ) [TermChainNone]
+                                    ) [Expr]
+                                  ) [DesignatorElemAssign]
+                                ) [DesignatorStatement]
+                              ) [DesignatorStatementOptSome]
+                            ) [ForInit]
+                            ForCond(
+                              ConditionOptForErr(
+                              ) [ConditionOptForErr]
+                            ) [ForCond]
+                            ForPost(
+                              DesignatorStatementOptSome(
+                                DesignatorStatement(
+                                  Designator(
+                                    DesigStart(
+                                     i
+                                    ) [DesigStart]
+                                    DesignatorChoiceListNone(
+                                    ) [DesignatorChoiceListNone]
+                                  ) [Designator]
+                                  DesignatorElemPlus(
+                                  ) [DesignatorElemPlus]
+                                ) [DesignatorStatement]
+                              ) [DesignatorStatementOptSome]
+                            ) [ForPost]
+                            BlockStatement(
+                              StatementListSome(
+                                MatchedStatement(
+                                  MatchedFor(
+                                    ForInit(
+                                      DesignatorStatementOptSome(
+                                        DesignatorStatement(
+                                          Designator(
+                                            DesigStart(
+                                             i
+                                            ) [DesigStart]
+                                            DesignatorChoiceListNone(
+                                            ) [DesignatorChoiceListNone]
+                                          ) [Designator]
+                                          DesignatorElemAssign(
+                                            AssignopEQ(
+                                            ) [AssignopEQ]
+                                            Expr(
+                                              MinusOptNone(
+                                              ) [MinusOptNone]
+                                              Term(
+                                                FactorNum(
+                                                 0
+                                                ) [FactorNum]
+                                                FactorChainNone(
+                                                ) [FactorChainNone]
+                                              ) [Term]
+                                              TermChainNone(
+                                              ) [TermChainNone]
+                                            ) [Expr]
+                                          ) [DesignatorElemAssign]
+                                        ) [DesignatorStatement]
+                                      ) [DesignatorStatementOptSome]
+                                    ) [ForInit]
+                                    ForCond(
+                                      ConditionOptForErr(
+                                      ) [ConditionOptForErr]
+                                    ) [ForCond]
+                                    ForPost(
+                                      DesignatorStatementOptNone(
+                                      ) [DesignatorStatementOptNone]
+                                    ) [ForPost]
+                                    BlockStatement(
+                                      StatementListSome(
+                                        MatchedStatement(
+                                          MatchedFor(
+                                            ForInit(
+                                              DesignatorStatementOptNone(
+                                              ) [DesignatorStatementOptNone]
+                                            ) [ForInit]
+                                            ForCond(
+                                              ConditionOptForSome(
+                                                ConditionSingle(
+                                                  CondTermSingle(
+                                                    CondFactSingle(
+                                                      Expr(
+                                                        MinusOptNone(
+                                                        ) [MinusOptNone]
+                                                        Term(
+                                                          FactorComplex(
+                                                            Designator(
+                                                              DesigStart(
+                                                               f
+                                                              ) [DesigStart]
+                                                              DesignatorChoiceListNone(
+                                                              ) [DesignatorChoiceListNone]
+                                                            ) [Designator]
+                                                            ActParsParenOptSome(
+                                                              FunInvoke(
+                                                                ActParsOptNone(
+                                                                ) [ActParsOptNone]
+                                                              ) [FunInvoke]
+                                                            ) [ActParsParenOptSome]
+                                                          ) [FactorComplex]
+                                                          FactorChainNone(
+                                                          ) [FactorChainNone]
+                                                        ) [Term]
+                                                        TermChainSome(
+                                                          TermChainEl(
+                                                            AddopL(
+                                                              AddopLeftPlus(
+                                                              ) [AddopLeftPlus]
+                                                            ) [AddopL]
+                                                            Term(
+                                                              FactorComplex(
+                                                                Designator(
+                                                                  DesigStart(
+                                                                   b
+                                                                  ) [DesigStart]
+                                                                  DesignatorChoiceListSome(
+                                                                    DesignatorChoiceArr(
+                                                                      Expr(
+                                                                        MinusOptNone(
+                                                                        ) [MinusOptNone]
+                                                                        Term(
+                                                                          FactorNum(
+                                                                           25
+                                                                          ) [FactorNum]
+                                                                          FactorChainNone(
+                                                                          ) [FactorChainNone]
+                                                                        ) [Term]
+                                                                        TermChainNone(
+                                                                        ) [TermChainNone]
+                                                                      ) [Expr]
+                                                                    ) [DesignatorChoiceArr]
+                                                                    DesignatorChoiceListNone(
+                                                                    ) [DesignatorChoiceListNone]
+                                                                  ) [DesignatorChoiceListSome]
+                                                                ) [Designator]
+                                                                ActParsParenOptNone(
+                                                                ) [ActParsParenOptNone]
+                                                              ) [FactorComplex]
+                                                              FactorChainNone(
+                                                              ) [FactorChainNone]
+                                                            ) [Term]
+                                                          ) [TermChainEl]
+                                                          TermChainNone(
+                                                          ) [TermChainNone]
+                                                        ) [TermChainSome]
+                                                      ) [Expr]
+                                                    ) [CondFactSingle]
+                                                  ) [CondTermSingle]
+                                                ) [ConditionSingle]
+                                              ) [ConditionOptForSome]
+                                            ) [ForCond]
+                                            ForPost(
+                                              DesignatorStatementOptSome(
+                                                DesignatorStatement(
+                                                  Designator(
+                                                    DesigStart(
+                                                     i
+                                                    ) [DesigStart]
+                                                    DesignatorChoiceListNone(
+                                                    ) [DesignatorChoiceListNone]
+                                                  ) [Designator]
+                                                  DesignatorElemPlus(
+                                                  ) [DesignatorElemPlus]
+                                                ) [DesignatorStatement]
+                                              ) [DesignatorStatementOptSome]
+                                            ) [ForPost]
+                                            BlockStatement(
+                                              StatementListNone(
+                                              ) [StatementListNone]
+                                            ) [BlockStatement]
+                                          ) [MatchedFor]
+                                        ) [MatchedStatement]
+                                        StatementListNone(
+                                        ) [StatementListNone]
+                                      ) [StatementListSome]
+                                    ) [BlockStatement]
+                                  ) [MatchedFor]
+                                ) [MatchedStatement]
+                                StatementListNone(
+                                ) [StatementListNone]
+                              ) [StatementListSome]
+                            ) [BlockStatement]
+                          ) [MatchedFor]
+                        ) [MatchedStatement]
+                        StatementListNone(
+                        ) [StatementListNone]
+                      ) [StatementListSome]
+                    ) [BlockStatement]
+                  ) [MatchedFor]
+                ) [MatchedStatement]
+                StatementListNone(
+                ) [StatementListNone]
+              ) [StatementListSome]
+            ) [MethodDecl]
+            MethodDeclListNone(
+            ) [MethodDeclListNone]
+          ) [MethodDeclListSome]
+        ) [MethodDeclListSome]
+      ) [MethodDeclListSome]
+    ) [MethodDeclListSome]
+  ) [MethodDeclListSome]
+) [Program]
+INFO  20:50:53,430 - ===================================
+ERROR 20:50:53,447 - Symbol main already declared in current scope at line 5
+INFO  20:51:10,465 - Compiling source file: E:\Fakultet\Semestar 8\PP\workspace\MJCompiler\test\parserTests\testErrC.mj
+INFO  20:51:11,014 - #2 program
+INFO  20:51:11,015 - #52 test_err
+INFO  20:51:11,015 - #13 class
+INFO  20:51:11,017 - #52 X
+ERROR 20:51:11,017 - Syntax error detected at line 4
+INFO  20:51:11,024 - #53 10
+INFO  20:51:11,026 - #13 class
+INFO  20:51:11,027 - #52 X
+DEBUG 20:51:11,028 - Recovered from bad CLASS NAMING.
+ERROR 20:51:11,057 - Syntax error detected at line 6
+INFO  20:51:11,059 - #53 5
+INFO  20:51:11,060 - #14 extends
+INFO  20:51:11,060 - #52 Object
+INFO  20:51:11,060 - #13 class
+INFO  20:51:11,060 - #52 X
+DEBUG 20:51:11,061 - Recovered from bad CLASS NAMING.
+ERROR 20:51:11,061 - Syntax error detected at line 8
+INFO  20:51:11,061 - #53 10
+INFO  20:51:11,061 - #14 extends
+INFO  20:51:11,061 - #53 2
+INFO  20:51:11,062 - #13 class
+INFO  20:51:11,062 - #52 X
+DEBUG 20:51:11,062 - Recovered from bad CLASS NAMING.
+INFO  20:51:11,062 - #14 extends
+INFO  20:51:11,062 - #53 10
+ERROR 20:51:11,063 - Syntax error detected at line 10
+INFO  20:51:11,063 - #18 abstract
+INFO  20:51:11,063 - #13 class
+DEBUG 20:51:11,063 - Recovered from bad CLASS NAMING.
+INFO  20:51:11,063 - #52 Y
+INFO  20:51:11,065 - #15 public
+INFO  20:51:11,066 - #18 abstract
+INFO  20:51:11,069 - #21 void
+ERROR 20:51:11,069 - Syntax error detected at line 15
+INFO  20:51:11,069 - #53 10
+INFO  20:51:11,070 - #52 bad_func
+INFO  20:51:11,070 - #15 public
+INFO  20:51:11,070 - #18 abstract
+INFO  20:51:11,070 - #21 void
+DEBUG 20:51:11,071 - Recovered from bad ABSTRACT METHOD DECLARATION.
+INFO  20:51:11,072 - #52 f
+INFO  20:51:11,076 - #15 public
+INFO  20:51:11,078 - #21 void
+INFO  20:51:11,078 - #52 f
+INFO  20:51:11,086 - #15 public
+INFO  20:51:11,101 - #21 void
+INFO  20:51:11,101 - #52 f
+INFO  20:51:11,101 - #18 abstract
+INFO  20:51:11,101 - #21 void
+ERROR 20:51:11,102 - Syntax error detected at line 19
+INFO  20:51:11,102 - #52 bad
+INFO  20:51:11,102 - #15 public
+INFO  20:51:11,102 - #21 void
+INFO  20:51:11,105 - #52 f
+DEBUG 20:51:11,105 - Recovered from bad ABSTRACT METHOD DECLARATION.
+INFO  20:51:11,105 - #15 public
+INFO  20:51:11,105 - #18 abstract
+INFO  20:51:11,106 - #52 f
+ERROR 20:51:11,106 - Syntax error detected at line 21
+INFO  20:51:11,106 - #53 5
+INFO  20:51:11,106 - #52 d
+INFO  20:51:11,106 - #15 public
+INFO  20:51:11,106 - #21 void
+INFO  20:51:11,107 - #52 f
+DEBUG 20:51:11,107 - Recovered from bad ABSTRACT METHOD DECLARATION.
+INFO  20:51:11,140 - Program(
+  ProgName(
+   test_err
+  ) [ProgName]
+  ProgramOptListSome(
+    ProgramOptC(
+      ClassDecl(
+        ClassNamingErr(
+        ) [ClassNamingErr]
+        ClassVarDeclListNone(
+        ) [ClassVarDeclListNone]
+        ClasMethodsOptNone(
+        ) [ClasMethodsOptNone]
+      ) [ClassDecl]
+    ) [ProgramOptC]
+    ProgramOptListSome(
+      ProgramOptC(
+        ClassDecl(
+          ClassNamingErr(
+          ) [ClassNamingErr]
+          ClassVarDeclListNone(
+          ) [ClassVarDeclListNone]
+          ClasMethodsOptNone(
+          ) [ClasMethodsOptNone]
+        ) [ClassDecl]
+      ) [ProgramOptC]
+      ProgramOptListSome(
+        ProgramOptC(
+          ClassDecl(
+            ClassNamingErr(
+            ) [ClassNamingErr]
+            ClassVarDeclListNone(
+            ) [ClassVarDeclListNone]
+            ClasMethodsOptNone(
+            ) [ClasMethodsOptNone]
+          ) [ClassDecl]
+        ) [ProgramOptC]
+        ProgramOptListSome(
+          ProgramOptC(
+            ClassDecl(
+              ClassNamingErr(
+              ) [ClassNamingErr]
+              ClassVarDeclListNone(
+              ) [ClassVarDeclListNone]
+              ClasMethodsOptNone(
+              ) [ClasMethodsOptNone]
+            ) [ClassDecl]
+          ) [ProgramOptC]
+          ProgramOptListSome(
+            ProgramOptAC(
+              AbstractClassDecl(
+                ClassNamingValid(
+                 Y
+                  ExtendOptNone(
+                  ) [ExtendOptNone]
+                ) [ClassNamingValid]
+                ClassVarDeclListNone(
+                ) [ClassVarDeclListNone]
+                AbstractClassMethodsOptSingle(
+                  AbstractClassMethods(
+                    AbstractMethodDeclListA(
+                      AbstractMethodDeclErr(
+                      ) [AbstractMethodDeclErr]
+                      AbstractMethodDeclListA(
+                        AbstractMethodDeclValid(
+                          AbstractMethodDeclA(
+                            Public(
+                            ) [Public]
+                            MethodReturnNone(
+                            ) [MethodReturnNone]
+                           f
+                          ) [AbstractMethodDeclA]
+                          FormParChainOptNone(
+                          ) [FormParChainOptNone]
+                        ) [AbstractMethodDeclValid]
+                        AbstractMethodDeclListB(
+                          ClassMethodDecl(
+                            Public(
+                            ) [Public]
+                            MethodDecl(
+                              MethodName(
+                                MethodReturnNone(
+                                ) [MethodReturnNone]
+                               f
+                              ) [MethodName]
+                              FormParChainOptNone(
+                              ) [FormParChainOptNone]
+                              MethodVars(
+                                VarDeclListNone(
+                                ) [VarDeclListNone]
+                              ) [MethodVars]
+                              StatementListNone(
+                              ) [StatementListNone]
+                            ) [MethodDecl]
+                          ) [ClassMethodDecl]
+                          AbstractMethodDeclListB(
+                            ClassMethodDecl(
+                              Public(
+                              ) [Public]
+                              MethodDecl(
+                                MethodName(
+                                  MethodReturnNone(
+                                  ) [MethodReturnNone]
+                                 f
+                                ) [MethodName]
+                                FormParChainOptNone(
+                                ) [FormParChainOptNone]
+                                MethodVars(
+                                  VarDeclListNone(
+                                  ) [VarDeclListNone]
+                                ) [MethodVars]
+                                StatementListNone(
+                                ) [StatementListNone]
+                              ) [MethodDecl]
+                            ) [ClassMethodDecl]
+                            AbstractMethodDeclListA(
+                              AbstractMethodDeclErr(
+                              ) [AbstractMethodDeclErr]
+                              AbstractMethodDeclListB(
+                                ClassMethodDecl(
+                                  Public(
+                                  ) [Public]
+                                  MethodDecl(
+                                    MethodName(
+                                      MethodReturnNone(
+                                      ) [MethodReturnNone]
+                                     f
+                                    ) [MethodName]
+                                    FormParChainOptNone(
+                                    ) [FormParChainOptNone]
+                                    MethodVars(
+                                      VarDeclListNone(
+                                      ) [VarDeclListNone]
+                                    ) [MethodVars]
+                                    StatementListNone(
+                                    ) [StatementListNone]
+                                  ) [MethodDecl]
+                                ) [ClassMethodDecl]
+                                AbstractMethodDeclListA(
+                                  AbstractMethodDeclErr(
+                                  ) [AbstractMethodDeclErr]
+                                  AbstractMethodDeclListB(
+                                    ClassMethodDecl(
+                                      Public(
+                                      ) [Public]
+                                      MethodDecl(
+                                        MethodName(
+                                          MethodReturnNone(
+                                          ) [MethodReturnNone]
+                                         f
+                                        ) [MethodName]
+                                        FormParChainOptNone(
+                                        ) [FormParChainOptNone]
+                                        MethodVars(
+                                          VarDeclListNone(
+                                          ) [VarDeclListNone]
+                                        ) [MethodVars]
+                                        StatementListNone(
+                                        ) [StatementListNone]
+                                      ) [MethodDecl]
+                                    ) [ClassMethodDecl]
+                                    AbstractMethodDeclListC(
+                                    ) [AbstractMethodDeclListC]
+                                  ) [AbstractMethodDeclListB]
+                                ) [AbstractMethodDeclListA]
+                              ) [AbstractMethodDeclListB]
+                            ) [AbstractMethodDeclListA]
+                          ) [AbstractMethodDeclListB]
+                        ) [AbstractMethodDeclListB]
+                      ) [AbstractMethodDeclListA]
+                    ) [AbstractMethodDeclListA]
+                  ) [AbstractClassMethods]
+                ) [AbstractClassMethodsOptSingle]
+              ) [AbstractClassDecl]
+            ) [ProgramOptAC]
+            ProgramOptListNone(
+            ) [ProgramOptListNone]
+          ) [ProgramOptListSome]
+        ) [ProgramOptListSome]
+      ) [ProgramOptListSome]
+    ) [ProgramOptListSome]
+  ) [ProgramOptListSome]
+  MethodDeclListNone(
+  ) [MethodDeclListNone]
+) [Program]
+INFO  20:51:11,142 - ===================================
+ERROR 20:51:11,160 - Class declaration invalid at line 4
+ERROR 20:51:11,160 - Class declaration invalid at line 6
+ERROR 20:51:11,160 - Class declaration invalid at line 8
+ERROR 20:51:11,161 - Class declaration invalid at line 10
+ERROR 20:51:11,161 - Symbol f already declared in current scope at line 17

@@ -1,0 +1,22 @@
+
+program test_err
+{
+	void main(int valid, invalid){}
+	void main(invalid/10 x){}
+	void main(int valid, x=5,x=3 {}){}
+	void main({}){}
+	
+	void test_for(){
+		
+		for(i=0; i<20.x[8} ; i++){
+			for(i=0; ++ ; i++){
+				for(i=0; void();){
+					for(;f()+b[25];i++){
+					}
+				}
+			}
+		}
+		
+	}
+		
+}

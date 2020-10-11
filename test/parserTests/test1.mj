@@ -1,0 +1,68 @@
+program MyProg
+
+//Decls
+
+const int x_const = 12, y_const = 13;
+const bool x_bool = true, y_bool = false;
+const char x_char = 'a';
+
+TypeA a[],b,c[],d;
+
+class Book extends Object {	
+	public TypeA a[],b,c[],d;
+	
+	{
+		private void helper() {}
+		protected Token helper(int a,Book b, Type c)
+		int x[],bi;
+		Book books; 	
+		{}
+	}
+}
+abstract class ABook extends Object {
+	private X x1;
+	{
+		public abstract int f(int x,Book b);
+		abstract private int f(int x,Book b);
+		private int f(){}
+	}
+}
+{
+
+//Statements and Exprs
+
+	void main(){
+		
+		//Designator Statement
+		a.c.b[82+1] = 2+2;
+		a[b.c].b *= 2 *= 3;
+		a['a'-'c'].f(a,b,c);
+		a.b.c[85]++;
+		
+		//If statement
+		
+		if(A && B.x[12])
+			x++;
+		else if(A != C)
+				if(someCond)
+					for(x=0;x<X.X.N;x++)
+						if(B || D)
+							y--;
+						else y++;
+					else x--;
+				else x=0;
+		
+		//For/Foreach statement
+		
+		for(x=1; x&&y||c;x+=2)
+			foreach(iter:coll)
+				foreach(x:X.arr.arrs[1]){
+					read(a[c].b);
+					a.b[2+2*b[8*3].b] = 2*b[9];
+					print(a.a[c+2*c[9]+3],10);
+				}
+					
+		
+	}
+
+}

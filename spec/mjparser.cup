@@ -1,0 +1,351 @@
+package rs.ac.bg.etf.pp1;
+
+import java_cup.runtime.*;
+import org.apache.log4j.*;
+
+
+import rs.ac.bg.etf.pp1.ast.*;
+
+
+parser code {:
+	
+	boolean errorDetected = false;
+	
+	Logger log = Logger.getLogger(getClass());
+   
+
+     
+    public void report_fatal_error(String message, Object info) throws java.lang.Exception {
+      done_parsing();
+      report_error(message, info);
+    }
+  
+    public void syntax_error(Symbol cur_token) {
+        report_error("Syntax error detected", cur_token);
+    }
+  
+    public void unrecovered_syntax_error(Symbol cur_token) throws java.lang.Exception {
+        report_fatal_error("Fatal error, parsing aborted", cur_token);
+    }
+
+    public void report_error(String message, Object info) {
+    	errorDetected = true;
+    	StringBuilder msg = new StringBuilder(message); 
+    	if (info instanceof Symbol)
+            msg.append (" at line ").append(((Symbol)info).left);
+        log.error(msg.toString());
+    }
+    
+    public void report_info(String message, Object info) {
+    	StringBuilder msg = new StringBuilder(message); 
+    	if (info instanceof Symbol)
+            msg.append (" at line ").append(((Symbol)info).left);
+        log.info(msg.toString());
+    }
+    
+:}
+
+scan with {:
+	Symbol s = this.getScanner().next_token();
+	if (s != null && s.value != null) 
+		log.info(s.toString() + " " + s.value.toString());
+	return s;
+:}
+						
+
+
+
+
+terminal PROGRAM, LBRACE, RBRACE, CONST, SEMI, COMMA, EQ, LBRACK, RBRACK, PREQ, LTE;
+terminal CLASS, EXTENDS, PUBLIC, PRIVATE, PROTECTED, ABSTRACT, LPAREN, RPAREN, VOID, IF, FOR, BREAK, CONTINUE, RETURN, DVEQ, LT;
+terminal PRINT, READ, COL, FOREACH, DPLUS, DMINUS, ELSE, OR, AND, MINUS, NEW, DOT, PLUS, PLEQ, MNEQ, MUL, DIV, PRC, MLEQ, EQL, NEQ, GT, GTE;	
+terminal String IDENT;
+terminal Integer NUM_CONST;
+terminal Boolean BOOL_CONST;
+terminal Character CHAR_CONST;
+
+non terminal java.lang.Object ProgramOptList,MethodDeclList,ProgramOpt,ConstDecl,VarDecl;
+non terminal java.lang.Object ConstChain,ExtendOpt,ClassNaming,IfCut,Rparen,Else,ForInit,ForCond,ForPost,ForeachRparen;
+non terminal java.lang.Object ClassVarDeclList,ClassVarDecl,AccessModifi,ClassMethods,ClassMethodDeclList,ClassMethodDecl;
+non terminal java.lang.Object AbstractClassMethods,AbstractMethodDeclList,MethodReturn,FormParChainOpt,FormParChain;
+non terminal java.lang.Object FormPar,StatementList,Statement,DesignatorStatement,DesignatorStatementOpt,BadAssign,ConditionOptFor;
+non terminal java.lang.Object ExprOpt,NumConstOpt,Assignop,ActParsOpt,DesignatorElem,VarDeclList;
+non terminal java.lang.Object ActPars,Relop,TermChain,Addop,Mulop,ActParsParenOpt,DesignatorChoiceList,TermChainEl;
+non terminal java.lang.Object AddopRight,MulopRight,AddopLeft,MulopLeft,MinusOpt,FactorChain,FactorChainEl,ExprBrackOpt,Matched,Unmatched;
+non terminal java.lang.Object ClassMethodsOpt,AbstractClassMethodsOpt,MethodVars,ConstChainElOpt;
+
+non terminal rs.etf.pp1.symboltable.concepts.Obj ProgName,Program,VarChainEl,ConstChainEl,MethodName,MethodDecl,ClassDecl,AbstractMethodDeclCut,AbstractMethodDecl,AbstractClassDecl,FunInvoke,Designator,DesigStart,DesignatorChoice,ForeachIter;
+non terminal rs.etf.pp1.symboltable.concepts.Struct Type,VarChain,Expr,Factor,Term,CondFact,Condition,CondTerm;
+
+
+Program					::= (Program) PROGRAM ProgName ProgramOptList : declsSlot LBRACE MethodDeclList:methodsSlot  RBRACE;
+
+ProgName				::= (ProgName) IDENT:progName;
+
+ProgramOptList			::= (ProgramOptListSome) ProgramOpt ProgramOptList  |
+							(ProgramOptListNone) /*e*/;
+
+ProgramOpt 				::= (ProgramOptConst)	ConstDecl : constDecl
+						| 	(ProgramOptVar)		VarDecl : var 
+						|	(ProgramOptAC)		AbstractClassDecl : abstractClass
+						|	(ProgramOptC)		ClassDecl : classDecl;
+
+ConstDecl 				::= (ConstDeclValid) CONST Type:constType  ConstChain:constChain  SEMI
+						|	(ConstDelcError) CONST error SEMI
+							{: parser.log.debug("Recovered from bad CONST DECLARATION."); :};
+						
+						
+ConstChain				::= (ConstChainMulti) ConstChain COMMA ConstChainEl
+						| 	(ConstChainSingle) ConstChainEl;
+					
+ConstChainEl			::= (ConstChainElValid) IDENT:constName  EQ ConstChainElOpt
+						|	(ConstChainElErr) error
+						{: parser.log.debug("Recovered from bad CONST DECLARATION."); :};
+						
+
+ConstChainElOpt			::= (ConstNum) NUM_CONST : val
+						|	(ConstChar) CHAR_CONST : val
+						|	(ConstBool) BOOL_CONST : val;
+
+VarDecl					::= (VarDeclValid) Type : varType VarChain :myChain  SEMI
+						| 	(VarDeclErr)error SEMI
+						{: parser.log.debug("Recovered from bad LOCAL VARIABLE DECLARATION."); :};
+						
+						
+VarDeclList				::=	(VarDeclListSome) VarDecl VarDeclList
+						|	(VarDeclListNone) /*e*/;
+											
+VarChain				::= (VarChainMulti) VarChain:rest COMMA VarChainEl:node
+						|	(VarChainSingle) VarChainEl : node;
+
+VarChainEl				::= (VarChainElSingle) IDENT : varName
+						| 	(VarChainElArr)IDENT : arrName LBRACK RBRACK 
+						|	(VarChainErr) error
+						{: parser.log.debug("Recovered from bad LOCAL VARIABLE DECLARATION."); :};
+					
+ClassDecl				::= (ClassDecl) CLASS ClassNaming LBRACE ClassVarDeclList : declsSlot ClassMethodsOpt : methods  RBRACE;
+
+AbstractClassDecl		::= (AbstractClassDecl) ABSTRACT CLASS ClassNaming LBRACE ClassVarDeclList : declsSlot  AbstractClassMethodsOpt : methods  RBRACE;
+
+ClassNaming				::= (ClassNamingValid) IDENT : className ExtendOpt : extended
+						|	(ClassNamingErr) error
+						{: parser.log.debug("Recovered from bad CLASS NAMING."); :};
+
+ExtendOpt				::= (ExtendOptSome) EXTENDS Type : className
+						|	(ExtendOptNone) /*e*/;
+
+ClassVarDeclList    	::= (ClassVarDeclListSome) ClassVarDeclList ClassVarDecl
+						|	(ClassVarDeclListNone) /*e*/;
+
+ClassVarDecl			::= (ClassVarDecl) AccessModifi : access VarDecl : declaration;
+						
+ClassMethodsOpt 		::= (ClassMethodsOptSingle) ClassMethods : classMethods
+						|	(ClasMethodsOptNone) /*e*/;
+
+ClassMethods			::= (ClassMethods) LBRACE ClassMethodDeclList : methodsSlot RBRACE;
+
+ClassMethodDeclList		::= (ClassMethodDeclListSome) ClassMethodDecl : decl ClassMethodDeclList : list
+						|	(ClassMethodDeclListNone) /*e*/;
+
+ClassMethodDecl			::= (ClassMethodDecl) AccessModifi : access  MethodDecl : method;
+
+AccessModifi			::= (Public) PUBLIC
+						| 	(Private) PRIVATE
+						|	(Protected) PROTECTED;
+
+AbstractClassMethods	::= (AbstractClassMethods) LBRACE AbstractMethodDeclList : methodsSlot RBRACE;
+
+AbstractClassMethodsOpt ::= (AbstractClassMethodsOptSingle) AbstractClassMethods
+						|	(AbstractClasMethodsOptNone) /*e*/;
+
+AbstractMethodDeclList	::= (AbstractMethodDeclListA) AbstractMethodDecl AbstractMethodDeclList 
+						|	(AbstractMethodDeclListB) ClassMethodDecl AbstractMethodDeclList
+						|	(AbstractMethodDeclListC) /*e*/;
+
+AbstractMethodDecl		::= (AbstractMethodDeclValid) AbstractMethodDeclCut LPAREN FormParChainOpt : formParSlot RPAREN SEMI
+						|	(AbstractMethodDeclErr) error SEMI
+						{: parser.log.debug("Recovered from bad ABSTRACT METHOD DECLARATION."); :};
+						
+AbstractMethodDeclCut	::= (AbstractMethodDeclA) AccessModifi : access ABSTRACT MethodReturn : toReturn IDENT : name 
+						|	(AbstractMethodDeclB) ABSTRACT AccessModifi : access MethodReturn : toReturn IDENT : name;
+						
+MethodDecl				::= (MethodDecl) MethodName : methodName LPAREN FormParChainOpt : formParSlot RPAREN MethodVars:varSlot LBRACE StatementList : bodySlot  RBRACE;
+
+MethodVars				::=(MethodVars) VarDeclList:varSlot;
+
+MethodName				::=(MethodName) MethodReturn : toReturn  IDENT : name;
+
+MethodDeclList			::= (MethodDeclListSome) MethodDecl MethodDeclList 
+						|	(MethodDeclListNone) /*e*/;
+
+MethodReturn 			::= (MethodReturnSome) Type : returnType
+						|	(MethodReturnNone) VOID : returnType;
+
+FormParChainOpt			::= (FormParChainOptSome) FormParChain
+						| 	(FormParChainOptNone) /*e*/;
+
+FormParChain			::= (FormParChainMulti) FormPar COMMA FormParChain
+						|	(FormParChainSingle) FormPar;
+
+FormPar					::= (FormParSingle) Type : parType IDENT : parName 
+						|	(FormParArr) Type : parArrType IDENT : parArrName LBRACK RBRACK
+						|	(FormParErr) error
+						{: parser.log.debug("Recovered from BAD FORMAL PARAMETER DECLARATION."); :};
+
+StatementList			::= (StatementListSome) Statement StatementList 
+						|	(StatementListNone) /*e*/;
+						
+Type					::= (Type) IDENT : type;
+
+Statement				::= (MatchedStatement) Matched
+						|	(UnmatchedStatement) Unmatched;
+						
+Unmatched				::= (UnmatchedIf) IfCut Condition : cond  Rparen Statement : stat 
+						|	(UnmatchedIfElse) IfCut Condition : cond  Rparen Matched : ifStat Else Unmatched : elseStat 
+						|	(UnmatchedFor) FOR LPAREN ForInit : initSlot  SEMI ForCond : condSlot SEMI ForPost : postSlot RPAREN Unmatched : stat
+						|	(UnmatchedForeach) FOREACH LPAREN ForeachIter : iter COL Designator : collection ForeachRparen Unmatched : stat;
+						
+Matched					::= (DesignatorStatementMatched) DesignatorStatement : stat SEMI 
+						|	(IfStatement) IfCut Condition : cond Rparen Matched : ifStat Else Matched : elseStat
+						|	(MatchedFor) FOR LPAREN ForInit : initSlot SEMI ForCond : condSlot SEMI ForPost : postSlot RPAREN Matched : stat
+						|	(BreakStatement) BREAK SEMI
+						|	(ContinueStatement) CONTINUE SEMI
+						|	(ReturnStatement)RETURN ExprOpt : exprSlot SEMI
+						|	(ReadStatement)READ LPAREN Designator : toRead RPAREN SEMI
+						| 	(PrintStatement)PRINT LPAREN Expr : exprs NumConstOpt : constSlot RPAREN SEMI
+						|	(BlockStatement)LBRACE StatementList : statSlot RBRACE
+						|	(MatchedForeach) FOREACH LPAREN ForeachIter : iter COL Designator : collection ForeachRparen Matched : stat
+						|	(BadStatement) error SEMI
+						|	(BadAssignStatement) BadAssign;
+
+IfCut					::=  (IfCut)IF LPAREN;
+Rparen					::= (Rparen)RPAREN;
+Else 					::= (Else) ELSE;
+
+ForInit					::= (ForInit) DesignatorStatementOpt : initSlot;
+ForCond					::= (ForCond) ConditionOptFor : condSlot;
+ForPost					::= (ForPost)  DesignatorStatementOpt : postSlot;
+
+ForeachIter				::= (ForeachIter) IDENT :iter ;
+ForeachRparen			::= (ForeachRparen) RPAREN;
+
+ConditionOptFor			::=		(ConditionOptForSome) Condition
+						|		(ConditionOptForNone) /*e*/
+						|		(ConditionOptForErr) error
+						{: parser.log.debug("Recovered from bad CONDITION IN FOR STATEMENT."); :};
+
+BadAssign	 			::= (BadAssignStatementA) Designator Assignop error SEMI
+						|	(BadAssignStatementB) error Assignop error SEMI
+						|	(BadAssignStatementC) error Assignop Expr SEMI;
+					
+												
+DesignatorStatementOpt	::= (DesignatorStatementOptSome) DesignatorStatement
+						|	(DesignatorStatementOptNone) /*e*/;	
+
+ExprOpt					::= (ExprOptSome) Expr
+						|	(ExprOptNone) /*e*/;
+
+NumConstOpt				::= (NumConstOptSome) COMMA NUM_CONST : val
+						|	(NumConstOptNone) /*e*/;
+						
+DesignatorStatement		::= (DesignatorStatement) Designator DesignatorElem;
+
+
+Designator				::= (Designator) DesigStart : ident DesignatorChoiceList : list;
+
+DesigStart				::= (DesigStart) IDENT : ident;
+
+DesignatorChoiceList	::= (DesignatorChoiceListSome) DesignatorChoice:elem DesignatorChoiceList:list
+						| 	(DesignatorChoiceListNone) /*e*/;
+
+DesignatorChoice		::= (DesignatorChoiceSingle) DOT IDENT : desigName
+						| 	(DesignatorChoiceArr) LBRACK Expr : index RBRACK;
+
+DesignatorElem			::= (DesignatorElemAssign) Assignop Expr : exprs
+						| 	(DesignatorElemActPars) FunInvoke
+						| 	(DesignatorElemPlus) DPLUS
+						|	(DesignatorElemMinus) DMINUS;
+						
+
+ActParsOpt 				::= (ActParsOptSome) ActPars : par
+						|	(ActParsOptNone) /*e*/;
+
+ActPars					::= (ActParsMulti)  Expr:expr COMMA ActPars:actPars
+						|	(ActParsSingle) Expr:expr;		
+
+Condition				::= (ConditionMulti) CondTerm OR Condition
+						|	(ConditionSingle) CondTerm;
+
+CondTerm				::= (CondTermMulti) CondFact AND CondTerm
+						|	(CondTermSingle) CondFact;
+
+CondFact				::= (CondFactMulti) Expr : A Relop Expr : B
+						|	(CondFactSingle) Expr : A; 
+
+Expr					::= (Expr) MinusOpt : optMin Term : term TermChain : chain;
+
+MinusOpt				::= (MinusOptSome) MINUS | (MinusOptNone) /*e*/;
+
+TermChain				::= (TermChainSome) TermChainEl TermChain
+						|	(TermChainNone) ;
+						
+TermChainEl				::= (TermChainEl) Addop Term;
+
+Term					::= (Term) Factor FactorChain;
+
+FactorChain				::= (FactorChainSome)  FactorChainEl:el FactorChain:other
+						|	(FactorChainNone)  ;
+
+FactorChainEl			::= (FactorChainEl) Mulop Factor;
+
+Factor					::= (FactorComplex) Designator : designator ActParsParenOpt : actParamsSlot
+						|	(FactorNum) NUM_CONST : val
+						|	(FactorChar) CHAR_CONST : val
+						|	(FactorBool) BOOL_CONST : val
+						|	(FactorNew) NEW Type : newType ExprBrackOpt : newExpr
+						| 	(FactorParen) LPAREN Expr : exprs RPAREN;
+
+ActParsParenOpt			::=	(ActParsParenOptSome) FunInvoke
+						|	(ActParsParenOptNone) /*e*/;
+
+FunInvoke				::= (FunInvoke) LPAREN ActParsOpt RPAREN;
+
+ExprBrackOpt			::= (ExprBrackOptSome) LBRACK Expr RBRACK
+						|	(ExprBrackOptNone) /*e*/;
+
+
+
+Assignop				::=	(AssignopEQ) EQ
+						|	(AssignopADD) AddopRight
+						| 	(AssignopMUL) MulopRight;
+
+AddopLeft				::= (AddopLeftPlus) PLUS
+						| 	(AddopLeftMinus) MINUS;
+
+AddopRight				::= (AddopRightPlus) PLEQ
+						|	(AddopRightMinus) MNEQ;
+
+Addop					::= (AddopL) AddopLeft
+						|	(AddopR) AddopRight;
+
+
+Mulop					::= (MulopR) MulopRight
+						|	(MulopL) MulopLeft;
+						
+
+MulopRight				::= (Mleq) MLEQ
+						|	(Dveq) DVEQ
+						|	(Preq) PREQ;
+						
+MulopLeft				::= (Mul) MUL
+						|	(Div) DIV
+						|	(Prc) PRC;
+
+
+Relop					::= (Eql) EQL
+						|	(Neq) NEQ
+						|	(Gt) GT
+						|	(Gte) GTE
+						|	(Lt)LT
+						|	(Lte)LTE;
+						

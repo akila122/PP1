@@ -1,0 +1,29 @@
+
+program test_err
+
+	class X/10 {}
+	
+	class X[5].() extends Object {}
+	
+	class X*=10 extends 2 {}
+	
+	class X extends 10*() {}
+	
+	
+	abstract class Y {
+		{
+			public abstract void*10 bad_func();
+			public abstract void f();
+			public void f(){}
+			public void f(){}
+			abstract void bad();
+			public void f(){}
+			public abstract f(5,d){{{{};
+			public void f(){}
+				
+		}
+	}
+	
+	{
+
+	}

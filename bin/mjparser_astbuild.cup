@@ -1,0 +1,351 @@
+package rs.ac.bg.etf.pp1;
+
+import java_cup.runtime.*;
+import org.apache.log4j.*;
+
+
+import rs.ac.bg.etf.pp1.ast.*;
+
+
+parser code {:
+	
+	boolean errorDetected = false;
+	
+	Logger log = Logger.getLogger(getClass());
+   
+
+     
+    public void report_fatal_error(String message, Object info) throws java.lang.Exception {
+      done_parsing();
+      report_error(message, info);
+    }
+  
+    public void syntax_error(Symbol cur_token) {
+        report_error("Syntax error detected", cur_token);
+    }
+  
+    public void unrecovered_syntax_error(Symbol cur_token) throws java.lang.Exception {
+        report_fatal_error("Fatal error, parsing aborted", cur_token);
+    }
+
+    public void report_error(String message, Object info) {
+    	errorDetected = true;
+    	StringBuilder msg = new StringBuilder(message); 
+    	if (info instanceof Symbol)
+            msg.append (" at line ").append(((Symbol)info).left);
+        log.error(msg.toString());
+    }
+    
+    public void report_info(String message, Object info) {
+    	StringBuilder msg = new StringBuilder(message); 
+    	if (info instanceof Symbol)
+            msg.append (" at line ").append(((Symbol)info).left);
+        log.info(msg.toString());
+    }
+    
+:}
+
+scan with {:
+	Symbol s = this.getScanner().next_token();
+	if (s != null && s.value != null) 
+		log.info(s.toString() + " " + s.value.toString());
+	return s;
+:}
+						
+
+
+
+
+terminal PROGRAM, LBRACE, RBRACE, CONST, SEMI, COMMA, EQ, LBRACK, RBRACK, PREQ, LTE;
+terminal CLASS, EXTENDS, PUBLIC, PRIVATE, PROTECTED, ABSTRACT, LPAREN, RPAREN, VOID, IF, FOR, BREAK, CONTINUE, RETURN, DVEQ, LT;
+terminal PRINT, READ, COL, FOREACH, DPLUS, DMINUS, ELSE, OR, AND, MINUS, NEW, DOT, PLUS, PLEQ, MNEQ, MUL, DIV, PRC, MLEQ, EQL, NEQ, GT, GTE;	
+terminal String IDENT;
+terminal Integer NUM_CONST;
+terminal Boolean BOOL_CONST;
+terminal Character CHAR_CONST;
+
+non terminal java.lang.Object ProgramOptList,MethodDeclList,ProgramOpt,ConstDecl,VarDecl;
+non terminal java.lang.Object ConstChain,ExtendOpt,ClassNaming,IfCut,Rparen,Else,ForInit,ForCond,ForPost,ForeachRparen;
+non terminal java.lang.Object ClassVarDeclList,ClassVarDecl,AccessModifi,ClassMethods,ClassMethodDeclList,ClassMethodDecl;
+non terminal java.lang.Object AbstractClassMethods,AbstractMethodDeclList,MethodReturn,FormParChainOpt,FormParChain;
+non terminal java.lang.Object FormPar,StatementList,Statement,DesignatorStatement,DesignatorStatementOpt,BadAssign,ConditionOptFor;
+non terminal java.lang.Object ExprOpt,NumConstOpt,Assignop,ActParsOpt,DesignatorElem,VarDeclList;
+non terminal java.lang.Object ActPars,Relop,TermChain,Addop,Mulop,ActParsParenOpt,DesignatorChoiceList,TermChainEl;
+non terminal java.lang.Object AddopRight,MulopRight,AddopLeft,MulopLeft,MinusOpt,FactorChain,FactorChainEl,ExprBrackOpt,Matched,Unmatched;
+non terminal java.lang.Object ClassMethodsOpt,AbstractClassMethodsOpt,MethodVars,ConstChainElOpt;
+
+non terminal rs.etf.pp1.symboltable.concepts.Obj ProgName,Program,VarChainEl,ConstChainEl,MethodName,MethodDecl,ClassDecl,AbstractMethodDeclCut,AbstractMethodDecl,AbstractClassDecl,FunInvoke,Designator,DesigStart,DesignatorChoice,ForeachIter;
+non terminal rs.etf.pp1.symboltable.concepts.Struct Type,VarChain,Expr,Factor,Term,CondFact,Condition,CondTerm;
+
+
+Program					::= (Program) PROGRAM ProgName:P1 ProgramOptList : declsSlot LBRACE MethodDeclList:methodsSlot  RBRACE {: RESULT=new Program(P1, declsSlot, methodsSlot); RESULT.setLine(P1left); :};
+
+ProgName				::= (ProgName) IDENT:progName {: RESULT=new ProgName(progName); RESULT.setLine(progNameleft); :};
+
+ProgramOptList			::= (ProgramOptListSome) ProgramOpt:P1 ProgramOptList:P2 {: RESULT=new ProgramOptListSome(P1, P2); RESULT.setLine(P1left); :}  |
+							(ProgramOptListNone) {: RESULT=new ProgramOptListNone(); :} /*e*/;
+
+ProgramOpt 				::= (ProgramOptConst)	ConstDecl : constDecl {: RESULT=new ProgramOptConst(constDecl); RESULT.setLine(constDeclleft); :}
+						| 	(ProgramOptVar)		VarDecl : var {: RESULT=new ProgramOptVar(var); RESULT.setLine(varleft); :} 
+						|	(ProgramOptAC)		AbstractClassDecl : abstractClass {: RESULT=new ProgramOptAC(abstractClass); RESULT.setLine(abstractClassleft); :}
+						|	(ProgramOptC)		ClassDecl : classDecl {: RESULT=new ProgramOptC(classDecl); RESULT.setLine(classDeclleft); :};
+
+ConstDecl 				::= (ConstDeclValid) CONST Type:constType  ConstChain:constChain  SEMI {: RESULT=new ConstDeclValid(constType, constChain); RESULT.setLine(constTypeleft); :}
+						|	(ConstDelcError) CONST error SEMI
+							{: parser.log.debug("Recovered from bad CONST DECLARATION."); :} {: RESULT=new ConstDelcError(); :};
+						
+						
+ConstChain				::= (ConstChainMulti) ConstChain:C1 COMMA ConstChainEl:C2 {: RESULT=new ConstChainMulti(C1, C2); RESULT.setLine(C1left); :}
+						| 	(ConstChainSingle) ConstChainEl:C1 {: RESULT=new ConstChainSingle(C1); RESULT.setLine(C1left); :};
+					
+ConstChainEl			::= (ConstChainElValid) IDENT:constName  EQ ConstChainElOpt:C1 {: RESULT=new ConstChainElValid(constName, C1); RESULT.setLine(constNameleft); :}
+						|	(ConstChainElErr) error
+						{: parser.log.debug("Recovered from bad CONST DECLARATION."); :} {: RESULT=new ConstChainElErr(); :};
+						
+
+ConstChainElOpt			::= (ConstNum) NUM_CONST : val {: RESULT=new ConstNum(val); RESULT.setLine(valleft); :}
+						|	(ConstChar) CHAR_CONST : val {: RESULT=new ConstChar(val); RESULT.setLine(valleft); :}
+						|	(ConstBool) BOOL_CONST : val {: RESULT=new ConstBool(val); RESULT.setLine(valleft); :};
+
+VarDecl					::= (VarDeclValid) Type : varType VarChain :myChain  SEMI {: RESULT=new VarDeclValid(varType, myChain); RESULT.setLine(varTypeleft); :}
+						| 	(VarDeclErr)error SEMI
+						{: parser.log.debug("Recovered from bad LOCAL VARIABLE DECLARATION."); :} {: RESULT=new VarDeclErr(); :};
+						
+						
+VarDeclList				::=	(VarDeclListSome) VarDecl:V1 VarDeclList:V2 {: RESULT=new VarDeclListSome(V1, V2); RESULT.setLine(V1left); :}
+						|	(VarDeclListNone) {: RESULT=new VarDeclListNone(); :} /*e*/;
+											
+VarChain				::= (VarChainMulti) VarChain:rest COMMA VarChainEl:node {: RESULT=new VarChainMulti(rest, node); RESULT.setLine(restleft); :}
+						|	(VarChainSingle) VarChainEl : node {: RESULT=new VarChainSingle(node); RESULT.setLine(nodeleft); :};
+
+VarChainEl				::= (VarChainElSingle) IDENT : varName {: RESULT=new VarChainElSingle(varName); RESULT.setLine(varNameleft); :}
+						| 	(VarChainElArr)IDENT : arrName LBRACK RBRACK {: RESULT=new VarChainElArr(arrName); RESULT.setLine(arrNameleft); :} 
+						|	(VarChainErr) error
+						{: parser.log.debug("Recovered from bad LOCAL VARIABLE DECLARATION."); :} {: RESULT=new VarChainErr(); :};
+					
+ClassDecl				::= (ClassDecl) CLASS ClassNaming:C1 LBRACE ClassVarDeclList : declsSlot ClassMethodsOpt : methods  RBRACE {: RESULT=new ClassDecl(C1, declsSlot, methods); RESULT.setLine(C1left); :};
+
+AbstractClassDecl		::= (AbstractClassDecl) ABSTRACT CLASS ClassNaming:C1 LBRACE ClassVarDeclList : declsSlot  AbstractClassMethodsOpt : methods  RBRACE {: RESULT=new AbstractClassDecl(C1, declsSlot, methods); RESULT.setLine(C1left); :};
+
+ClassNaming				::= (ClassNamingValid) IDENT : className ExtendOpt : extended {: RESULT=new ClassNamingValid(className, extended); RESULT.setLine(classNameleft); :}
+						|	(ClassNamingErr) error
+						{: parser.log.debug("Recovered from bad CLASS NAMING."); :} {: RESULT=new ClassNamingErr(); :};
+
+ExtendOpt				::= (ExtendOptSome) EXTENDS Type : className {: RESULT=new ExtendOptSome(className); RESULT.setLine(classNameleft); :}
+						|	(ExtendOptNone) {: RESULT=new ExtendOptNone(); :} /*e*/;
+
+ClassVarDeclList    	::= (ClassVarDeclListSome) ClassVarDeclList:C1 ClassVarDecl:C2 {: RESULT=new ClassVarDeclListSome(C1, C2); RESULT.setLine(C1left); :}
+						|	(ClassVarDeclListNone) {: RESULT=new ClassVarDeclListNone(); :} /*e*/;
+
+ClassVarDecl			::= (ClassVarDecl) AccessModifi : access VarDecl : declaration {: RESULT=new ClassVarDecl(access, declaration); RESULT.setLine(accessleft); :};
+						
+ClassMethodsOpt 		::= (ClassMethodsOptSingle) ClassMethods : classMethods {: RESULT=new ClassMethodsOptSingle(classMethods); RESULT.setLine(classMethodsleft); :}
+						|	(ClasMethodsOptNone) {: RESULT=new ClasMethodsOptNone(); :} /*e*/;
+
+ClassMethods			::= (ClassMethods) LBRACE ClassMethodDeclList : methodsSlot RBRACE {: RESULT=new ClassMethods(methodsSlot); RESULT.setLine(methodsSlotleft); :};
+
+ClassMethodDeclList		::= (ClassMethodDeclListSome) ClassMethodDecl : decl ClassMethodDeclList : list {: RESULT=new ClassMethodDeclListSome(decl, list); RESULT.setLine(declleft); :}
+						|	(ClassMethodDeclListNone) {: RESULT=new ClassMethodDeclListNone(); :} /*e*/;
+
+ClassMethodDecl			::= (ClassMethodDecl) AccessModifi : access  MethodDecl : method {: RESULT=new ClassMethodDecl(access, method); RESULT.setLine(accessleft); :};
+
+AccessModifi			::= (Public) PUBLIC {: RESULT=new Public(); :}
+						| 	(Private) PRIVATE {: RESULT=new Private(); :}
+						|	(Protected) PROTECTED {: RESULT=new Protected(); :};
+
+AbstractClassMethods	::= (AbstractClassMethods) LBRACE AbstractMethodDeclList : methodsSlot RBRACE {: RESULT=new AbstractClassMethods(methodsSlot); RESULT.setLine(methodsSlotleft); :};
+
+AbstractClassMethodsOpt ::= (AbstractClassMethodsOptSingle) AbstractClassMethods:A1 {: RESULT=new AbstractClassMethodsOptSingle(A1); RESULT.setLine(A1left); :}
+						|	(AbstractClasMethodsOptNone) {: RESULT=new AbstractClasMethodsOptNone(); :} /*e*/;
+
+AbstractMethodDeclList	::= (AbstractMethodDeclListA) AbstractMethodDecl:A1 AbstractMethodDeclList:A2 {: RESULT=new AbstractMethodDeclListA(A1, A2); RESULT.setLine(A1left); :} 
+						|	(AbstractMethodDeclListB) ClassMethodDecl:C1 AbstractMethodDeclList:A2 {: RESULT=new AbstractMethodDeclListB(C1, A2); RESULT.setLine(C1left); :}
+						|	(AbstractMethodDeclListC) {: RESULT=new AbstractMethodDeclListC(); :} /*e*/;
+
+AbstractMethodDecl		::= (AbstractMethodDeclValid) AbstractMethodDeclCut:A1 LPAREN FormParChainOpt : formParSlot RPAREN SEMI {: RESULT=new AbstractMethodDeclValid(A1, formParSlot); RESULT.setLine(A1left); :}
+						|	(AbstractMethodDeclErr) error SEMI
+						{: parser.log.debug("Recovered from bad ABSTRACT METHOD DECLARATION."); :} {: RESULT=new AbstractMethodDeclErr(); :};
+						
+AbstractMethodDeclCut	::= (AbstractMethodDeclA) AccessModifi : access ABSTRACT MethodReturn : toReturn IDENT : name {: RESULT=new AbstractMethodDeclA(access, toReturn, name); RESULT.setLine(accessleft); :} 
+						|	(AbstractMethodDeclB) ABSTRACT AccessModifi : access MethodReturn : toReturn IDENT : name {: RESULT=new AbstractMethodDeclB(access, toReturn, name); RESULT.setLine(accessleft); :};
+						
+MethodDecl				::= (MethodDecl) MethodName : methodName LPAREN FormParChainOpt : formParSlot RPAREN MethodVars:varSlot LBRACE StatementList : bodySlot  RBRACE {: RESULT=new MethodDecl(methodName, formParSlot, varSlot, bodySlot); RESULT.setLine(methodNameleft); :};
+
+MethodVars				::=(MethodVars) VarDeclList:varSlot {: RESULT=new MethodVars(varSlot); RESULT.setLine(varSlotleft); :};
+
+MethodName				::=(MethodName) MethodReturn : toReturn  IDENT : name {: RESULT=new MethodName(toReturn, name); RESULT.setLine(toReturnleft); :};
+
+MethodDeclList			::= (MethodDeclListSome) MethodDecl:M1 MethodDeclList:M2 {: RESULT=new MethodDeclListSome(M1, M2); RESULT.setLine(M1left); :} 
+						|	(MethodDeclListNone) {: RESULT=new MethodDeclListNone(); :} /*e*/;
+
+MethodReturn 			::= (MethodReturnSome) Type : returnType {: RESULT=new MethodReturnSome(returnType); RESULT.setLine(returnTypeleft); :}
+						|	(MethodReturnNone) VOID : returnType {: RESULT=new MethodReturnNone(); :};
+
+FormParChainOpt			::= (FormParChainOptSome) FormParChain:F1 {: RESULT=new FormParChainOptSome(F1); RESULT.setLine(F1left); :}
+						| 	(FormParChainOptNone) {: RESULT=new FormParChainOptNone(); :} /*e*/;
+
+FormParChain			::= (FormParChainMulti) FormPar:F1 COMMA FormParChain:F2 {: RESULT=new FormParChainMulti(F1, F2); RESULT.setLine(F1left); :}
+						|	(FormParChainSingle) FormPar:F1 {: RESULT=new FormParChainSingle(F1); RESULT.setLine(F1left); :};
+
+FormPar					::= (FormParSingle) Type : parType IDENT : parName {: RESULT=new FormParSingle(parType, parName); RESULT.setLine(parTypeleft); :} 
+						|	(FormParArr) Type : parArrType IDENT : parArrName LBRACK RBRACK {: RESULT=new FormParArr(parArrType, parArrName); RESULT.setLine(parArrTypeleft); :}
+						|	(FormParErr) error
+						{: parser.log.debug("Recovered from BAD FORMAL PARAMETER DECLARATION."); :} {: RESULT=new FormParErr(); :};
+
+StatementList			::= (StatementListSome) Statement:S1 StatementList:S2 {: RESULT=new StatementListSome(S1, S2); RESULT.setLine(S1left); :} 
+						|	(StatementListNone) {: RESULT=new StatementListNone(); :} /*e*/;
+						
+Type					::= (Type) IDENT : type {: RESULT=new Type(type); RESULT.setLine(typeleft); :};
+
+Statement				::= (MatchedStatement) Matched:M1 {: RESULT=new MatchedStatement(M1); RESULT.setLine(M1left); :}
+						|	(UnmatchedStatement) Unmatched:U1 {: RESULT=new UnmatchedStatement(U1); RESULT.setLine(U1left); :};
+						
+Unmatched				::= (UnmatchedIf) IfCut:I1 Condition : cond  Rparen:R2 Statement : stat {: RESULT=new UnmatchedIf(I1, cond, R2, stat); RESULT.setLine(I1left); :} 
+						|	(UnmatchedIfElse) IfCut:I1 Condition : cond  Rparen:R2 Matched : ifStat Else:E3 Unmatched : elseStat {: RESULT=new UnmatchedIfElse(I1, cond, R2, ifStat, E3, elseStat); RESULT.setLine(I1left); :} 
+						|	(UnmatchedFor) FOR LPAREN ForInit : initSlot  SEMI ForCond : condSlot SEMI ForPost : postSlot RPAREN Unmatched : stat {: RESULT=new UnmatchedFor(initSlot, condSlot, postSlot, stat); RESULT.setLine(initSlotleft); :}
+						|	(UnmatchedForeach) FOREACH LPAREN ForeachIter : iter COL Designator : collection ForeachRparen:F1 Unmatched : stat {: RESULT=new UnmatchedForeach(iter, collection, F1, stat); RESULT.setLine(iterleft); :};
+						
+Matched					::= (DesignatorStatementMatched) DesignatorStatement : stat SEMI {: RESULT=new DesignatorStatementMatched(stat); RESULT.setLine(statleft); :} 
+						|	(IfStatement) IfCut:I1 Condition : cond Rparen:R2 Matched : ifStat Else:E3 Matched : elseStat {: RESULT=new IfStatement(I1, cond, R2, ifStat, E3, elseStat); RESULT.setLine(I1left); :}
+						|	(MatchedFor) FOR LPAREN ForInit : initSlot SEMI ForCond : condSlot SEMI ForPost : postSlot RPAREN Matched : stat {: RESULT=new MatchedFor(initSlot, condSlot, postSlot, stat); RESULT.setLine(initSlotleft); :}
+						|	(BreakStatement) BREAK SEMI {: RESULT=new BreakStatement(); :}
+						|	(ContinueStatement) CONTINUE SEMI {: RESULT=new ContinueStatement(); :}
+						|	(ReturnStatement)RETURN ExprOpt : exprSlot SEMI {: RESULT=new ReturnStatement(exprSlot); RESULT.setLine(exprSlotleft); :}
+						|	(ReadStatement)READ LPAREN Designator : toRead RPAREN SEMI {: RESULT=new ReadStatement(toRead); RESULT.setLine(toReadleft); :}
+						| 	(PrintStatement)PRINT LPAREN Expr : exprs NumConstOpt : constSlot RPAREN SEMI {: RESULT=new PrintStatement(exprs, constSlot); RESULT.setLine(exprsleft); :}
+						|	(BlockStatement)LBRACE StatementList : statSlot RBRACE {: RESULT=new BlockStatement(statSlot); RESULT.setLine(statSlotleft); :}
+						|	(MatchedForeach) FOREACH LPAREN ForeachIter : iter COL Designator : collection ForeachRparen:F1 Matched : stat {: RESULT=new MatchedForeach(iter, collection, F1, stat); RESULT.setLine(iterleft); :}
+						|	(BadStatement) error SEMI {: RESULT=new BadStatement(); :}
+						|	(BadAssignStatement) BadAssign:B1 {: RESULT=new BadAssignStatement(B1); RESULT.setLine(B1left); :};
+
+IfCut					::=  (IfCut)IF LPAREN {: RESULT=new IfCut(); :};
+Rparen					::= (Rparen)RPAREN {: RESULT=new Rparen(); :};
+Else 					::= (Else) ELSE {: RESULT=new Else(); :};
+
+ForInit					::= (ForInit) DesignatorStatementOpt : initSlot {: RESULT=new ForInit(initSlot); RESULT.setLine(initSlotleft); :};
+ForCond					::= (ForCond) ConditionOptFor : condSlot {: RESULT=new ForCond(condSlot); RESULT.setLine(condSlotleft); :};
+ForPost					::= (ForPost)  DesignatorStatementOpt : postSlot {: RESULT=new ForPost(postSlot); RESULT.setLine(postSlotleft); :};
+
+ForeachIter				::= (ForeachIter) IDENT :iter {: RESULT=new ForeachIter(iter); RESULT.setLine(iterleft); :} ;
+ForeachRparen			::= (ForeachRparen) RPAREN {: RESULT=new ForeachRparen(); :};
+
+ConditionOptFor			::=		(ConditionOptForSome) Condition:C1 {: RESULT=new ConditionOptForSome(C1); RESULT.setLine(C1left); :}
+						|		(ConditionOptForNone) {: RESULT=new ConditionOptForNone(); :} /*e*/
+						|		(ConditionOptForErr) error
+						{: parser.log.debug("Recovered from bad CONDITION IN FOR STATEMENT."); :} {: RESULT=new ConditionOptForErr(); :};
+
+BadAssign	 			::= (BadAssignStatementA) Designator:D1 Assignop:A2 error SEMI {: RESULT=new BadAssignStatementA(D1, A2); RESULT.setLine(D1left); :}
+						|	(BadAssignStatementB) error Assignop:A1 error SEMI {: RESULT=new BadAssignStatementB(A1); RESULT.setLine(A1left); :}
+						|	(BadAssignStatementC) error Assignop:A1 Expr:E2 SEMI {: RESULT=new BadAssignStatementC(A1, E2); RESULT.setLine(A1left); :};
+					
+												
+DesignatorStatementOpt	::= (DesignatorStatementOptSome) DesignatorStatement:D1 {: RESULT=new DesignatorStatementOptSome(D1); RESULT.setLine(D1left); :}
+						|	(DesignatorStatementOptNone) {: RESULT=new DesignatorStatementOptNone(); :} /*e*/;	
+
+ExprOpt					::= (ExprOptSome) Expr:E1 {: RESULT=new ExprOptSome(E1); RESULT.setLine(E1left); :}
+						|	(ExprOptNone) {: RESULT=new ExprOptNone(); :} /*e*/;
+
+NumConstOpt				::= (NumConstOptSome) COMMA NUM_CONST : val {: RESULT=new NumConstOptSome(val); RESULT.setLine(valleft); :}
+						|	(NumConstOptNone) {: RESULT=new NumConstOptNone(); :} /*e*/;
+						
+DesignatorStatement		::= (DesignatorStatement) Designator:D1 DesignatorElem:D2 {: RESULT=new DesignatorStatement(D1, D2); RESULT.setLine(D1left); :};
+
+
+Designator				::= (Designator) DesigStart : ident DesignatorChoiceList : list {: RESULT=new Designator(ident, list); RESULT.setLine(identleft); :};
+
+DesigStart				::= (DesigStart) IDENT : ident {: RESULT=new DesigStart(ident); RESULT.setLine(identleft); :};
+
+DesignatorChoiceList	::= (DesignatorChoiceListSome) DesignatorChoice:elem DesignatorChoiceList:list {: RESULT=new DesignatorChoiceListSome(elem, list); RESULT.setLine(elemleft); :}
+						| 	(DesignatorChoiceListNone) {: RESULT=new DesignatorChoiceListNone(); :} /*e*/;
+
+DesignatorChoice		::= (DesignatorChoiceSingle) DOT IDENT : desigName {: RESULT=new DesignatorChoiceSingle(desigName); RESULT.setLine(desigNameleft); :}
+						| 	(DesignatorChoiceArr) LBRACK Expr : index RBRACK {: RESULT=new DesignatorChoiceArr(index); RESULT.setLine(indexleft); :};
+
+DesignatorElem			::= (DesignatorElemAssign) Assignop:A1 Expr : exprs {: RESULT=new DesignatorElemAssign(A1, exprs); RESULT.setLine(A1left); :}
+						| 	(DesignatorElemActPars) FunInvoke:F1 {: RESULT=new DesignatorElemActPars(F1); RESULT.setLine(F1left); :}
+						| 	(DesignatorElemPlus) DPLUS {: RESULT=new DesignatorElemPlus(); :}
+						|	(DesignatorElemMinus) DMINUS {: RESULT=new DesignatorElemMinus(); :};
+						
+
+ActParsOpt 				::= (ActParsOptSome) ActPars : par {: RESULT=new ActParsOptSome(par); RESULT.setLine(parleft); :}
+						|	(ActParsOptNone) {: RESULT=new ActParsOptNone(); :} /*e*/;
+
+ActPars					::= (ActParsMulti)  Expr:expr COMMA ActPars:actPars {: RESULT=new ActParsMulti(expr, actPars); RESULT.setLine(exprleft); :}
+						|	(ActParsSingle) Expr:expr {: RESULT=new ActParsSingle(expr); RESULT.setLine(exprleft); :};		
+
+Condition				::= (ConditionMulti) CondTerm:C1 OR Condition:C2 {: RESULT=new ConditionMulti(C1, C2); RESULT.setLine(C1left); :}
+						|	(ConditionSingle) CondTerm:C1 {: RESULT=new ConditionSingle(C1); RESULT.setLine(C1left); :};
+
+CondTerm				::= (CondTermMulti) CondFact:C1 AND CondTerm:C2 {: RESULT=new CondTermMulti(C1, C2); RESULT.setLine(C1left); :}
+						|	(CondTermSingle) CondFact:C1 {: RESULT=new CondTermSingle(C1); RESULT.setLine(C1left); :};
+
+CondFact				::= (CondFactMulti) Expr : A Relop:R1 Expr : B {: RESULT=new CondFactMulti(A, R1, B); RESULT.setLine(Aleft); :}
+						|	(CondFactSingle) Expr : A {: RESULT=new CondFactSingle(A); RESULT.setLine(Aleft); :}; 
+
+Expr					::= (Expr) MinusOpt : optMin Term : term TermChain : chain {: RESULT=new Expr(optMin, term, chain); RESULT.setLine(optMinleft); :};
+
+MinusOpt				::= (MinusOptSome) MINUS {: RESULT=new MinusOptSome(); :} | (MinusOptNone) {: RESULT=new MinusOptNone(); :} /*e*/;
+
+TermChain				::= (TermChainSome) TermChainEl:T1 TermChain:T2 {: RESULT=new TermChainSome(T1, T2); RESULT.setLine(T1left); :}
+						|	(TermChainNone) {: RESULT=new TermChainNone(); :} ;
+						
+TermChainEl				::= (TermChainEl) Addop:A1 Term:T2 {: RESULT=new TermChainEl(A1, T2); RESULT.setLine(A1left); :};
+
+Term					::= (Term) Factor:F1 FactorChain:F2 {: RESULT=new Term(F1, F2); RESULT.setLine(F1left); :};
+
+FactorChain				::= (FactorChainSome)  FactorChainEl:el FactorChain:other {: RESULT=new FactorChainSome(el, other); RESULT.setLine(elleft); :}
+						|	(FactorChainNone) {: RESULT=new FactorChainNone(); :}  ;
+
+FactorChainEl			::= (FactorChainEl) Mulop:M1 Factor:F2 {: RESULT=new FactorChainEl(M1, F2); RESULT.setLine(M1left); :};
+
+Factor					::= (FactorComplex) Designator : designator ActParsParenOpt : actParamsSlot {: RESULT=new FactorComplex(designator, actParamsSlot); RESULT.setLine(designatorleft); :}
+						|	(FactorNum) NUM_CONST : val {: RESULT=new FactorNum(val); RESULT.setLine(valleft); :}
+						|	(FactorChar) CHAR_CONST : val {: RESULT=new FactorChar(val); RESULT.setLine(valleft); :}
+						|	(FactorBool) BOOL_CONST : val {: RESULT=new FactorBool(val); RESULT.setLine(valleft); :}
+						|	(FactorNew) NEW Type : newType ExprBrackOpt : newExpr {: RESULT=new FactorNew(newType, newExpr); RESULT.setLine(newTypeleft); :}
+						| 	(FactorParen) LPAREN Expr : exprs RPAREN {: RESULT=new FactorParen(exprs); RESULT.setLine(exprsleft); :};
+
+ActParsParenOpt			::=	(ActParsParenOptSome) FunInvoke:F1 {: RESULT=new ActParsParenOptSome(F1); RESULT.setLine(F1left); :}
+						|	(ActParsParenOptNone) {: RESULT=new ActParsParenOptNone(); :} /*e*/;
+
+FunInvoke				::= (FunInvoke) LPAREN ActParsOpt:A1 RPAREN {: RESULT=new FunInvoke(A1); RESULT.setLine(A1left); :};
+
+ExprBrackOpt			::= (ExprBrackOptSome) LBRACK Expr:E1 RBRACK {: RESULT=new ExprBrackOptSome(E1); RESULT.setLine(E1left); :}
+						|	(ExprBrackOptNone) {: RESULT=new ExprBrackOptNone(); :} /*e*/;
+
+
+
+Assignop				::=	(AssignopEQ) EQ {: RESULT=new AssignopEQ(); :}
+						|	(AssignopADD) AddopRight:A1 {: RESULT=new AssignopADD(A1); RESULT.setLine(A1left); :}
+						| 	(AssignopMUL) MulopRight:M1 {: RESULT=new AssignopMUL(M1); RESULT.setLine(M1left); :};
+
+AddopLeft				::= (AddopLeftPlus) PLUS {: RESULT=new AddopLeftPlus(); :}
+						| 	(AddopLeftMinus) MINUS {: RESULT=new AddopLeftMinus(); :};
+
+AddopRight				::= (AddopRightPlus) PLEQ {: RESULT=new AddopRightPlus(); :}
+						|	(AddopRightMinus) MNEQ {: RESULT=new AddopRightMinus(); :};
+
+Addop					::= (AddopL) AddopLeft:A1 {: RESULT=new AddopL(A1); RESULT.setLine(A1left); :}
+						|	(AddopR) AddopRight:A1 {: RESULT=new AddopR(A1); RESULT.setLine(A1left); :};
+
+
+Mulop					::= (MulopR) MulopRight:M1 {: RESULT=new MulopR(M1); RESULT.setLine(M1left); :}
+						|	(MulopL) MulopLeft:M1 {: RESULT=new MulopL(M1); RESULT.setLine(M1left); :};
+						
+
+MulopRight				::= (Mleq) MLEQ {: RESULT=new Mleq(); :}
+						|	(Dveq) DVEQ {: RESULT=new Dveq(); :}
+						|	(Preq) PREQ {: RESULT=new Preq(); :};
+						
+MulopLeft				::= (Mul) MUL {: RESULT=new Mul(); :}
+						|	(Div) DIV {: RESULT=new Div(); :}
+						|	(Prc) PRC {: RESULT=new Prc(); :};
+
+
+Relop					::= (Eql) EQL {: RESULT=new Eql(); :}
+						|	(Neq) NEQ {: RESULT=new Neq(); :}
+						|	(Gt) GT {: RESULT=new Gt(); :}
+						|	(Gte) GTE {: RESULT=new Gte(); :}
+						|	(Lt)LT {: RESULT=new Lt(); :}
+						|	(Lte)LTE {: RESULT=new Lte(); :};
+						

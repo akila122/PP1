@@ -1,0 +1,17 @@
+Exception in thread "main" java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader.main(JarRsrcLoader.java:61)
+Caused by: java.lang.NullPointerException
+	at rs.etf.pp1.symboltable.Tab.chainLocalSymbols(Tab.java:79)
+	at rs.ac.bg.etf.pp1.SemanticAnalyizer.visit(SemanticAnalyizer.java:329)
+	at rs.ac.bg.etf.pp1.ast.MethodVars.accept(MethodVars.java:46)
+	at rs.ac.bg.etf.pp1.ast.MethodVars.traverseBottomUp(MethodVars.java:60)
+	at rs.ac.bg.etf.pp1.ast.MethodDecl.traverseBottomUp(MethodDecl.java:100)
+	at rs.ac.bg.etf.pp1.ast.MethodDeclListSome.traverseBottomUp(MethodDeclListSome.java:52)
+	at rs.ac.bg.etf.pp1.ast.MethodDeclListSome.traverseBottomUp(MethodDeclListSome.java:53)
+	at rs.ac.bg.etf.pp1.ast.Program.traverseBottomUp(Program.java:87)
+	at rs.ac.bg.etf.pp1.Compiler.main(Compiler.java:71)
+	... 5 more

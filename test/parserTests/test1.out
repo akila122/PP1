@@ -1,0 +1,1864 @@
+INFO  20:24:40,805 - Compiling source file: E:\Fakultet\Semestar 8\PP\workspace\MJCompiler\test\parserTests\test1.mj
+INFO  20:24:41,062 - #2 program
+INFO  20:24:41,063 - #52 MyProg
+INFO  20:24:41,063 - #5 const
+INFO  20:24:41,065 - #52 int
+INFO  20:24:41,070 - #52 x_const
+INFO  20:24:41,072 - #53 12
+INFO  20:24:41,073 - #52 y_const
+INFO  20:24:41,073 - #53 13
+INFO  20:24:41,074 - #5 const
+INFO  20:24:41,074 - #52 bool
+INFO  20:24:41,075 - #52 x_bool
+INFO  20:24:41,075 - #54 true
+INFO  20:24:41,075 - #52 y_bool
+INFO  20:24:41,076 - #54 false
+INFO  20:24:41,076 - #5 const
+INFO  20:24:41,076 - #52 char
+INFO  20:24:41,076 - #52 x_char
+INFO  20:24:41,077 - #55 a
+INFO  20:24:41,077 - #52 TypeA
+INFO  20:24:41,078 - #52 a
+INFO  20:24:41,078 - #52 b
+INFO  20:24:41,078 - #52 c
+INFO  20:24:41,079 - #52 d
+INFO  20:24:41,079 - #13 class
+INFO  20:24:41,079 - #52 Book
+INFO  20:24:41,079 - #14 extends
+INFO  20:24:41,079 - #52 Object
+INFO  20:24:41,080 - #15 public
+INFO  20:24:41,082 - #52 TypeA
+INFO  20:24:41,084 - #52 a
+INFO  20:24:41,084 - #52 b
+INFO  20:24:41,084 - #52 c
+INFO  20:24:41,084 - #52 d
+INFO  20:24:41,086 - #16 private
+INFO  20:24:41,087 - #21 void
+INFO  20:24:41,088 - #52 helper
+INFO  20:24:41,096 - #17 protected
+INFO  20:24:41,100 - #52 Token
+INFO  20:24:41,107 - #52 helper
+INFO  20:24:41,108 - #52 int
+INFO  20:24:41,108 - #52 a
+INFO  20:24:41,109 - #52 Book
+INFO  20:24:41,109 - #52 b
+INFO  20:24:41,109 - #52 Type
+INFO  20:24:41,109 - #52 c
+INFO  20:24:41,110 - #52 int
+INFO  20:24:41,110 - #52 x
+INFO  20:24:41,110 - #52 bi
+INFO  20:24:41,111 - #52 Book
+INFO  20:24:41,111 - #52 books
+INFO  20:24:41,115 - #18 abstract
+INFO  20:24:41,117 - #13 class
+INFO  20:24:41,118 - #52 ABook
+INFO  20:24:41,118 - #14 extends
+INFO  20:24:41,118 - #52 Object
+INFO  20:24:41,118 - #16 private
+INFO  20:24:41,118 - #52 X
+INFO  20:24:41,118 - #52 x1
+INFO  20:24:41,119 - #15 public
+INFO  20:24:41,119 - #18 abstract
+INFO  20:24:41,119 - #52 int
+INFO  20:24:41,119 - #52 f
+INFO  20:24:41,120 - #52 int
+INFO  20:24:41,120 - #52 x
+INFO  20:24:41,120 - #52 Book
+INFO  20:24:41,120 - #52 b
+INFO  20:24:41,120 - #18 abstract
+INFO  20:24:41,121 - #16 private
+INFO  20:24:41,121 - #52 int
+INFO  20:24:41,121 - #52 f
+INFO  20:24:41,122 - #52 int
+INFO  20:24:41,122 - #52 x
+INFO  20:24:41,122 - #52 Book
+INFO  20:24:41,123 - #52 b
+INFO  20:24:41,123 - #16 private
+INFO  20:24:41,123 - #52 int
+INFO  20:24:41,123 - #52 f
+INFO  20:24:41,132 - #21 void
+INFO  20:24:41,132 - #52 main
+INFO  20:24:41,132 - #52 a
+INFO  20:24:41,134 - #52 c
+INFO  20:24:41,135 - #52 b
+INFO  20:24:41,135 - #53 82
+INFO  20:24:41,142 - #53 1
+INFO  20:24:41,158 - #53 2
+INFO  20:24:41,160 - #53 2
+INFO  20:24:41,162 - #52 a
+INFO  20:24:41,163 - #52 b
+INFO  20:24:41,163 - #52 c
+INFO  20:24:41,165 - #52 b
+INFO  20:24:41,165 - #53 2
+INFO  20:24:41,169 - #53 3
+INFO  20:24:41,175 - #52 a
+INFO  20:24:41,175 - #55 a
+INFO  20:24:41,176 - #55 c
+INFO  20:24:41,179 - #52 f
+INFO  20:24:41,179 - #52 a
+INFO  20:24:41,179 - #52 b
+INFO  20:24:41,179 - #52 c
+INFO  20:24:41,182 - #52 a
+INFO  20:24:41,183 - #52 b
+INFO  20:24:41,183 - #52 c
+INFO  20:24:41,183 - #53 85
+INFO  20:24:41,185 - #22 if
+INFO  20:24:41,185 - #52 A
+INFO  20:24:41,187 - #52 B
+INFO  20:24:41,187 - #52 x
+INFO  20:24:41,187 - #53 12
+INFO  20:24:41,188 - #52 x
+INFO  20:24:41,190 - #35 else
+INFO  20:24:41,191 - #22 if
+INFO  20:24:41,192 - #52 A
+INFO  20:24:41,192 - #52 C
+INFO  20:24:41,196 - #22 if
+INFO  20:24:41,196 - #52 someCond
+INFO  20:24:41,196 - #23 for
+INFO  20:24:41,196 - #52 x
+INFO  20:24:41,196 - #53 0
+INFO  20:24:41,199 - #52 x
+INFO  20:24:41,199 - #52 X
+INFO  20:24:41,201 - #52 X
+INFO  20:24:41,201 - #52 N
+INFO  20:24:41,208 - #52 x
+INFO  20:24:41,210 - #22 if
+INFO  20:24:41,210 - #52 B
+INFO  20:24:41,211 - #52 D
+INFO  20:24:41,211 - #52 y
+INFO  20:24:41,213 - #35 else
+INFO  20:24:41,213 - #52 y
+INFO  20:24:41,213 - #35 else
+INFO  20:24:41,214 - #52 x
+INFO  20:24:41,214 - #35 else
+INFO  20:24:41,214 - #52 x
+INFO  20:24:41,215 - #53 0
+INFO  20:24:41,215 - #23 for
+INFO  20:24:41,215 - #52 x
+INFO  20:24:41,215 - #53 1
+INFO  20:24:41,215 - #52 x
+INFO  20:24:41,216 - #52 y||c
+INFO  20:24:41,216 - #52 x
+INFO  20:24:41,216 - #53 2
+INFO  20:24:41,219 - #32 foreach
+INFO  20:24:41,219 - #52 iter
+INFO  20:24:41,221 - #52 coll
+INFO  20:24:41,221 - #32 foreach
+INFO  20:24:41,222 - #52 x
+INFO  20:24:41,223 - #52 X
+INFO  20:24:41,223 - #52 arr
+INFO  20:24:41,223 - #52 arrs
+INFO  20:24:41,223 - #53 1
+INFO  20:24:41,223 - #30 read
+INFO  20:24:41,223 - #52 a
+INFO  20:24:41,223 - #52 c
+INFO  20:24:41,224 - #52 b
+INFO  20:24:41,224 - #52 a
+INFO  20:24:41,224 - #52 b
+INFO  20:24:41,224 - #53 2
+INFO  20:24:41,224 - #53 2
+INFO  20:24:41,225 - #52 b
+INFO  20:24:41,227 - #53 8
+INFO  20:24:41,228 - #53 3
+INFO  20:24:41,228 - #52 b
+INFO  20:24:41,228 - #53 2
+INFO  20:24:41,228 - #52 b
+INFO  20:24:41,228 - #53 9
+INFO  20:24:41,229 - #29 print
+INFO  20:24:41,229 - #52 a
+INFO  20:24:41,229 - #52 a
+INFO  20:24:41,229 - #52 c
+INFO  20:24:41,229 - #53 2
+INFO  20:24:41,229 - #52 c
+INFO  20:24:41,229 - #53 9
+INFO  20:24:41,229 - #53 3
+INFO  20:24:41,230 - #53 10
+INFO  20:24:41,274 - Program(
+  ProgName(
+   MyProg
+  ) [ProgName]
+  ProgramOptListSome(
+    ProgramOptConst(
+      ConstDeclValid(
+        Type(
+         int
+        ) [Type]
+        ConstChainMulti(
+          ConstChainSingle(
+            ConstChainElValid(
+             x_const
+              ConstNum(
+               12
+              ) [ConstNum]
+            ) [ConstChainElValid]
+          ) [ConstChainSingle]
+          ConstChainElValid(
+           y_const
+            ConstNum(
+             13
+            ) [ConstNum]
+          ) [ConstChainElValid]
+        ) [ConstChainMulti]
+      ) [ConstDeclValid]
+    ) [ProgramOptConst]
+    ProgramOptListSome(
+      ProgramOptConst(
+        ConstDeclValid(
+          Type(
+           bool
+          ) [Type]
+          ConstChainMulti(
+            ConstChainSingle(
+              ConstChainElValid(
+               x_bool
+                ConstBool(
+                 true
+                ) [ConstBool]
+              ) [ConstChainElValid]
+            ) [ConstChainSingle]
+            ConstChainElValid(
+             y_bool
+              ConstBool(
+               false
+              ) [ConstBool]
+            ) [ConstChainElValid]
+          ) [ConstChainMulti]
+        ) [ConstDeclValid]
+      ) [ProgramOptConst]
+      ProgramOptListSome(
+        ProgramOptConst(
+          ConstDeclValid(
+            Type(
+             char
+            ) [Type]
+            ConstChainSingle(
+              ConstChainElValid(
+               x_char
+                ConstChar(
+                 a
+                ) [ConstChar]
+              ) [ConstChainElValid]
+            ) [ConstChainSingle]
+          ) [ConstDeclValid]
+        ) [ProgramOptConst]
+        ProgramOptListSome(
+          ProgramOptVar(
+            VarDeclValid(
+              Type(
+               TypeA
+              ) [Type]
+              VarChainMulti(
+                VarChainMulti(
+                  VarChainMulti(
+                    VarChainSingle(
+                      VarChainElArr(
+                       a
+                      ) [VarChainElArr]
+                    ) [VarChainSingle]
+                    VarChainElSingle(
+                     b
+                    ) [VarChainElSingle]
+                  ) [VarChainMulti]
+                  VarChainElArr(
+                   c
+                  ) [VarChainElArr]
+                ) [VarChainMulti]
+                VarChainElSingle(
+                 d
+                ) [VarChainElSingle]
+              ) [VarChainMulti]
+            ) [VarDeclValid]
+          ) [ProgramOptVar]
+          ProgramOptListSome(
+            ProgramOptC(
+              ClassDecl(
+                ClassNamingValid(
+                 Book
+                  ExtendOptSome(
+                    Type(
+                     Object
+                    ) [Type]
+                  ) [ExtendOptSome]
+                ) [ClassNamingValid]
+                ClassVarDeclListSome(
+                  ClassVarDeclListNone(
+                  ) [ClassVarDeclListNone]
+                  ClassVarDecl(
+                    Public(
+                    ) [Public]
+                    VarDeclValid(
+                      Type(
+                       TypeA
+                      ) [Type]
+                      VarChainMulti(
+                        VarChainMulti(
+                          VarChainMulti(
+                            VarChainSingle(
+                              VarChainElArr(
+                               a
+                              ) [VarChainElArr]
+                            ) [VarChainSingle]
+                            VarChainElSingle(
+                             b
+                            ) [VarChainElSingle]
+                          ) [VarChainMulti]
+                          VarChainElArr(
+                           c
+                          ) [VarChainElArr]
+                        ) [VarChainMulti]
+                        VarChainElSingle(
+                         d
+                        ) [VarChainElSingle]
+                      ) [VarChainMulti]
+                    ) [VarDeclValid]
+                  ) [ClassVarDecl]
+                ) [ClassVarDeclListSome]
+                ClassMethodsOptSingle(
+                  ClassMethods(
+                    ClassMethodDeclListSome(
+                      ClassMethodDecl(
+                        Private(
+                        ) [Private]
+                        MethodDecl(
+                          MethodName(
+                            MethodReturnNone(
+                            ) [MethodReturnNone]
+                           helper
+                          ) [MethodName]
+                          FormParChainOptNone(
+                          ) [FormParChainOptNone]
+                          MethodVars(
+                            VarDeclListNone(
+                            ) [VarDeclListNone]
+                          ) [MethodVars]
+                          StatementListNone(
+                          ) [StatementListNone]
+                        ) [MethodDecl]
+                      ) [ClassMethodDecl]
+                      ClassMethodDeclListSome(
+                        ClassMethodDecl(
+                          Protected(
+                          ) [Protected]
+                          MethodDecl(
+                            MethodName(
+                              MethodReturnSome(
+                                Type(
+                                 Token
+                                ) [Type]
+                              ) [MethodReturnSome]
+                             helper
+                            ) [MethodName]
+                            FormParChainOptSome(
+                              FormParChainMulti(
+                                FormParSingle(
+                                  Type(
+                                   int
+                                  ) [Type]
+                                 a
+                                ) [FormParSingle]
+                                FormParChainMulti(
+                                  FormParSingle(
+                                    Type(
+                                     Book
+                                    ) [Type]
+                                   b
+                                  ) [FormParSingle]
+                                  FormParChainSingle(
+                                    FormParSingle(
+                                      Type(
+                                       Type
+                                      ) [Type]
+                                     c
+                                    ) [FormParSingle]
+                                  ) [FormParChainSingle]
+                                ) [FormParChainMulti]
+                              ) [FormParChainMulti]
+                            ) [FormParChainOptSome]
+                            MethodVars(
+                              VarDeclListSome(
+                                VarDeclValid(
+                                  Type(
+                                   int
+                                  ) [Type]
+                                  VarChainMulti(
+                                    VarChainSingle(
+                                      VarChainElArr(
+                                       x
+                                      ) [VarChainElArr]
+                                    ) [VarChainSingle]
+                                    VarChainElSingle(
+                                     bi
+                                    ) [VarChainElSingle]
+                                  ) [VarChainMulti]
+                                ) [VarDeclValid]
+                                VarDeclListSome(
+                                  VarDeclValid(
+                                    Type(
+                                     Book
+                                    ) [Type]
+                                    VarChainSingle(
+                                      VarChainElSingle(
+                                       books
+                                      ) [VarChainElSingle]
+                                    ) [VarChainSingle]
+                                  ) [VarDeclValid]
+                                  VarDeclListNone(
+                                  ) [VarDeclListNone]
+                                ) [VarDeclListSome]
+                              ) [VarDeclListSome]
+                            ) [MethodVars]
+                            StatementListNone(
+                            ) [StatementListNone]
+                          ) [MethodDecl]
+                        ) [ClassMethodDecl]
+                        ClassMethodDeclListNone(
+                        ) [ClassMethodDeclListNone]
+                      ) [ClassMethodDeclListSome]
+                    ) [ClassMethodDeclListSome]
+                  ) [ClassMethods]
+                ) [ClassMethodsOptSingle]
+              ) [ClassDecl]
+            ) [ProgramOptC]
+            ProgramOptListSome(
+              ProgramOptAC(
+                AbstractClassDecl(
+                  ClassNamingValid(
+                   ABook
+                    ExtendOptSome(
+                      Type(
+                       Object
+                      ) [Type]
+                    ) [ExtendOptSome]
+                  ) [ClassNamingValid]
+                  ClassVarDeclListSome(
+                    ClassVarDeclListNone(
+                    ) [ClassVarDeclListNone]
+                    ClassVarDecl(
+                      Private(
+                      ) [Private]
+                      VarDeclValid(
+                        Type(
+                         X
+                        ) [Type]
+                        VarChainSingle(
+                          VarChainElSingle(
+                           x1
+                          ) [VarChainElSingle]
+                        ) [VarChainSingle]
+                      ) [VarDeclValid]
+                    ) [ClassVarDecl]
+                  ) [ClassVarDeclListSome]
+                  AbstractClassMethodsOptSingle(
+                    AbstractClassMethods(
+                      AbstractMethodDeclListA(
+                        AbstractMethodDeclValid(
+                          AbstractMethodDeclA(
+                            Public(
+                            ) [Public]
+                            MethodReturnSome(
+                              Type(
+                               int
+                              ) [Type]
+                            ) [MethodReturnSome]
+                           f
+                          ) [AbstractMethodDeclA]
+                          FormParChainOptSome(
+                            FormParChainMulti(
+                              FormParSingle(
+                                Type(
+                                 int
+                                ) [Type]
+                               x
+                              ) [FormParSingle]
+                              FormParChainSingle(
+                                FormParSingle(
+                                  Type(
+                                   Book
+                                  ) [Type]
+                                 b
+                                ) [FormParSingle]
+                              ) [FormParChainSingle]
+                            ) [FormParChainMulti]
+                          ) [FormParChainOptSome]
+                        ) [AbstractMethodDeclValid]
+                        AbstractMethodDeclListA(
+                          AbstractMethodDeclValid(
+                            AbstractMethodDeclB(
+                              Private(
+                              ) [Private]
+                              MethodReturnSome(
+                                Type(
+                                 int
+                                ) [Type]
+                              ) [MethodReturnSome]
+                             f
+                            ) [AbstractMethodDeclB]
+                            FormParChainOptSome(
+                              FormParChainMulti(
+                                FormParSingle(
+                                  Type(
+                                   int
+                                  ) [Type]
+                                 x
+                                ) [FormParSingle]
+                                FormParChainSingle(
+                                  FormParSingle(
+                                    Type(
+                                     Book
+                                    ) [Type]
+                                   b
+                                  ) [FormParSingle]
+                                ) [FormParChainSingle]
+                              ) [FormParChainMulti]
+                            ) [FormParChainOptSome]
+                          ) [AbstractMethodDeclValid]
+                          AbstractMethodDeclListB(
+                            ClassMethodDecl(
+                              Private(
+                              ) [Private]
+                              MethodDecl(
+                                MethodName(
+                                  MethodReturnSome(
+                                    Type(
+                                     int
+                                    ) [Type]
+                                  ) [MethodReturnSome]
+                                 f
+                                ) [MethodName]
+                                FormParChainOptNone(
+                                ) [FormParChainOptNone]
+                                MethodVars(
+                                  VarDeclListNone(
+                                  ) [VarDeclListNone]
+                                ) [MethodVars]
+                                StatementListNone(
+                                ) [StatementListNone]
+                              ) [MethodDecl]
+                            ) [ClassMethodDecl]
+                            AbstractMethodDeclListC(
+                            ) [AbstractMethodDeclListC]
+                          ) [AbstractMethodDeclListB]
+                        ) [AbstractMethodDeclListA]
+                      ) [AbstractMethodDeclListA]
+                    ) [AbstractClassMethods]
+                  ) [AbstractClassMethodsOptSingle]
+                ) [AbstractClassDecl]
+              ) [ProgramOptAC]
+              ProgramOptListNone(
+              ) [ProgramOptListNone]
+            ) [ProgramOptListSome]
+          ) [ProgramOptListSome]
+        ) [ProgramOptListSome]
+      ) [ProgramOptListSome]
+    ) [ProgramOptListSome]
+  ) [ProgramOptListSome]
+  MethodDeclListSome(
+    MethodDecl(
+      MethodName(
+        MethodReturnNone(
+        ) [MethodReturnNone]
+       main
+      ) [MethodName]
+      FormParChainOptNone(
+      ) [FormParChainOptNone]
+      MethodVars(
+        VarDeclListNone(
+        ) [VarDeclListNone]
+      ) [MethodVars]
+      StatementListSome(
+        MatchedStatement(
+          DesignatorStatementMatched(
+            DesignatorStatement(
+              Designator(
+                DesigStart(
+                 a
+                ) [DesigStart]
+                DesignatorChoiceListSome(
+                  DesignatorChoiceSingle(
+                   c
+                  ) [DesignatorChoiceSingle]
+                  DesignatorChoiceListSome(
+                    DesignatorChoiceSingle(
+                     b
+                    ) [DesignatorChoiceSingle]
+                    DesignatorChoiceListSome(
+                      DesignatorChoiceArr(
+                        Expr(
+                          MinusOptNone(
+                          ) [MinusOptNone]
+                          Term(
+                            FactorNum(
+                             82
+                            ) [FactorNum]
+                            FactorChainNone(
+                            ) [FactorChainNone]
+                          ) [Term]
+                          TermChainSome(
+                            TermChainEl(
+                              AddopL(
+                                AddopLeftPlus(
+                                ) [AddopLeftPlus]
+                              ) [AddopL]
+                              Term(
+                                FactorNum(
+                                 1
+                                ) [FactorNum]
+                                FactorChainNone(
+                                ) [FactorChainNone]
+                              ) [Term]
+                            ) [TermChainEl]
+                            TermChainNone(
+                            ) [TermChainNone]
+                          ) [TermChainSome]
+                        ) [Expr]
+                      ) [DesignatorChoiceArr]
+                      DesignatorChoiceListNone(
+                      ) [DesignatorChoiceListNone]
+                    ) [DesignatorChoiceListSome]
+                  ) [DesignatorChoiceListSome]
+                ) [DesignatorChoiceListSome]
+              ) [Designator]
+              DesignatorElemAssign(
+                AssignopEQ(
+                ) [AssignopEQ]
+                Expr(
+                  MinusOptNone(
+                  ) [MinusOptNone]
+                  Term(
+                    FactorNum(
+                     2
+                    ) [FactorNum]
+                    FactorChainNone(
+                    ) [FactorChainNone]
+                  ) [Term]
+                  TermChainSome(
+                    TermChainEl(
+                      AddopL(
+                        AddopLeftPlus(
+                        ) [AddopLeftPlus]
+                      ) [AddopL]
+                      Term(
+                        FactorNum(
+                         2
+                        ) [FactorNum]
+                        FactorChainNone(
+                        ) [FactorChainNone]
+                      ) [Term]
+                    ) [TermChainEl]
+                    TermChainNone(
+                    ) [TermChainNone]
+                  ) [TermChainSome]
+                ) [Expr]
+              ) [DesignatorElemAssign]
+            ) [DesignatorStatement]
+          ) [DesignatorStatementMatched]
+        ) [MatchedStatement]
+        StatementListSome(
+          MatchedStatement(
+            DesignatorStatementMatched(
+              DesignatorStatement(
+                Designator(
+                  DesigStart(
+                   a
+                  ) [DesigStart]
+                  DesignatorChoiceListSome(
+                    DesignatorChoiceArr(
+                      Expr(
+                        MinusOptNone(
+                        ) [MinusOptNone]
+                        Term(
+                          FactorComplex(
+                            Designator(
+                              DesigStart(
+                               b
+                              ) [DesigStart]
+                              DesignatorChoiceListSome(
+                                DesignatorChoiceSingle(
+                                 c
+                                ) [DesignatorChoiceSingle]
+                                DesignatorChoiceListNone(
+                                ) [DesignatorChoiceListNone]
+                              ) [DesignatorChoiceListSome]
+                            ) [Designator]
+                            ActParsParenOptNone(
+                            ) [ActParsParenOptNone]
+                          ) [FactorComplex]
+                          FactorChainNone(
+                          ) [FactorChainNone]
+                        ) [Term]
+                        TermChainNone(
+                        ) [TermChainNone]
+                      ) [Expr]
+                    ) [DesignatorChoiceArr]
+                    DesignatorChoiceListSome(
+                      DesignatorChoiceSingle(
+                       b
+                      ) [DesignatorChoiceSingle]
+                      DesignatorChoiceListNone(
+                      ) [DesignatorChoiceListNone]
+                    ) [DesignatorChoiceListSome]
+                  ) [DesignatorChoiceListSome]
+                ) [Designator]
+                DesignatorElemAssign(
+                  AssignopMUL(
+                    Mleq(
+                    ) [Mleq]
+                  ) [AssignopMUL]
+                  Expr(
+                    MinusOptNone(
+                    ) [MinusOptNone]
+                    Term(
+                      FactorNum(
+                       2
+                      ) [FactorNum]
+                      FactorChainSome(
+                        FactorChainEl(
+                          MulopR(
+                            Mleq(
+                            ) [Mleq]
+                          ) [MulopR]
+                          FactorNum(
+                           3
+                          ) [FactorNum]
+                        ) [FactorChainEl]
+                        FactorChainNone(
+                        ) [FactorChainNone]
+                      ) [FactorChainSome]
+                    ) [Term]
+                    TermChainNone(
+                    ) [TermChainNone]
+                  ) [Expr]
+                ) [DesignatorElemAssign]
+              ) [DesignatorStatement]
+            ) [DesignatorStatementMatched]
+          ) [MatchedStatement]
+          StatementListSome(
+            MatchedStatement(
+              DesignatorStatementMatched(
+                DesignatorStatement(
+                  Designator(
+                    DesigStart(
+                     a
+                    ) [DesigStart]
+                    DesignatorChoiceListSome(
+                      DesignatorChoiceArr(
+                        Expr(
+                          MinusOptNone(
+                          ) [MinusOptNone]
+                          Term(
+                            FactorChar(
+                             a
+                            ) [FactorChar]
+                            FactorChainNone(
+                            ) [FactorChainNone]
+                          ) [Term]
+                          TermChainSome(
+                            TermChainEl(
+                              AddopL(
+                                AddopLeftMinus(
+                                ) [AddopLeftMinus]
+                              ) [AddopL]
+                              Term(
+                                FactorChar(
+                                 c
+                                ) [FactorChar]
+                                FactorChainNone(
+                                ) [FactorChainNone]
+                              ) [Term]
+                            ) [TermChainEl]
+                            TermChainNone(
+                            ) [TermChainNone]
+                          ) [TermChainSome]
+                        ) [Expr]
+                      ) [DesignatorChoiceArr]
+                      DesignatorChoiceListSome(
+                        DesignatorChoiceSingle(
+                         f
+                        ) [DesignatorChoiceSingle]
+                        DesignatorChoiceListNone(
+                        ) [DesignatorChoiceListNone]
+                      ) [DesignatorChoiceListSome]
+                    ) [DesignatorChoiceListSome]
+                  ) [Designator]
+                  DesignatorElemActPars(
+                    FunInvoke(
+                      ActParsOptSome(
+                        ActParsMulti(
+                          Expr(
+                            MinusOptNone(
+                            ) [MinusOptNone]
+                            Term(
+                              FactorComplex(
+                                Designator(
+                                  DesigStart(
+                                   a
+                                  ) [DesigStart]
+                                  DesignatorChoiceListNone(
+                                  ) [DesignatorChoiceListNone]
+                                ) [Designator]
+                                ActParsParenOptNone(
+                                ) [ActParsParenOptNone]
+                              ) [FactorComplex]
+                              FactorChainNone(
+                              ) [FactorChainNone]
+                            ) [Term]
+                            TermChainNone(
+                            ) [TermChainNone]
+                          ) [Expr]
+                          ActParsMulti(
+                            Expr(
+                              MinusOptNone(
+                              ) [MinusOptNone]
+                              Term(
+                                FactorComplex(
+                                  Designator(
+                                    DesigStart(
+                                     b
+                                    ) [DesigStart]
+                                    DesignatorChoiceListNone(
+                                    ) [DesignatorChoiceListNone]
+                                  ) [Designator]
+                                  ActParsParenOptNone(
+                                  ) [ActParsParenOptNone]
+                                ) [FactorComplex]
+                                FactorChainNone(
+                                ) [FactorChainNone]
+                              ) [Term]
+                              TermChainNone(
+                              ) [TermChainNone]
+                            ) [Expr]
+                            ActParsSingle(
+                              Expr(
+                                MinusOptNone(
+                                ) [MinusOptNone]
+                                Term(
+                                  FactorComplex(
+                                    Designator(
+                                      DesigStart(
+                                       c
+                                      ) [DesigStart]
+                                      DesignatorChoiceListNone(
+                                      ) [DesignatorChoiceListNone]
+                                    ) [Designator]
+                                    ActParsParenOptNone(
+                                    ) [ActParsParenOptNone]
+                                  ) [FactorComplex]
+                                  FactorChainNone(
+                                  ) [FactorChainNone]
+                                ) [Term]
+                                TermChainNone(
+                                ) [TermChainNone]
+                              ) [Expr]
+                            ) [ActParsSingle]
+                          ) [ActParsMulti]
+                        ) [ActParsMulti]
+                      ) [ActParsOptSome]
+                    ) [FunInvoke]
+                  ) [DesignatorElemActPars]
+                ) [DesignatorStatement]
+              ) [DesignatorStatementMatched]
+            ) [MatchedStatement]
+            StatementListSome(
+              MatchedStatement(
+                DesignatorStatementMatched(
+                  DesignatorStatement(
+                    Designator(
+                      DesigStart(
+                       a
+                      ) [DesigStart]
+                      DesignatorChoiceListSome(
+                        DesignatorChoiceSingle(
+                         b
+                        ) [DesignatorChoiceSingle]
+                        DesignatorChoiceListSome(
+                          DesignatorChoiceSingle(
+                           c
+                          ) [DesignatorChoiceSingle]
+                          DesignatorChoiceListSome(
+                            DesignatorChoiceArr(
+                              Expr(
+                                MinusOptNone(
+                                ) [MinusOptNone]
+                                Term(
+                                  FactorNum(
+                                   85
+                                  ) [FactorNum]
+                                  FactorChainNone(
+                                  ) [FactorChainNone]
+                                ) [Term]
+                                TermChainNone(
+                                ) [TermChainNone]
+                              ) [Expr]
+                            ) [DesignatorChoiceArr]
+                            DesignatorChoiceListNone(
+                            ) [DesignatorChoiceListNone]
+                          ) [DesignatorChoiceListSome]
+                        ) [DesignatorChoiceListSome]
+                      ) [DesignatorChoiceListSome]
+                    ) [Designator]
+                    DesignatorElemPlus(
+                    ) [DesignatorElemPlus]
+                  ) [DesignatorStatement]
+                ) [DesignatorStatementMatched]
+              ) [MatchedStatement]
+              StatementListSome(
+                MatchedStatement(
+                  IfStatement(
+                    IfCut(
+                    ) [IfCut]
+                    ConditionSingle(
+                      CondTermMulti(
+                        CondFactSingle(
+                          Expr(
+                            MinusOptNone(
+                            ) [MinusOptNone]
+                            Term(
+                              FactorComplex(
+                                Designator(
+                                  DesigStart(
+                                   A
+                                  ) [DesigStart]
+                                  DesignatorChoiceListNone(
+                                  ) [DesignatorChoiceListNone]
+                                ) [Designator]
+                                ActParsParenOptNone(
+                                ) [ActParsParenOptNone]
+                              ) [FactorComplex]
+                              FactorChainNone(
+                              ) [FactorChainNone]
+                            ) [Term]
+                            TermChainNone(
+                            ) [TermChainNone]
+                          ) [Expr]
+                        ) [CondFactSingle]
+                        CondTermSingle(
+                          CondFactSingle(
+                            Expr(
+                              MinusOptNone(
+                              ) [MinusOptNone]
+                              Term(
+                                FactorComplex(
+                                  Designator(
+                                    DesigStart(
+                                     B
+                                    ) [DesigStart]
+                                    DesignatorChoiceListSome(
+                                      DesignatorChoiceSingle(
+                                       x
+                                      ) [DesignatorChoiceSingle]
+                                      DesignatorChoiceListSome(
+                                        DesignatorChoiceArr(
+                                          Expr(
+                                            MinusOptNone(
+                                            ) [MinusOptNone]
+                                            Term(
+                                              FactorNum(
+                                               12
+                                              ) [FactorNum]
+                                              FactorChainNone(
+                                              ) [FactorChainNone]
+                                            ) [Term]
+                                            TermChainNone(
+                                            ) [TermChainNone]
+                                          ) [Expr]
+                                        ) [DesignatorChoiceArr]
+                                        DesignatorChoiceListNone(
+                                        ) [DesignatorChoiceListNone]
+                                      ) [DesignatorChoiceListSome]
+                                    ) [DesignatorChoiceListSome]
+                                  ) [Designator]
+                                  ActParsParenOptNone(
+                                  ) [ActParsParenOptNone]
+                                ) [FactorComplex]
+                                FactorChainNone(
+                                ) [FactorChainNone]
+                              ) [Term]
+                              TermChainNone(
+                              ) [TermChainNone]
+                            ) [Expr]
+                          ) [CondFactSingle]
+                        ) [CondTermSingle]
+                      ) [CondTermMulti]
+                    ) [ConditionSingle]
+                    Rparen(
+                    ) [Rparen]
+                    DesignatorStatementMatched(
+                      DesignatorStatement(
+                        Designator(
+                          DesigStart(
+                           x
+                          ) [DesigStart]
+                          DesignatorChoiceListNone(
+                          ) [DesignatorChoiceListNone]
+                        ) [Designator]
+                        DesignatorElemPlus(
+                        ) [DesignatorElemPlus]
+                      ) [DesignatorStatement]
+                    ) [DesignatorStatementMatched]
+                    Else(
+                    ) [Else]
+                    IfStatement(
+                      IfCut(
+                      ) [IfCut]
+                      ConditionSingle(
+                        CondTermSingle(
+                          CondFactMulti(
+                            Expr(
+                              MinusOptNone(
+                              ) [MinusOptNone]
+                              Term(
+                                FactorComplex(
+                                  Designator(
+                                    DesigStart(
+                                     A
+                                    ) [DesigStart]
+                                    DesignatorChoiceListNone(
+                                    ) [DesignatorChoiceListNone]
+                                  ) [Designator]
+                                  ActParsParenOptNone(
+                                  ) [ActParsParenOptNone]
+                                ) [FactorComplex]
+                                FactorChainNone(
+                                ) [FactorChainNone]
+                              ) [Term]
+                              TermChainNone(
+                              ) [TermChainNone]
+                            ) [Expr]
+                            Neq(
+                            ) [Neq]
+                            Expr(
+                              MinusOptNone(
+                              ) [MinusOptNone]
+                              Term(
+                                FactorComplex(
+                                  Designator(
+                                    DesigStart(
+                                     C
+                                    ) [DesigStart]
+                                    DesignatorChoiceListNone(
+                                    ) [DesignatorChoiceListNone]
+                                  ) [Designator]
+                                  ActParsParenOptNone(
+                                  ) [ActParsParenOptNone]
+                                ) [FactorComplex]
+                                FactorChainNone(
+                                ) [FactorChainNone]
+                              ) [Term]
+                              TermChainNone(
+                              ) [TermChainNone]
+                            ) [Expr]
+                          ) [CondFactMulti]
+                        ) [CondTermSingle]
+                      ) [ConditionSingle]
+                      Rparen(
+                      ) [Rparen]
+                      IfStatement(
+                        IfCut(
+                        ) [IfCut]
+                        ConditionSingle(
+                          CondTermSingle(
+                            CondFactSingle(
+                              Expr(
+                                MinusOptNone(
+                                ) [MinusOptNone]
+                                Term(
+                                  FactorComplex(
+                                    Designator(
+                                      DesigStart(
+                                       someCond
+                                      ) [DesigStart]
+                                      DesignatorChoiceListNone(
+                                      ) [DesignatorChoiceListNone]
+                                    ) [Designator]
+                                    ActParsParenOptNone(
+                                    ) [ActParsParenOptNone]
+                                  ) [FactorComplex]
+                                  FactorChainNone(
+                                  ) [FactorChainNone]
+                                ) [Term]
+                                TermChainNone(
+                                ) [TermChainNone]
+                              ) [Expr]
+                            ) [CondFactSingle]
+                          ) [CondTermSingle]
+                        ) [ConditionSingle]
+                        Rparen(
+                        ) [Rparen]
+                        MatchedFor(
+                          ForInit(
+                            DesignatorStatementOptSome(
+                              DesignatorStatement(
+                                Designator(
+                                  DesigStart(
+                                   x
+                                  ) [DesigStart]
+                                  DesignatorChoiceListNone(
+                                  ) [DesignatorChoiceListNone]
+                                ) [Designator]
+                                DesignatorElemAssign(
+                                  AssignopEQ(
+                                  ) [AssignopEQ]
+                                  Expr(
+                                    MinusOptNone(
+                                    ) [MinusOptNone]
+                                    Term(
+                                      FactorNum(
+                                       0
+                                      ) [FactorNum]
+                                      FactorChainNone(
+                                      ) [FactorChainNone]
+                                    ) [Term]
+                                    TermChainNone(
+                                    ) [TermChainNone]
+                                  ) [Expr]
+                                ) [DesignatorElemAssign]
+                              ) [DesignatorStatement]
+                            ) [DesignatorStatementOptSome]
+                          ) [ForInit]
+                          ForCond(
+                            ConditionOptForSome(
+                              ConditionSingle(
+                                CondTermSingle(
+                                  CondFactMulti(
+                                    Expr(
+                                      MinusOptNone(
+                                      ) [MinusOptNone]
+                                      Term(
+                                        FactorComplex(
+                                          Designator(
+                                            DesigStart(
+                                             x
+                                            ) [DesigStart]
+                                            DesignatorChoiceListNone(
+                                            ) [DesignatorChoiceListNone]
+                                          ) [Designator]
+                                          ActParsParenOptNone(
+                                          ) [ActParsParenOptNone]
+                                        ) [FactorComplex]
+                                        FactorChainNone(
+                                        ) [FactorChainNone]
+                                      ) [Term]
+                                      TermChainNone(
+                                      ) [TermChainNone]
+                                    ) [Expr]
+                                    Lt(
+                                    ) [Lt]
+                                    Expr(
+                                      MinusOptNone(
+                                      ) [MinusOptNone]
+                                      Term(
+                                        FactorComplex(
+                                          Designator(
+                                            DesigStart(
+                                             X
+                                            ) [DesigStart]
+                                            DesignatorChoiceListSome(
+                                              DesignatorChoiceSingle(
+                                               X
+                                              ) [DesignatorChoiceSingle]
+                                              DesignatorChoiceListSome(
+                                                DesignatorChoiceSingle(
+                                                 N
+                                                ) [DesignatorChoiceSingle]
+                                                DesignatorChoiceListNone(
+                                                ) [DesignatorChoiceListNone]
+                                              ) [DesignatorChoiceListSome]
+                                            ) [DesignatorChoiceListSome]
+                                          ) [Designator]
+                                          ActParsParenOptNone(
+                                          ) [ActParsParenOptNone]
+                                        ) [FactorComplex]
+                                        FactorChainNone(
+                                        ) [FactorChainNone]
+                                      ) [Term]
+                                      TermChainNone(
+                                      ) [TermChainNone]
+                                    ) [Expr]
+                                  ) [CondFactMulti]
+                                ) [CondTermSingle]
+                              ) [ConditionSingle]
+                            ) [ConditionOptForSome]
+                          ) [ForCond]
+                          ForPost(
+                            DesignatorStatementOptSome(
+                              DesignatorStatement(
+                                Designator(
+                                  DesigStart(
+                                   x
+                                  ) [DesigStart]
+                                  DesignatorChoiceListNone(
+                                  ) [DesignatorChoiceListNone]
+                                ) [Designator]
+                                DesignatorElemPlus(
+                                ) [DesignatorElemPlus]
+                              ) [DesignatorStatement]
+                            ) [DesignatorStatementOptSome]
+                          ) [ForPost]
+                          IfStatement(
+                            IfCut(
+                            ) [IfCut]
+                            ConditionMulti(
+                              CondTermSingle(
+                                CondFactSingle(
+                                  Expr(
+                                    MinusOptNone(
+                                    ) [MinusOptNone]
+                                    Term(
+                                      FactorComplex(
+                                        Designator(
+                                          DesigStart(
+                                           B
+                                          ) [DesigStart]
+                                          DesignatorChoiceListNone(
+                                          ) [DesignatorChoiceListNone]
+                                        ) [Designator]
+                                        ActParsParenOptNone(
+                                        ) [ActParsParenOptNone]
+                                      ) [FactorComplex]
+                                      FactorChainNone(
+                                      ) [FactorChainNone]
+                                    ) [Term]
+                                    TermChainNone(
+                                    ) [TermChainNone]
+                                  ) [Expr]
+                                ) [CondFactSingle]
+                              ) [CondTermSingle]
+                              ConditionSingle(
+                                CondTermSingle(
+                                  CondFactSingle(
+                                    Expr(
+                                      MinusOptNone(
+                                      ) [MinusOptNone]
+                                      Term(
+                                        FactorComplex(
+                                          Designator(
+                                            DesigStart(
+                                             D
+                                            ) [DesigStart]
+                                            DesignatorChoiceListNone(
+                                            ) [DesignatorChoiceListNone]
+                                          ) [Designator]
+                                          ActParsParenOptNone(
+                                          ) [ActParsParenOptNone]
+                                        ) [FactorComplex]
+                                        FactorChainNone(
+                                        ) [FactorChainNone]
+                                      ) [Term]
+                                      TermChainNone(
+                                      ) [TermChainNone]
+                                    ) [Expr]
+                                  ) [CondFactSingle]
+                                ) [CondTermSingle]
+                              ) [ConditionSingle]
+                            ) [ConditionMulti]
+                            Rparen(
+                            ) [Rparen]
+                            DesignatorStatementMatched(
+                              DesignatorStatement(
+                                Designator(
+                                  DesigStart(
+                                   y
+                                  ) [DesigStart]
+                                  DesignatorChoiceListNone(
+                                  ) [DesignatorChoiceListNone]
+                                ) [Designator]
+                                DesignatorElemMinus(
+                                ) [DesignatorElemMinus]
+                              ) [DesignatorStatement]
+                            ) [DesignatorStatementMatched]
+                            Else(
+                            ) [Else]
+                            DesignatorStatementMatched(
+                              DesignatorStatement(
+                                Designator(
+                                  DesigStart(
+                                   y
+                                  ) [DesigStart]
+                                  DesignatorChoiceListNone(
+                                  ) [DesignatorChoiceListNone]
+                                ) [Designator]
+                                DesignatorElemPlus(
+                                ) [DesignatorElemPlus]
+                              ) [DesignatorStatement]
+                            ) [DesignatorStatementMatched]
+                          ) [IfStatement]
+                        ) [MatchedFor]
+                        Else(
+                        ) [Else]
+                        DesignatorStatementMatched(
+                          DesignatorStatement(
+                            Designator(
+                              DesigStart(
+                               x
+                              ) [DesigStart]
+                              DesignatorChoiceListNone(
+                              ) [DesignatorChoiceListNone]
+                            ) [Designator]
+                            DesignatorElemMinus(
+                            ) [DesignatorElemMinus]
+                          ) [DesignatorStatement]
+                        ) [DesignatorStatementMatched]
+                      ) [IfStatement]
+                      Else(
+                      ) [Else]
+                      DesignatorStatementMatched(
+                        DesignatorStatement(
+                          Designator(
+                            DesigStart(
+                             x
+                            ) [DesigStart]
+                            DesignatorChoiceListNone(
+                            ) [DesignatorChoiceListNone]
+                          ) [Designator]
+                          DesignatorElemAssign(
+                            AssignopEQ(
+                            ) [AssignopEQ]
+                            Expr(
+                              MinusOptNone(
+                              ) [MinusOptNone]
+                              Term(
+                                FactorNum(
+                                 0
+                                ) [FactorNum]
+                                FactorChainNone(
+                                ) [FactorChainNone]
+                              ) [Term]
+                              TermChainNone(
+                              ) [TermChainNone]
+                            ) [Expr]
+                          ) [DesignatorElemAssign]
+                        ) [DesignatorStatement]
+                      ) [DesignatorStatementMatched]
+                    ) [IfStatement]
+                  ) [IfStatement]
+                ) [MatchedStatement]
+                StatementListSome(
+                  MatchedStatement(
+                    MatchedFor(
+                      ForInit(
+                        DesignatorStatementOptSome(
+                          DesignatorStatement(
+                            Designator(
+                              DesigStart(
+                               x
+                              ) [DesigStart]
+                              DesignatorChoiceListNone(
+                              ) [DesignatorChoiceListNone]
+                            ) [Designator]
+                            DesignatorElemAssign(
+                              AssignopEQ(
+                              ) [AssignopEQ]
+                              Expr(
+                                MinusOptNone(
+                                ) [MinusOptNone]
+                                Term(
+                                  FactorNum(
+                                   1
+                                  ) [FactorNum]
+                                  FactorChainNone(
+                                  ) [FactorChainNone]
+                                ) [Term]
+                                TermChainNone(
+                                ) [TermChainNone]
+                              ) [Expr]
+                            ) [DesignatorElemAssign]
+                          ) [DesignatorStatement]
+                        ) [DesignatorStatementOptSome]
+                      ) [ForInit]
+                      ForCond(
+                        ConditionOptForSome(
+                          ConditionSingle(
+                            CondTermMulti(
+                              CondFactSingle(
+                                Expr(
+                                  MinusOptNone(
+                                  ) [MinusOptNone]
+                                  Term(
+                                    FactorComplex(
+                                      Designator(
+                                        DesigStart(
+                                         x
+                                        ) [DesigStart]
+                                        DesignatorChoiceListNone(
+                                        ) [DesignatorChoiceListNone]
+                                      ) [Designator]
+                                      ActParsParenOptNone(
+                                      ) [ActParsParenOptNone]
+                                    ) [FactorComplex]
+                                    FactorChainNone(
+                                    ) [FactorChainNone]
+                                  ) [Term]
+                                  TermChainNone(
+                                  ) [TermChainNone]
+                                ) [Expr]
+                              ) [CondFactSingle]
+                              CondTermSingle(
+                                CondFactSingle(
+                                  Expr(
+                                    MinusOptNone(
+                                    ) [MinusOptNone]
+                                    Term(
+                                      FactorComplex(
+                                        Designator(
+                                          DesigStart(
+                                           y||c
+                                          ) [DesigStart]
+                                          DesignatorChoiceListNone(
+                                          ) [DesignatorChoiceListNone]
+                                        ) [Designator]
+                                        ActParsParenOptNone(
+                                        ) [ActParsParenOptNone]
+                                      ) [FactorComplex]
+                                      FactorChainNone(
+                                      ) [FactorChainNone]
+                                    ) [Term]
+                                    TermChainNone(
+                                    ) [TermChainNone]
+                                  ) [Expr]
+                                ) [CondFactSingle]
+                              ) [CondTermSingle]
+                            ) [CondTermMulti]
+                          ) [ConditionSingle]
+                        ) [ConditionOptForSome]
+                      ) [ForCond]
+                      ForPost(
+                        DesignatorStatementOptSome(
+                          DesignatorStatement(
+                            Designator(
+                              DesigStart(
+                               x
+                              ) [DesigStart]
+                              DesignatorChoiceListNone(
+                              ) [DesignatorChoiceListNone]
+                            ) [Designator]
+                            DesignatorElemAssign(
+                              AssignopADD(
+                                AddopRightPlus(
+                                ) [AddopRightPlus]
+                              ) [AssignopADD]
+                              Expr(
+                                MinusOptNone(
+                                ) [MinusOptNone]
+                                Term(
+                                  FactorNum(
+                                   2
+                                  ) [FactorNum]
+                                  FactorChainNone(
+                                  ) [FactorChainNone]
+                                ) [Term]
+                                TermChainNone(
+                                ) [TermChainNone]
+                              ) [Expr]
+                            ) [DesignatorElemAssign]
+                          ) [DesignatorStatement]
+                        ) [DesignatorStatementOptSome]
+                      ) [ForPost]
+                      MatchedForeach(
+                        ForeachIter(
+                         iter
+                        ) [ForeachIter]
+                        Designator(
+                          DesigStart(
+                           coll
+                          ) [DesigStart]
+                          DesignatorChoiceListNone(
+                          ) [DesignatorChoiceListNone]
+                        ) [Designator]
+                        ForeachRparen(
+                        ) [ForeachRparen]
+                        MatchedForeach(
+                          ForeachIter(
+                           x
+                          ) [ForeachIter]
+                          Designator(
+                            DesigStart(
+                             X
+                            ) [DesigStart]
+                            DesignatorChoiceListSome(
+                              DesignatorChoiceSingle(
+                               arr
+                              ) [DesignatorChoiceSingle]
+                              DesignatorChoiceListSome(
+                                DesignatorChoiceSingle(
+                                 arrs
+                                ) [DesignatorChoiceSingle]
+                                DesignatorChoiceListSome(
+                                  DesignatorChoiceArr(
+                                    Expr(
+                                      MinusOptNone(
+                                      ) [MinusOptNone]
+                                      Term(
+                                        FactorNum(
+                                         1
+                                        ) [FactorNum]
+                                        FactorChainNone(
+                                        ) [FactorChainNone]
+                                      ) [Term]
+                                      TermChainNone(
+                                      ) [TermChainNone]
+                                    ) [Expr]
+                                  ) [DesignatorChoiceArr]
+                                  DesignatorChoiceListNone(
+                                  ) [DesignatorChoiceListNone]
+                                ) [DesignatorChoiceListSome]
+                              ) [DesignatorChoiceListSome]
+                            ) [DesignatorChoiceListSome]
+                          ) [Designator]
+                          ForeachRparen(
+                          ) [ForeachRparen]
+                          BlockStatement(
+                            StatementListSome(
+                              MatchedStatement(
+                                ReadStatement(
+                                  Designator(
+                                    DesigStart(
+                                     a
+                                    ) [DesigStart]
+                                    DesignatorChoiceListSome(
+                                      DesignatorChoiceArr(
+                                        Expr(
+                                          MinusOptNone(
+                                          ) [MinusOptNone]
+                                          Term(
+                                            FactorComplex(
+                                              Designator(
+                                                DesigStart(
+                                                 c
+                                                ) [DesigStart]
+                                                DesignatorChoiceListNone(
+                                                ) [DesignatorChoiceListNone]
+                                              ) [Designator]
+                                              ActParsParenOptNone(
+                                              ) [ActParsParenOptNone]
+                                            ) [FactorComplex]
+                                            FactorChainNone(
+                                            ) [FactorChainNone]
+                                          ) [Term]
+                                          TermChainNone(
+                                          ) [TermChainNone]
+                                        ) [Expr]
+                                      ) [DesignatorChoiceArr]
+                                      DesignatorChoiceListSome(
+                                        DesignatorChoiceSingle(
+                                         b
+                                        ) [DesignatorChoiceSingle]
+                                        DesignatorChoiceListNone(
+                                        ) [DesignatorChoiceListNone]
+                                      ) [DesignatorChoiceListSome]
+                                    ) [DesignatorChoiceListSome]
+                                  ) [Designator]
+                                ) [ReadStatement]
+                              ) [MatchedStatement]
+                              StatementListSome(
+                                MatchedStatement(
+                                  DesignatorStatementMatched(
+                                    DesignatorStatement(
+                                      Designator(
+                                        DesigStart(
+                                         a
+                                        ) [DesigStart]
+                                        DesignatorChoiceListSome(
+                                          DesignatorChoiceSingle(
+                                           b
+                                          ) [DesignatorChoiceSingle]
+                                          DesignatorChoiceListSome(
+                                            DesignatorChoiceArr(
+                                              Expr(
+                                                MinusOptNone(
+                                                ) [MinusOptNone]
+                                                Term(
+                                                  FactorNum(
+                                                   2
+                                                  ) [FactorNum]
+                                                  FactorChainNone(
+                                                  ) [FactorChainNone]
+                                                ) [Term]
+                                                TermChainSome(
+                                                  TermChainEl(
+                                                    AddopL(
+                                                      AddopLeftPlus(
+                                                      ) [AddopLeftPlus]
+                                                    ) [AddopL]
+                                                    Term(
+                                                      FactorNum(
+                                                       2
+                                                      ) [FactorNum]
+                                                      FactorChainSome(
+                                                        FactorChainEl(
+                                                          MulopL(
+                                                            Mul(
+                                                            ) [Mul]
+                                                          ) [MulopL]
+                                                          FactorComplex(
+                                                            Designator(
+                                                              DesigStart(
+                                                               b
+                                                              ) [DesigStart]
+                                                              DesignatorChoiceListSome(
+                                                                DesignatorChoiceArr(
+                                                                  Expr(
+                                                                    MinusOptNone(
+                                                                    ) [MinusOptNone]
+                                                                    Term(
+                                                                      FactorNum(
+                                                                       8
+                                                                      ) [FactorNum]
+                                                                      FactorChainSome(
+                                                                        FactorChainEl(
+                                                                          MulopL(
+                                                                            Mul(
+                                                                            ) [Mul]
+                                                                          ) [MulopL]
+                                                                          FactorNum(
+                                                                           3
+                                                                          ) [FactorNum]
+                                                                        ) [FactorChainEl]
+                                                                        FactorChainNone(
+                                                                        ) [FactorChainNone]
+                                                                      ) [FactorChainSome]
+                                                                    ) [Term]
+                                                                    TermChainNone(
+                                                                    ) [TermChainNone]
+                                                                  ) [Expr]
+                                                                ) [DesignatorChoiceArr]
+                                                                DesignatorChoiceListSome(
+                                                                  DesignatorChoiceSingle(
+                                                                   b
+                                                                  ) [DesignatorChoiceSingle]
+                                                                  DesignatorChoiceListNone(
+                                                                  ) [DesignatorChoiceListNone]
+                                                                ) [DesignatorChoiceListSome]
+                                                              ) [DesignatorChoiceListSome]
+                                                            ) [Designator]
+                                                            ActParsParenOptNone(
+                                                            ) [ActParsParenOptNone]
+                                                          ) [FactorComplex]
+                                                        ) [FactorChainEl]
+                                                        FactorChainNone(
+                                                        ) [FactorChainNone]
+                                                      ) [FactorChainSome]
+                                                    ) [Term]
+                                                  ) [TermChainEl]
+                                                  TermChainNone(
+                                                  ) [TermChainNone]
+                                                ) [TermChainSome]
+                                              ) [Expr]
+                                            ) [DesignatorChoiceArr]
+                                            DesignatorChoiceListNone(
+                                            ) [DesignatorChoiceListNone]
+                                          ) [DesignatorChoiceListSome]
+                                        ) [DesignatorChoiceListSome]
+                                      ) [Designator]
+                                      DesignatorElemAssign(
+                                        AssignopEQ(
+                                        ) [AssignopEQ]
+                                        Expr(
+                                          MinusOptNone(
+                                          ) [MinusOptNone]
+                                          Term(
+                                            FactorNum(
+                                             2
+                                            ) [FactorNum]
+                                            FactorChainSome(
+                                              FactorChainEl(
+                                                MulopL(
+                                                  Mul(
+                                                  ) [Mul]
+                                                ) [MulopL]
+                                                FactorComplex(
+                                                  Designator(
+                                                    DesigStart(
+                                                     b
+                                                    ) [DesigStart]
+                                                    DesignatorChoiceListSome(
+                                                      DesignatorChoiceArr(
+                                                        Expr(
+                                                          MinusOptNone(
+                                                          ) [MinusOptNone]
+                                                          Term(
+                                                            FactorNum(
+                                                             9
+                                                            ) [FactorNum]
+                                                            FactorChainNone(
+                                                            ) [FactorChainNone]
+                                                          ) [Term]
+                                                          TermChainNone(
+                                                          ) [TermChainNone]
+                                                        ) [Expr]
+                                                      ) [DesignatorChoiceArr]
+                                                      DesignatorChoiceListNone(
+                                                      ) [DesignatorChoiceListNone]
+                                                    ) [DesignatorChoiceListSome]
+                                                  ) [Designator]
+                                                  ActParsParenOptNone(
+                                                  ) [ActParsParenOptNone]
+                                                ) [FactorComplex]
+                                              ) [FactorChainEl]
+                                              FactorChainNone(
+                                              ) [FactorChainNone]
+                                            ) [FactorChainSome]
+                                          ) [Term]
+                                          TermChainNone(
+                                          ) [TermChainNone]
+                                        ) [Expr]
+                                      ) [DesignatorElemAssign]
+                                    ) [DesignatorStatement]
+                                  ) [DesignatorStatementMatched]
+                                ) [MatchedStatement]
+                                StatementListSome(
+                                  MatchedStatement(
+                                    PrintStatement(
+                                      Expr(
+                                        MinusOptNone(
+                                        ) [MinusOptNone]
+                                        Term(
+                                          FactorComplex(
+                                            Designator(
+                                              DesigStart(
+                                               a
+                                              ) [DesigStart]
+                                              DesignatorChoiceListSome(
+                                                DesignatorChoiceSingle(
+                                                 a
+                                                ) [DesignatorChoiceSingle]
+                                                DesignatorChoiceListSome(
+                                                  DesignatorChoiceArr(
+                                                    Expr(
+                                                      MinusOptNone(
+                                                      ) [MinusOptNone]
+                                                      Term(
+                                                        FactorComplex(
+                                                          Designator(
+                                                            DesigStart(
+                                                             c
+                                                            ) [DesigStart]
+                                                            DesignatorChoiceListNone(
+                                                            ) [DesignatorChoiceListNone]
+                                                          ) [Designator]
+                                                          ActParsParenOptNone(
+                                                          ) [ActParsParenOptNone]
+                                                        ) [FactorComplex]
+                                                        FactorChainNone(
+                                                        ) [FactorChainNone]
+                                                      ) [Term]
+                                                      TermChainSome(
+                                                        TermChainEl(
+                                                          AddopL(
+                                                            AddopLeftPlus(
+                                                            ) [AddopLeftPlus]
+                                                          ) [AddopL]
+                                                          Term(
+                                                            FactorNum(
+                                                             2
+                                                            ) [FactorNum]
+                                                            FactorChainSome(
+                                                              FactorChainEl(
+                                                                MulopL(
+                                                                  Mul(
+                                                                  ) [Mul]
+                                                                ) [MulopL]
+                                                                FactorComplex(
+                                                                  Designator(
+                                                                    DesigStart(
+                                                                     c
+                                                                    ) [DesigStart]
+                                                                    DesignatorChoiceListSome(
+                                                                      DesignatorChoiceArr(
+                                                                        Expr(
+                                                                          MinusOptNone(
+                                                                          ) [MinusOptNone]
+                                                                          Term(
+                                                                            FactorNum(
+                                                                             9
+                                                                            ) [FactorNum]
+                                                                            FactorChainNone(
+                                                                            ) [FactorChainNone]
+                                                                          ) [Term]
+                                                                          TermChainNone(
+                                                                          ) [TermChainNone]
+                                                                        ) [Expr]
+                                                                      ) [DesignatorChoiceArr]
+                                                                      DesignatorChoiceListNone(
+                                                                      ) [DesignatorChoiceListNone]
+                                                                    ) [DesignatorChoiceListSome]
+                                                                  ) [Designator]
+                                                                  ActParsParenOptNone(
+                                                                  ) [ActParsParenOptNone]
+                                                                ) [FactorComplex]
+                                                              ) [FactorChainEl]
+                                                              FactorChainNone(
+                                                              ) [FactorChainNone]
+                                                            ) [FactorChainSome]
+                                                          ) [Term]
+                                                        ) [TermChainEl]
+                                                        TermChainSome(
+                                                          TermChainEl(
+                                                            AddopL(
+                                                              AddopLeftPlus(
+                                                              ) [AddopLeftPlus]
+                                                            ) [AddopL]
+                                                            Term(
+                                                              FactorNum(
+                                                               3
+                                                              ) [FactorNum]
+                                                              FactorChainNone(
+                                                              ) [FactorChainNone]
+                                                            ) [Term]
+                                                          ) [TermChainEl]
+                                                          TermChainNone(
+                                                          ) [TermChainNone]
+                                                        ) [TermChainSome]
+                                                      ) [TermChainSome]
+                                                    ) [Expr]
+                                                  ) [DesignatorChoiceArr]
+                                                  DesignatorChoiceListNone(
+                                                  ) [DesignatorChoiceListNone]
+                                                ) [DesignatorChoiceListSome]
+                                              ) [DesignatorChoiceListSome]
+                                            ) [Designator]
+                                            ActParsParenOptNone(
+                                            ) [ActParsParenOptNone]
+                                          ) [FactorComplex]
+                                          FactorChainNone(
+                                          ) [FactorChainNone]
+                                        ) [Term]
+                                        TermChainNone(
+                                        ) [TermChainNone]
+                                      ) [Expr]
+                                      NumConstOptSome(
+                                       10
+                                      ) [NumConstOptSome]
+                                    ) [PrintStatement]
+                                  ) [MatchedStatement]
+                                  StatementListNone(
+                                  ) [StatementListNone]
+                                ) [StatementListSome]
+                              ) [StatementListSome]
+                            ) [StatementListSome]
+                          ) [BlockStatement]
+                        ) [MatchedForeach]
+                      ) [MatchedForeach]
+                    ) [MatchedFor]
+                  ) [MatchedStatement]
+                  StatementListNone(
+                  ) [StatementListNone]
+                ) [StatementListSome]
+              ) [StatementListSome]
+            ) [StatementListSome]
+          ) [StatementListSome]
+        ) [StatementListSome]
+      ) [StatementListSome]
+    ) [MethodDecl]
+    MethodDeclListNone(
+    ) [MethodDeclListNone]
+  ) [MethodDeclListSome]
+) [Program]
+INFO  20:24:41,282 - ===================================
+ERROR 20:24:41,295 - Type used but not declared TypeA at line 9
+ERROR 20:24:41,295 - Type used but not declared Object at line 11
+ERROR 20:24:41,296 - Cannot extend class Book from non extendable type at line 11
+ERROR 20:24:41,296 - Type used but not declared TypeA at line 12
+ERROR 20:24:41,296 - Symbol a already declared in current scope at line 12
+ERROR 20:24:41,296 - Symbol b already declared in current scope at line 12
+ERROR 20:24:41,296 - Symbol c already declared in current scope at line 12
+ERROR 20:24:41,296 - Symbol d already declared in current scope at line 12

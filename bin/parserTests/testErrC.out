@@ -1,0 +1,257 @@
+INFO  20:51:10,465 - Compiling source file: E:\Fakultet\Semestar 8\PP\workspace\MJCompiler\test\parserTests\testErrC.mj
+INFO  20:51:11,014 - #2 program
+INFO  20:51:11,015 - #52 test_err
+INFO  20:51:11,015 - #13 class
+INFO  20:51:11,017 - #52 X
+ERROR 20:51:11,017 - Syntax error detected at line 4
+INFO  20:51:11,024 - #53 10
+INFO  20:51:11,026 - #13 class
+INFO  20:51:11,027 - #52 X
+DEBUG 20:51:11,028 - Recovered from bad CLASS NAMING.
+ERROR 20:51:11,057 - Syntax error detected at line 6
+INFO  20:51:11,059 - #53 5
+INFO  20:51:11,060 - #14 extends
+INFO  20:51:11,060 - #52 Object
+INFO  20:51:11,060 - #13 class
+INFO  20:51:11,060 - #52 X
+DEBUG 20:51:11,061 - Recovered from bad CLASS NAMING.
+ERROR 20:51:11,061 - Syntax error detected at line 8
+INFO  20:51:11,061 - #53 10
+INFO  20:51:11,061 - #14 extends
+INFO  20:51:11,061 - #53 2
+INFO  20:51:11,062 - #13 class
+INFO  20:51:11,062 - #52 X
+DEBUG 20:51:11,062 - Recovered from bad CLASS NAMING.
+INFO  20:51:11,062 - #14 extends
+INFO  20:51:11,062 - #53 10
+ERROR 20:51:11,063 - Syntax error detected at line 10
+INFO  20:51:11,063 - #18 abstract
+INFO  20:51:11,063 - #13 class
+DEBUG 20:51:11,063 - Recovered from bad CLASS NAMING.
+INFO  20:51:11,063 - #52 Y
+INFO  20:51:11,065 - #15 public
+INFO  20:51:11,066 - #18 abstract
+INFO  20:51:11,069 - #21 void
+ERROR 20:51:11,069 - Syntax error detected at line 15
+INFO  20:51:11,069 - #53 10
+INFO  20:51:11,070 - #52 bad_func
+INFO  20:51:11,070 - #15 public
+INFO  20:51:11,070 - #18 abstract
+INFO  20:51:11,070 - #21 void
+DEBUG 20:51:11,071 - Recovered from bad ABSTRACT METHOD DECLARATION.
+INFO  20:51:11,072 - #52 f
+INFO  20:51:11,076 - #15 public
+INFO  20:51:11,078 - #21 void
+INFO  20:51:11,078 - #52 f
+INFO  20:51:11,086 - #15 public
+INFO  20:51:11,101 - #21 void
+INFO  20:51:11,101 - #52 f
+INFO  20:51:11,101 - #18 abstract
+INFO  20:51:11,101 - #21 void
+ERROR 20:51:11,102 - Syntax error detected at line 19
+INFO  20:51:11,102 - #52 bad
+INFO  20:51:11,102 - #15 public
+INFO  20:51:11,102 - #21 void
+INFO  20:51:11,105 - #52 f
+DEBUG 20:51:11,105 - Recovered from bad ABSTRACT METHOD DECLARATION.
+INFO  20:51:11,105 - #15 public
+INFO  20:51:11,105 - #18 abstract
+INFO  20:51:11,106 - #52 f
+ERROR 20:51:11,106 - Syntax error detected at line 21
+INFO  20:51:11,106 - #53 5
+INFO  20:51:11,106 - #52 d
+INFO  20:51:11,106 - #15 public
+INFO  20:51:11,106 - #21 void
+INFO  20:51:11,107 - #52 f
+DEBUG 20:51:11,107 - Recovered from bad ABSTRACT METHOD DECLARATION.
+INFO  20:51:11,140 - Program(
+  ProgName(
+   test_err
+  ) [ProgName]
+  ProgramOptListSome(
+    ProgramOptC(
+      ClassDecl(
+        ClassNamingErr(
+        ) [ClassNamingErr]
+        ClassVarDeclListNone(
+        ) [ClassVarDeclListNone]
+        ClasMethodsOptNone(
+        ) [ClasMethodsOptNone]
+      ) [ClassDecl]
+    ) [ProgramOptC]
+    ProgramOptListSome(
+      ProgramOptC(
+        ClassDecl(
+          ClassNamingErr(
+          ) [ClassNamingErr]
+          ClassVarDeclListNone(
+          ) [ClassVarDeclListNone]
+          ClasMethodsOptNone(
+          ) [ClasMethodsOptNone]
+        ) [ClassDecl]
+      ) [ProgramOptC]
+      ProgramOptListSome(
+        ProgramOptC(
+          ClassDecl(
+            ClassNamingErr(
+            ) [ClassNamingErr]
+            ClassVarDeclListNone(
+            ) [ClassVarDeclListNone]
+            ClasMethodsOptNone(
+            ) [ClasMethodsOptNone]
+          ) [ClassDecl]
+        ) [ProgramOptC]
+        ProgramOptListSome(
+          ProgramOptC(
+            ClassDecl(
+              ClassNamingErr(
+              ) [ClassNamingErr]
+              ClassVarDeclListNone(
+              ) [ClassVarDeclListNone]
+              ClasMethodsOptNone(
+              ) [ClasMethodsOptNone]
+            ) [ClassDecl]
+          ) [ProgramOptC]
+          ProgramOptListSome(
+            ProgramOptAC(
+              AbstractClassDecl(
+                ClassNamingValid(
+                 Y
+                  ExtendOptNone(
+                  ) [ExtendOptNone]
+                ) [ClassNamingValid]
+                ClassVarDeclListNone(
+                ) [ClassVarDeclListNone]
+                AbstractClassMethodsOptSingle(
+                  AbstractClassMethods(
+                    AbstractMethodDeclListA(
+                      AbstractMethodDeclErr(
+                      ) [AbstractMethodDeclErr]
+                      AbstractMethodDeclListA(
+                        AbstractMethodDeclValid(
+                          AbstractMethodDeclA(
+                            Public(
+                            ) [Public]
+                            MethodReturnNone(
+                            ) [MethodReturnNone]
+                           f
+                          ) [AbstractMethodDeclA]
+                          FormParChainOptNone(
+                          ) [FormParChainOptNone]
+                        ) [AbstractMethodDeclValid]
+                        AbstractMethodDeclListB(
+                          ClassMethodDecl(
+                            Public(
+                            ) [Public]
+                            MethodDecl(
+                              MethodName(
+                                MethodReturnNone(
+                                ) [MethodReturnNone]
+                               f
+                              ) [MethodName]
+                              FormParChainOptNone(
+                              ) [FormParChainOptNone]
+                              MethodVars(
+                                VarDeclListNone(
+                                ) [VarDeclListNone]
+                              ) [MethodVars]
+                              StatementListNone(
+                              ) [StatementListNone]
+                            ) [MethodDecl]
+                          ) [ClassMethodDecl]
+                          AbstractMethodDeclListB(
+                            ClassMethodDecl(
+                              Public(
+                              ) [Public]
+                              MethodDecl(
+                                MethodName(
+                                  MethodReturnNone(
+                                  ) [MethodReturnNone]
+                                 f
+                                ) [MethodName]
+                                FormParChainOptNone(
+                                ) [FormParChainOptNone]
+                                MethodVars(
+                                  VarDeclListNone(
+                                  ) [VarDeclListNone]
+                                ) [MethodVars]
+                                StatementListNone(
+                                ) [StatementListNone]
+                              ) [MethodDecl]
+                            ) [ClassMethodDecl]
+                            AbstractMethodDeclListA(
+                              AbstractMethodDeclErr(
+                              ) [AbstractMethodDeclErr]
+                              AbstractMethodDeclListB(
+                                ClassMethodDecl(
+                                  Public(
+                                  ) [Public]
+                                  MethodDecl(
+                                    MethodName(
+                                      MethodReturnNone(
+                                      ) [MethodReturnNone]
+                                     f
+                                    ) [MethodName]
+                                    FormParChainOptNone(
+                                    ) [FormParChainOptNone]
+                                    MethodVars(
+                                      VarDeclListNone(
+                                      ) [VarDeclListNone]
+                                    ) [MethodVars]
+                                    StatementListNone(
+                                    ) [StatementListNone]
+                                  ) [MethodDecl]
+                                ) [ClassMethodDecl]
+                                AbstractMethodDeclListA(
+                                  AbstractMethodDeclErr(
+                                  ) [AbstractMethodDeclErr]
+                                  AbstractMethodDeclListB(
+                                    ClassMethodDecl(
+                                      Public(
+                                      ) [Public]
+                                      MethodDecl(
+                                        MethodName(
+                                          MethodReturnNone(
+                                          ) [MethodReturnNone]
+                                         f
+                                        ) [MethodName]
+                                        FormParChainOptNone(
+                                        ) [FormParChainOptNone]
+                                        MethodVars(
+                                          VarDeclListNone(
+                                          ) [VarDeclListNone]
+                                        ) [MethodVars]
+                                        StatementListNone(
+                                        ) [StatementListNone]
+                                      ) [MethodDecl]
+                                    ) [ClassMethodDecl]
+                                    AbstractMethodDeclListC(
+                                    ) [AbstractMethodDeclListC]
+                                  ) [AbstractMethodDeclListB]
+                                ) [AbstractMethodDeclListA]
+                              ) [AbstractMethodDeclListB]
+                            ) [AbstractMethodDeclListA]
+                          ) [AbstractMethodDeclListB]
+                        ) [AbstractMethodDeclListB]
+                      ) [AbstractMethodDeclListA]
+                    ) [AbstractMethodDeclListA]
+                  ) [AbstractClassMethods]
+                ) [AbstractClassMethodsOptSingle]
+              ) [AbstractClassDecl]
+            ) [ProgramOptAC]
+            ProgramOptListNone(
+            ) [ProgramOptListNone]
+          ) [ProgramOptListSome]
+        ) [ProgramOptListSome]
+      ) [ProgramOptListSome]
+    ) [ProgramOptListSome]
+  ) [ProgramOptListSome]
+  MethodDeclListNone(
+  ) [MethodDeclListNone]
+) [Program]
+INFO  20:51:11,142 - ===================================
+ERROR 20:51:11,160 - Class declaration invalid at line 4
+ERROR 20:51:11,160 - Class declaration invalid at line 6
+ERROR 20:51:11,160 - Class declaration invalid at line 8
+ERROR 20:51:11,161 - Class declaration invalid at line 10
+ERROR 20:51:11,161 - Symbol f already declared in current scope at line 17

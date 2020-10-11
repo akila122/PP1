@@ -1,0 +1,267 @@
+INFO  20:32:57,602 - Compiling source file: E:\Fakultet\Semestar 8\PP\workspace\MJCompiler\test\parserTests\testErrA.mj
+INFO  20:32:57,895 - #2 program
+INFO  20:32:57,895 - #52 test_err
+INFO  20:32:57,897 - #21 void
+INFO  20:32:57,898 - #52 main
+INFO  20:32:57,907 - #53 10
+ERROR 20:32:57,907 - Syntax error detected at line 6
+INFO  20:32:57,907 - #52 int
+INFO  20:32:57,907 - #52 x
+DEBUG 20:32:57,909 - Recovered from bad LOCAL VARIABLE DECLARATION.
+INFO  20:32:57,912 - #5 const
+ERROR 20:32:57,912 - Syntax error detected at line 9
+INFO  20:32:57,913 - #52 x
+INFO  20:32:57,913 - #53 0
+INFO  20:32:57,913 - #52 dasdas
+INFO  20:32:57,913 - #52 int
+INFO  20:32:57,913 - #52 x
+DEBUG 20:32:57,913 - Recovered from bad LOCAL VARIABLE DECLARATION.
+INFO  20:32:57,913 - #52 cont
+INFO  20:32:57,914 - #52 d
+ERROR 20:32:57,914 - Syntax error detected at line 13
+INFO  20:32:57,914 - #52 dasdsa
+INFO  20:32:57,914 - #52 x
+INFO  20:32:57,914 - #52 int
+INFO  20:32:57,914 - #52 x
+DEBUG 20:32:57,914 - Recovered from bad LOCAL VARIABLE DECLARATION.
+INFO  20:32:57,916 - #52 cont
+INFO  20:32:57,916 - #52 d
+ERROR 20:32:57,916 - Syntax error detected at line 18
+INFO  20:32:57,916 - #52 dasdsa
+INFO  20:32:57,917 - #52 int
+INFO  20:32:57,917 - #52 x
+DEBUG 20:32:57,917 - Recovered from bad LOCAL VARIABLE DECLARATION.
+INFO  20:32:57,917 - #52 still_bad
+INFO  20:32:57,917 - #52 x
+INFO  20:32:57,917 - #52 x
+ERROR 20:32:57,917 - Syntax error detected at line 22
+INFO  20:32:57,918 - #53 10
+INFO  20:32:57,918 - #53 2
+INFO  20:32:57,918 - #52 x
+INFO  20:32:57,918 - #52 d4
+DEBUG 20:32:57,918 - Recovered from bad LOCAL VARIABLE DECLARATION.
+INFO  20:32:57,919 - #52 bad
+ERROR 20:32:57,919 - Syntax error detected at line 24
+INFO  20:32:57,919 - #53 10
+INFO  20:32:57,919 - #52 d
+INFO  20:32:57,919 - #52 good
+DEBUG 20:32:57,920 - Recovered from bad LOCAL VARIABLE DECLARATION.
+INFO  20:32:57,927 - #52 ok
+INFO  20:32:57,948 - #53 5
+ERROR 20:32:57,948 - Syntax error detected at line 31
+INFO  20:32:57,948 - #52 f
+INFO  20:32:57,948 - #53 2
+INFO  20:32:57,949 - #52 good
+INFO  20:32:57,950 - #52 ok
+ERROR 20:32:57,951 - Syntax error detected at line 35
+INFO  20:32:57,987 - Program(
+  ProgName(
+   test_err
+  ) [ProgName]
+  ProgramOptListNone(
+  ) [ProgramOptListNone]
+  MethodDeclListSome(
+    MethodDecl(
+      MethodName(
+        MethodReturnNone(
+        ) [MethodReturnNone]
+       main
+      ) [MethodName]
+      FormParChainOptNone(
+      ) [FormParChainOptNone]
+      MethodVars(
+        VarDeclListSome(
+          VarDeclErr(
+          ) [VarDeclErr]
+          VarDeclListSome(
+            VarDeclValid(
+              Type(
+               int
+              ) [Type]
+              VarChainSingle(
+                VarChainElSingle(
+                 x
+                ) [VarChainElSingle]
+              ) [VarChainSingle]
+            ) [VarDeclValid]
+            VarDeclListSome(
+              VarDeclErr(
+              ) [VarDeclErr]
+              VarDeclListSome(
+                VarDeclValid(
+                  Type(
+                   int
+                  ) [Type]
+                  VarChainSingle(
+                    VarChainElSingle(
+                     x
+                    ) [VarChainElSingle]
+                  ) [VarChainSingle]
+                ) [VarDeclValid]
+                VarDeclListSome(
+                  VarDeclValid(
+                    Type(
+                     cont
+                    ) [Type]
+                    VarChainSingle(
+                      VarChainErr(
+                      ) [VarChainErr]
+                    ) [VarChainSingle]
+                  ) [VarDeclValid]
+                  VarDeclListSome(
+                    VarDeclValid(
+                      Type(
+                       int
+                      ) [Type]
+                      VarChainSingle(
+                        VarChainElSingle(
+                         x
+                        ) [VarChainElSingle]
+                      ) [VarChainSingle]
+                    ) [VarDeclValid]
+                    VarDeclListSome(
+                      VarDeclValid(
+                        Type(
+                         cont
+                        ) [Type]
+                        VarChainSingle(
+                          VarChainErr(
+                          ) [VarChainErr]
+                        ) [VarChainSingle]
+                      ) [VarDeclValid]
+                      VarDeclListSome(
+                        VarDeclValid(
+                          Type(
+                           int
+                          ) [Type]
+                          VarChainSingle(
+                            VarChainElSingle(
+                             x
+                            ) [VarChainElSingle]
+                          ) [VarChainSingle]
+                        ) [VarDeclValid]
+                        VarDeclListSome(
+                          VarDeclValid(
+                            Type(
+                             still_bad
+                            ) [Type]
+                            VarChainMulti(
+                              VarChainMulti(
+                                VarChainMulti(
+                                  VarChainSingle(
+                                    VarChainElSingle(
+                                     x
+                                    ) [VarChainElSingle]
+                                  ) [VarChainSingle]
+                                  VarChainErr(
+                                  ) [VarChainErr]
+                                ) [VarChainMulti]
+                                VarChainElSingle(
+                                 x
+                                ) [VarChainElSingle]
+                              ) [VarChainMulti]
+                              VarChainElSingle(
+                               d4
+                              ) [VarChainElSingle]
+                            ) [VarChainMulti]
+                          ) [VarDeclValid]
+                          VarDeclListSome(
+                            VarDeclValid(
+                              Type(
+                               bad
+                              ) [Type]
+                              VarChainSingle(
+                                VarChainErr(
+                                ) [VarChainErr]
+                              ) [VarChainSingle]
+                            ) [VarDeclValid]
+                            VarDeclListNone(
+                            ) [VarDeclListNone]
+                          ) [VarDeclListSome]
+                        ) [VarDeclListSome]
+                      ) [VarDeclListSome]
+                    ) [VarDeclListSome]
+                  ) [VarDeclListSome]
+                ) [VarDeclListSome]
+              ) [VarDeclListSome]
+            ) [VarDeclListSome]
+          ) [VarDeclListSome]
+        ) [VarDeclListSome]
+      ) [MethodVars]
+      StatementListSome(
+        MatchedStatement(
+          BadAssignStatement(
+            BadAssignStatementC(
+              AssignopEQ(
+              ) [AssignopEQ]
+              Expr(
+                MinusOptNone(
+                ) [MinusOptNone]
+                Term(
+                  FactorComplex(
+                    Designator(
+                      DesigStart(
+                       f
+                      ) [DesigStart]
+                      DesignatorChoiceListSome(
+                        DesignatorChoiceArr(
+                          Expr(
+                            MinusOptNone(
+                            ) [MinusOptNone]
+                            Term(
+                              FactorNum(
+                               2
+                              ) [FactorNum]
+                              FactorChainNone(
+                              ) [FactorChainNone]
+                            ) [Term]
+                            TermChainNone(
+                            ) [TermChainNone]
+                          ) [Expr]
+                        ) [DesignatorChoiceArr]
+                        DesignatorChoiceListNone(
+                        ) [DesignatorChoiceListNone]
+                      ) [DesignatorChoiceListSome]
+                    ) [Designator]
+                    ActParsParenOptNone(
+                    ) [ActParsParenOptNone]
+                  ) [FactorComplex]
+                  FactorChainNone(
+                  ) [FactorChainNone]
+                ) [Term]
+                TermChainNone(
+                ) [TermChainNone]
+              ) [Expr]
+            ) [BadAssignStatementC]
+          ) [BadAssignStatement]
+        ) [MatchedStatement]
+        StatementListSome(
+          MatchedStatement(
+            BadStatement(
+            ) [BadStatement]
+          ) [MatchedStatement]
+          StatementListNone(
+          ) [StatementListNone]
+        ) [StatementListSome]
+      ) [StatementListSome]
+    ) [MethodDecl]
+    MethodDeclListNone(
+    ) [MethodDeclListNone]
+  ) [MethodDeclListSome]
+) [Program]
+INFO  20:32:57,989 - ===================================
+ERROR 20:32:58,006 - Symbol x already declared in current scope at line 11
+ERROR 20:32:58,007 - Type used but not declared cont at line 13
+ERROR 20:32:58,007 - Symbol x already declared in current scope at line 16
+ERROR 20:32:58,007 - Type used but not declared cont at line 18
+ERROR 20:32:58,007 - Symbol x already declared in current scope at line 20
+ERROR 20:32:58,007 - Type used but not declared still_bad at line 22
+ERROR 20:32:58,009 - Symbol x already declared in current scope at line 22
+ERROR 20:32:58,009 - Symbol x already declared in current scope at line 22
+ERROR 20:32:58,009 - Type used but not declared bad at line 24
+ERROR 20:32:58,011 - Symbol f not found in current scope at line 31
+ERROR 20:32:58,011 - Symbol f not found in current scope at line 31
+INFO  20:32:58,012 - ===================================
+ERROR 20:32:58,012 - Compilation failed.
+ERROR 20:32:58,012 - Parsing failed.
+ERROR 20:32:58,012 - Semantics errors encouterd in code.

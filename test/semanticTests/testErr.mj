@@ -1,0 +1,75 @@
+program p
+
+
+const int notInt = true;
+
+
+class BadClass1 extends bool {}
+class BadClass2 extends None {}
+
+abstract class Abstraction{	
+	{
+		public abstract void f();		
+		public int g(Abstraction a, char c)
+		int myInt;
+		char myChar;
+		{
+			
+			Abstraction notPossible = new Abstraction;
+			return 'c';
+		
+		}
+	}
+
+}
+
+
+class X extends Abstraction {
+
+	public X arr[];
+}
+
+
+{
+
+
+	void f1(int x,int y, char c)
+	X myX;
+	
+	{}
+
+
+	bool main()
+	X myX;
+	int notFunc;
+	{
+		myX = myX.g();
+		notInt = myX.arr;
+		myX++;
+		notFunc();
+		
+		if(true)
+			break;
+		else continue;
+		
+		read(myX);
+		read(notInt);
+		
+		print(main);
+
+		return;
+	
+		if(notFunc){
+			notFunc++;
+		}
+		f1(1,1,2);
+		
+		myX.g(myX,'c',5);
+		
+		
+	
+		
+	}
+
+
+}
